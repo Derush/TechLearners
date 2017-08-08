@@ -1,0 +1,30 @@
+{ 
+    "_id" : ObjectId("5987f14738c410dfe29c14d4"), 
+    "eligibility" : {
+        "Combined Mathematics" : 2.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f1a338c410dfe29c14d5"), 
+    "eligibility" : {
+        "Combined Mathematics" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f1e438c410dfe29c14d6"), 
+    "eligibility" : {
+        "Combined Mathematics" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f21938c410dfe29c14d7"), 
+    "eligibility" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("5987f2a238c410dfe29c14d8"), 
+    "eligibility" : {
+
+    }
+}

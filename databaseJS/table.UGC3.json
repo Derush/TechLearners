@@ -1,0 +1,54 @@
+{ 
+    "_id" : ObjectId("5987f14738c410dfe29c14d4"), 
+    "name" : "Computer Science", 
+    "eligibility" : {
+        "Combined Mathematics" : 2.0, 
+        "higher Mathematics" : 2.0, 
+        "physics" : 2.0, 
+        "Information and communication technology" : 1.0, 
+        "chemistry" : 1.0, 
+        "mathematics" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f1a338c410dfe29c14d5"), 
+    "name" : "physical Science", 
+    "eligibility" : {
+        "Combined Mathematics" : 1.0, 
+        "higher Mathematics" : 1.0, 
+        "physics" : 1.0, 
+        "Agriculture" : 1.0, 
+        "chemistry" : 1.0, 
+        "biology" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f1e438c410dfe29c14d6"), 
+    "name" : "Information and Communication Technology", 
+    "eligibility" : {
+        "Combined Mathematics" : 1.0, 
+        "higher Mathematics" : 1.0, 
+        "physics" : 1.0, 
+        "Agriculture" : 1.0, 
+        "chemistry" : 1.0, 
+        "biology" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f21938c410dfe29c14d7"), 
+    "name" : "Fisheries and marine  Sciences", 
+    "eligibility" : {
+        "physics" : 1.0, 
+        "chemistry" : 1.0, 
+        "biology" : 1.0
+    }
+}
+{ 
+    "_id" : ObjectId("5987f2a238c410dfe29c14d8"), 
+    "name" : "Management and Information Technology", 
+    "eligibility" : {
+        "physics" : 2.0, 
+        "chemistry" : 2.0, 
+        "biology" : 2.0
+    }
+}
