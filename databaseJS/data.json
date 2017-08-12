@@ -1,0 +1,110 @@
+{ 
+    "_id" : ObjectId("598eab4b865e42068b85a562"), 
+    "name" : "ENGINEERING", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598eac87865e42068b85a563"), 
+    "name" : "PHISICAL SCIENCE", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Biology" : NumberInt(1), 
+        "Agriculture" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598ead7de41174341905a754"), 
+    "name" : "COMPUTER SCIENCE", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(2), 
+        "physics" : NumberInt(2), 
+        "Chemistry" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1), 
+        "Mathematics" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f09f5f8dde890e541142a"), 
+    "name" : "INFORMATION AND COMMUNICATION TECHNOLOGY", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Biology" : NumberInt(1), 
+        "geography" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1), 
+        "commerce" : NumberInt(1), 
+        "music" : NumberInt(1), 
+        "latin" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0a70f8dde890e541142b"), 
+    "name" : "APPLIED SCIENCES", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Biology" : NumberInt(1), 
+        "Agriculture" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0c7cf8dde890e541142c"), 
+    "name" : "TRANSPORT AND LOGISTICS MANAGEMENT", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0cb6f8dde890e541142d"), 
+    "name" : "INDUSTRIAL STATISTIC AND MATHEMATICS FINANCE", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0d7cf8dde890e541142e"), 
+    "name" : "STATISTICS AND OPERATIONAL RESEARCH", 
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Agiculture" : NumberInt(1), 
+        "Higher mathematics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0e73e912f0e3ff19dfc9"), 
+    "name" : "SOFWARE ENGINEERING", 
+    "eligibility" : {
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Higher mathematics" : NumberInt(1), 
+        "Combined mathematics" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("598f0eede912f0e3ff19dfca"), 
+    "name" : "AGRIC BUSINESS MANAGEMENT", 
+    "eligibility" : {
+        "physics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "Agriculture" : NumberInt(1), 
+        "food and technology" : NumberInt(1)
+    }
+}
