@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="thumbnail">
-                <a href="page0.html" target="_blank">
+                <a href="page0.html">
                     <img src="/images/book.jpg" alt="Lights" style="width:100%">
                     <div class="caption">
                         <p>What are the eligible courses for me ?</p>
@@ -68,7 +68,7 @@
         </div>
         <div class="col-md-4">
             <div class="thumbnail">
-                <a href="page.html" target="_blank">
+                <a href="page.html">
                     <img src="/images/img.jpeg" alt="Nature" style="width:100%">
                     <div class="caption">
                         <p>Which are the courses to my Z-score ?</p>
@@ -78,7 +78,7 @@
         </div>
         <div class="col-md-4">
             <div class="thumbnail">
-                <a href="page2.html" target="_blank">
+                <a href="page2.html">
                     <img src="/images/book.jpg" alt="Fjords" style="width:100%">
                     <div class="caption">
                         <p>Which are the courses suitable for me ?</p>
