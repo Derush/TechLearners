@@ -1,0 +1,80 @@
+{ 
+    "_id" : ObjectId("5999cceb2e2fce15da9b811f"), 
+    "name" : "Technology stream", 
+    "option1" : [
+        "Science for Technology"
+    ], 
+    "option2" : [
+        "Engineering Technology", 
+        "Bio-system technology"
+    ], 
+    "option3" : [
+        "Economics", 
+        "Geography", 
+        "Home Economics", 
+        "English Language", 
+        "Accountancy", 
+        "Communication and Media Study", 
+        "Information and communication Technology", 
+        "Arts", 
+        "Business Studies", 
+        "Agriculture"
+    ]
+}
+{ 
+    "_id" : ObjectId("5999cf562e2fce15da9b8120"), 
+    "name" : "Biological Science", 
+    "option1" : [
+        "Physics"
+    ], 
+    "option2" : [
+        "Chemistry"
+    ], 
+    "option3" : [
+        "Biology", 
+        "Agriculture"
+    ]
+}
+{ 
+    "_id" : ObjectId("5999cfb02e2fce15da9b8121"), 
+    "name" : "Physical science ", 
+    "option1" : [
+        "Physics"
+    ], 
+    "option2" : [
+        "Chemistry"
+    ], 
+    "option3" : [
+        "Combined Mathematics"
+    ]
+}
+{ 
+    "_id" : ObjectId("5999d1f02e2fce15da9b8122"), 
+    "name" : "Commerce stream", 
+    "option1" : [
+        "Accountancy", 
+        "Business Studies", 
+        "Economics"
+    ], 
+    "option2" : [
+        "Accountancy", 
+        "Business Studies", 
+        "Economics"
+    ], 
+    "option3" : [
+        "Business Statistics", 
+        "Geography", 
+        "Political Science", 
+        "History", 
+        "The logic and the scientific method", 
+        "English", 
+        "German", 
+        "French", 
+        "Agricultural Sciences", 
+        "Combined Mathematics", 
+        "Information and Communication Technology (ICT)", 
+        "Accountancy", 
+        "Business Studies", 
+        "Economics"
+    ]
+}
