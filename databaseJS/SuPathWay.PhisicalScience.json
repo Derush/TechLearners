@@ -1,0 +1,276 @@
+{ 
+    "_id" : ObjectId("59990fec3b60b3f32fde9df5"), 
+    "name" : "ENGINEERING", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("599910403b60b3f32fde9df6"), 
+    "name" : "EARTH RESOURCES ENGINEERING", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("599910713b60b3f32fde9df7"), 
+    "name" : "TEXTILE AND CLOTHING TECHNOLOGY", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("599911713b60b3f32fde9df8"), 
+    "name" : "PHISICAL SCIENCE", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(1), 
+        "chemistry" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Agriculture" : NumberInt(1), 
+        "Biology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("5999127fb432243a82565a9c"), 
+    "name" : "COMPUTER SCIENCE", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(2), 
+        "Higher Mathematics" : NumberInt(2)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(2), 
+        "chemistry" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59991582b432243a82565a9d"), 
+    "name" : "INFORMATION AND COMMUNICATION TECHNOLOGY", 
+    "primary" : {
+
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(2), 
+        "physics" : NumberInt(2), 
+        "Combined Mathematics" : NumberInt(2), 
+        "Higher Mathematics" : NumberInt(2), 
+        "Commerce" : NumberInt(2), 
+        "Geography" : NumberInt(2), 
+        "Latin" : NumberInt(2), 
+        "Information and Communication Technology" : NumberInt(2), 
+        "Music" : NumberInt(2), 
+        "Citizenship Education" : NumberInt(2)
+    }, 
+    "OL" : {
+        "English" : NumberInt(2), 
+        "Mathematics" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("5999177e497d3a62c9d9dd50"), 
+    "name" : "APPLIED SCIENCES(PHISICAL SCIENCE)", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "physics" : NumberInt(1), 
+        "chemistry" : NumberInt(1)
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Agriculture" : NumberInt(1), 
+        "Biology" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59991805497d3a62c9d9dd51"), 
+    "name" : "TRANSPORT AND LOGISTIC MANAGEMENT", 
+    "primary" : {
+
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59991854497d3a62c9d9dd52"), 
+    "name" : "INDUSTRIAL STATISTICS AND MATHEMATICAL FINANCE", 
+    "primary" : {
+
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Higher Mathematics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("5999199e497d3a62c9d9dd53"), 
+    "name" : "STATISTICS AND OPERATIONAL RESEARCH", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Higher Mathematics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Biology" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1), 
+        "Agriculture" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59991b462ac5e4e10b10d31d"), 
+    "name" : "COMPUTING AND INFORMATION TECHNOLOGY", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(2), 
+        "Higher Mathematics" : NumberInt(2), 
+        "physics" : NumberInt(2)
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Higher Mathematics" : NumberInt(1), 
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1)
+    }, 
+    "OL" : {
+        "English" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59991df52342e800a195b8a2"), 
+    "name" : "INFORMATION TECHNOLOGY", 
+    "primary" : {
+
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Combined Mathematics" : NumberInt(2), 
+        "Chemistry" : NumberInt(2), 
+        "physics" : NumberInt(2), 
+        "Higher Mathematics" : NumberInt(2)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59991e3c2342e800a195b8a3"), 
+    "name" : "MANAGEMENT AND INFORMATION TECHNOLOGY", 
+    "primary" : {
+
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Combined Mathematics" : NumberInt(2), 
+        "Chemistry" : NumberInt(2), 
+        "physics" : NumberInt(2), 
+        "Higher Mathematics" : NumberInt(2)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("5999200e2342e800a195b8a4"), 
+    "name" : "QUANTITY SURVEYING", 
+    "primary" : {
+        "Combined Mathematics" : NumberInt(1), 
+        "Higher Mathematics" : NumberInt(1)
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Chemistry" : NumberInt(1), 
+        "physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1), 
+        "Commerce" : NumberInt(1), 
+        "Economics" : NumberInt(1)
+    }, 
+    "OL" : {
+        "Mathematics" : NumberInt(2), 
+        "Science and Technology" : NumberInt(1), 
+        "English" : NumberInt(2)
+    }
+}

@@ -1,0 +1,4 @@
+
+db.PhisicalScience.find({"primary.Combined Mathematics": 1})
+
+db.PhisicalScience.find({"primary.Combined Mathematics": 1, "secondary.physics": 1})
