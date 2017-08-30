@@ -1,0 +1,146 @@
+{ 
+    "_id" : ObjectId("59a3ca9cf07f113d471f0ef0"), 
+    "name" : "MANAGEMENT(PUBLIC) SPECIAL", 
+    "primary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "option" : {
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59a3cae8f07f113d471f0ef1"), 
+    "name" : "MANAGEMENT", 
+    "primary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "option" : {
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59a3cb15f07f113d471f0ef2"), 
+    "name" : "ESTATE MANAGEMENT AND VALUATION", 
+    "primary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "option" : {
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59a3cb27f07f113d471f0ef3"), 
+    "name" : "COMMERCE", 
+    "primary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "secondary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "option" : {
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
+{ 
+    "_id" : ObjectId("59a3ccc1f07f113d471f0ef4"), 
+    "name" : "BUSINESS INFORMATION SYSTEMS(SPECIAL)", 
+    "primary" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1)
+    }, 
+    "secondary" : {
+
+    }, 
+    "option" : {
+        "Business Statistics" : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }, 
+    "OL" : {
+
+    }
+}
