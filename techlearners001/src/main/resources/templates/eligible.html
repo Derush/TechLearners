@@ -1,5 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<style>
+    /* Full-width input fields */
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+
+
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes animatezoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 200px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,131 +156,139 @@
 
 
 </nav>
-<div class="container">
-    <div id="page-wrapper" >
-        <div id="page-inner">
-            <div class="row">
-                <div class="col-md-12">
-                    <form class="form-horizontal" action="/addstream" method="POST"  >
-                        <div class="form-group">
-                            <label class="control-label col-sm-5">Your Stream:</label>
-                            <div class="col-sm-5">
-
-
-                                <select id="list" onchange="getStream();">
-                                    <option value="NONE">--select--</option>
-                                    <option value="PhysicalScience">Physical Science</option>
-                                    <option value="BioScience">Bio Science</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Technology">Technology</option>
-                                </select>
-                                <input type="hidden" id="stream" name="stream"/>
 
 
 
-                            </div>
-                        </div>
+<h2>Choose your Stream</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Phisical Science</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">BioScience</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Technology</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Comerce</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Arts</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Other</button>
+
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="/addstream" method="POST"  >
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper" >
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
 
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-5 " >Your Results:</label>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 " >Your Results:</label>
 
 
 
-                            <div class="col-sm-5">
+                                <div class="col-sm-5">
 
-                                <table class="table table-striped" >
+                                    <table class="table table-striped" >
 
-                                    <thead>
-                                    <tr>
-                                        <th>Subject</th>
-                                        <th>Grade</th>
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <select id="list1" onchange="getSubject1();">
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list1" onchange="getSubject1();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject1" name="subject1"/>
+                                            <td><select id="subject1Result1" class="form-control2" onchange="getSubject1Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject1R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list2" onchange="getSubject2();">
                                                 <option value="NONE">--select--</option>
                                                 <option value="Combined Mathematics">Combined Mathematics</option>
                                                 <option value="Physics">Physics</option>
                                                 <option value="Chemistry">Chemistry</option>
                                             </select></td>
-                                        <input type="hidden" id="subject1" name="subject1"/>
-                                        <td><select id="subject1Result1" class="form-control2" onchange="getSubject1Result()">
-                                            <option value="NONE">--select--</option>
-                                            <option value=4>A</option>
-                                            <option value=3>B</option>
-                                            <option value=2>C</option>
-                                            <option value=1>S</option>
-                                        </select></td>
-                                        <input type="hidden" id="subject1R" name="subject1R"/>
-                                    </tr>
-                                    <tr>
-                                        <td><select id="list2" onchange="getSubject2();">
-                                            <option value="NONE">--select--</option>
-                                            <option value="Combined Mathematics">Combined Mathematics</option>
-                                            <option value="Physics">Physics</option>
-                                            <option value="Chemistry">Chemistry</option>
-                                        </select></td>
-                                        <input type="hidden" id="subject2" name="subject2"/>
-                                        <td><select id="subject2Result" class="form-control2" onchange="getSubject2Result()">
-                                            <option value="NONE">--select--</option>
-                                            <option value=4>A</option>
-                                            <option value=3>B</option>
-                                            <option value=2>C</option>
-                                            <option value=1>S</option>
-                                        </select></td>
-                                        <input type="hidden" id="subject2R" name="subject2R"/>
+                                            <input type="hidden" id="subject2" name="subject2"/>
+                                            <td><select id="subject2Result" class="form-control2" onchange="getSubject2Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject2R" name="subject2R"/>
 
-                                    </tr>
-                                    <tr>
-                                        <td><select id="list3" onchange="getSubject3();">
-                                            <option value="NONE">--select--</option>
-                                            <option value="Combined Mathematics">Combined Mathematics</option>
-                                            <option value="Physics">Physics</option>
-                                            <option value="Chemistry">Chemistry</option>
-                                        </select></td>
-                                        <input type="hidden" id="subject3" name="subject3"/>
-                                        <td><select id="subject3Result" class="form-control2" onchange="getSubject3Result()">
-                                            <option value="NONE">--select--</option>
-                                            <option value=4>A</option>
-                                            <option value=3>B</option>
-                                            <option value=2>C</option>
-                                            <option value=1>S</option>
-                                        </select></td>
-                                        <input type="hidden" id="subject3R" name="subject3R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list3" onchange="getSubject3();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3" name="subject3"/>
+                                            <td><select id="subject3Result" class="form-control2" onchange="getSubject3Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3R" name="subject3R"/>
 
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                        </tr>
+                                        </tbody>
+                                    </table>
 
 
+                                </div>
                             </div>
-                        </div>
 
 
 
 
 
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-6 col-sm-2">
-                                <input type="submit"/>
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- /. ROW  -->
-            <hr />
 
-        </div>
-        <!-- /. PAGE INNER  -->
-    </div>
-    <!-- /. PAGE WRAPPER  -->
+
+
 </div>
+</div>
+<!-- /. ROW  -->
+<hr />
+
+</div>
+<!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+</div>
+    </form>
+</div>
+
+
 <script>
 
     function getSubject1()
@@ -233,13 +346,23 @@
     }
     getStream();
 
-
-
-
 </script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 </body>
