@@ -12,10 +12,38 @@ public class eligible {
     private String subject1;
     private String subject2;
     private String subject3;
-    private String subject1R;
-    private String subject2R;
-    private String subject3R;
+    private Integer subject1R;
+    private Integer subject2R;
+    private Integer subject3R;
+
     private String stream;
+
+
+
+    public Integer getSubject1R() {
+        return subject1R;
+    }
+
+    public void setSubject1R(Integer subject1R) {
+        this.subject1R = subject1R;
+    }
+
+    public Integer getSubject2R() {
+        return subject2R;
+    }
+
+    public void setSubject2R(Integer subject2R) {
+        this.subject2R = subject2R;
+    }
+
+    public Integer getSubject3R() {
+        return subject3R;
+    }
+
+    public void setSubject3R(Integer subject3R) {
+        this.subject3R = subject3R;
+    }
+
 
 
     public eligible() {}
@@ -39,12 +67,7 @@ public class eligible {
     }
 
 
-    public String getsubject1R() {
-        return subject1R;
-    }
-    public void setsubject1R(String subject1R) {
-        this.subject1R = subject1R;
-    }
+
 
 
 
@@ -56,12 +79,7 @@ public class eligible {
     }
 
 
-    public String getsubject2R() {
-        return subject2R;
-    }
-    public void setsubject2R(String subject2R) {
-        this.subject2R = subject2R;
-    }
+
 
 
 
@@ -74,13 +92,7 @@ public class eligible {
     }
 
 
-    public String getsubject3R() {
-        return subject3R;
-    }
-    public void setsubject3R(String subject3R) {
-        this.subject3R = subject3R;
-    }
-    public String getstream() {
+       public String getstream() {
         return stream;
     }
     public void setstream(String stream) {
