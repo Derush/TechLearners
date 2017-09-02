@@ -1,10 +1,13 @@
 package com.dreamon.techlearners.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.HashMap;
+import java.util.Map;
 
 @Document(collection = "Eli")
-public class eligible {
 
+public class eligible {
+    private Map<String, Double> eligibility = new HashMap();
     private String id;
     private String subject1;
     private String subject2;
@@ -83,4 +86,28 @@ public class eligible {
     public void setstream(String stream) {
         this.stream = stream;
     }
+
+    public Map<String, Double> getEligibility() {
+        return eligibility;
+    }
+
+    public void setEligibility(Map<String, Double> eligibility) {
+        this.eligibility = eligibility;
+    }
+
+
+
+    public static void main(String args[]){
+
+        HashMap<Integer,String> eligibility=new HashMap<Integer,String>();
+
+        eligibility.put(100,"Amit");
+        eligibility.put(101,"Vijay");
+        eligibility.put(102,"Rahul");
+
+
+    }
+
+
+
 }

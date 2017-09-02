@@ -12,7 +12,6 @@ public class UGC_Course {
     @Id
     private String id;
     private String name;
-
     private Map<String, Double> eligibility = new HashMap();
 
     public String getId() {
@@ -38,4 +37,5 @@ public class UGC_Course {
     public void setEligibility(Map<String, Double> eligibility) {
         this.eligibility = eligibility;
     }
-}
+
+    }

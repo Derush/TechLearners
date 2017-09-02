@@ -162,7 +162,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-6 col-sm-2">
-                                <input type="submit"/>
+                                <button type="submit"  onclick="myFunction()" >Submit</button>
                             </div>
                         </div>
                     </form>
@@ -232,6 +232,16 @@
         document.getElementById("stream").value =streamval ;
     }
     getStream();
+
+
+
+    function myFunction() {
+        if (subject1sel==subject2sel) {
+            alert("Name must be filled out");
+            return false;
+        }
+
+    }
 
 
 
