@@ -163,25 +163,24 @@
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Phisical Science</button>
 <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">BioScience</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Technology</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Comerce</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Arts</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Other</button>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Technology</button>
+<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Comerce</button>
+<button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts</button>
+<button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
 
-<div id="id01" class="modal">
-    <form class="modal-content animate" action="/addstream" method="POST"  >
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="/addstream" method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
         </div>
+
+
 
         <div class="container">
             <div id="page-wrapper" >
                 <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
-
-
 
 
                             <div class="form-group">
@@ -263,17 +262,11 @@
                             </div>
 
 
-
-
-
-
                             <div class="form-group">
                                 <div class="col-sm-offset-6 col-sm-2">
                                     <input type="submit"/>
                                 </div>
                             </div>
-
-
 
 </div>
 </div>
@@ -287,6 +280,183 @@
 </div>
     </form>
 </div>
+
+
+<div id="id02" class="modal">
+    <form class="modal-content animate" action="/addstream" method="POST"  >
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <div id="page-wrapper" >
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 " >Your Results:</label>
+
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped" >
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list21" onchange="getSubject21();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Bio Science">Bio Science</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject21" name="subject21"/>
+
+                                            <td><select id="subject1Result21" class="form-control2" onchange="getSubject21Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject21R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list22" onchange="getSubject22();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Bio Science">Bio Science</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject22" name="subject2"/>
+
+                                            <td><select id="subject22Result" class="form-control2" onchange="getSubject22Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject22R" name="subject2R"/>
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list23" onchange="getSubject23();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Bio Science">Bio Science</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject23" name="subject3"/>
+
+
+                                            <td><select id="subject23Result" class="form-control2" onchange="getSubject23Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject23R" name="subject3R"/>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr />
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+
+
+
+
+<script>
+
+    function getSubject21()
+    {
+        var subject1se2l = document.getElementById("list21").value;
+        document.getElementById("subject21").value = subject1se2l;
+    }
+    getSubject21();
+
+    function getSubject21Result()
+    {
+        var subject1Result = document.getElementById("subject1Result21").value;
+        document.getElementById("subject21R").value =subject1Result ;
+    }
+    getSubject21Result();
+
+    function getSubject22()
+    {
+        var subject22sel = document.getElementById("list22").value;
+        document.getElementById("subject22").value = subject22sel;
+    }
+    getSubject22();
+
+
+
+    function getSubject22Result()
+    {
+        var subject22Result = document.getElementById("subject22Result").value;
+        document.getElementById("subject22R").value =subject22Result ;
+    }
+    getSubject22Result();
+
+
+    function getSubject23()
+    {
+        var subject23sel = document.getElementById("list23").value;
+        document.getElementById("subject23").value = subject23sel;
+    }
+    getSubject23();
+
+
+
+    function getSubject23Result()
+    {
+        var subject23Result = document.getElementById("subject23Result").value;
+        document.getElementById("subject23R").value =subject23Result ;
+    }
+    getSubject23Result();
+
+
+    function getStream()
+    {
+        var streamval = document.getElementById("list").value;
+        document.getElementById("stream").value =streamval ;
+    }
+    getStream();
+
+</script>
 
 
 <script>
@@ -359,6 +529,19 @@
         }
     }
 </script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
