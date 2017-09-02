@@ -1,39 +1,69 @@
 package com.dreamon.techlearners.controller;
+
+import com.dreamon.techlearners.model.Eligi;
+import com.dreamon.techlearners.model.UGC_Course;
+import com.dreamon.techlearners.repository.UGCRepository;
 import com.dreamon.techlearners.repository.eligibleRepository;
-import com.dreamon.techlearners.model.eligible;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-
-
-
-
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 public class EligibleController {
 
     @Autowired
-    eligibleRepository eligible;
+    eligibleRepository eligi;
+    @Autowired
+    UGCRepository course;
 
     @RequestMapping("/eligible")
-    public  String pageform(Model model)
-    {
+    public String pageform(Model model) {
 //        ugcRepository.findAll();
         return "eligible";
     }
+//    @RequestMapping(value = "/addstream", method = RequestMethod.POST)
+//    public String addCar(@ModelAttribute eligible z) {
+//
+//        eligible.save(z);
+//        return "redirect:eligible";
+//    }
+
     @RequestMapping(value = "/addstream", method = RequestMethod.POST)
-    public String addCar(@ModelAttribute eligible z) {
-        eligible.save(z);
+    public String addCar(HttpServletRequest request) {
+
+        String subject1 = request.getParameter("subject1");
+        String subject2 = request.getParameter("subject2");
+        String subject3 = request.getParameter("subject3");
+        Integer subject1R = Integer.valueOf(request.getParameter("subject1R"));
+        Integer subject2R = Integer.valueOf(request.getParameter("subject2R"));
+        Integer subject3R = Integer.valueOf(request.getParameter("subject3R"));
+
+        Map<String, Integer> eligi = new HashMap<String, Integer>();
+        eligi.put(subject1, subject1R);
+        eligi.put(subject2, subject2R);
+        eligi.put(subject3, subject3R);
+
+//        UGC_Course ugcCourse1 = new UGC_Course();
+        List <UGC_Course> newList = course.findAll();
+
+        Map<String,Integer> checking = newList.get(1).getEligibility();
+
+        for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+            String key = entry.getKey().toString();
+            Integer value = entry.getValue();
+            System.out.println("key, " + key + " value " + value);
+        }
+
+
         return "redirect:eligible";
     }
-
-
 
 
 }
