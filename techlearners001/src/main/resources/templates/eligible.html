@@ -169,7 +169,7 @@
 <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Other</button>
 
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="/addstream" method="POST"  >
+    <form name="myForm" class="modal-content animate" action="/addstream" onsubmit="return validateForm()"method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
@@ -357,6 +357,22 @@
             modal.style.display = "none";
         }
     }
+
+
+
+
+    function validateForm() {
+        var x = document.forms["myForm"]["subject1"].value;
+        var y = document.forms["myForm"]["subject2"].value;
+        var z = document.forms["myForm"]["subject3"].value;
+        if ((x==y)||(y==z)||(x==z)) {
+            alert("There are same subjects in the form");
+            return false;
+        }
+    }
+
+
+
 
 </script>
 

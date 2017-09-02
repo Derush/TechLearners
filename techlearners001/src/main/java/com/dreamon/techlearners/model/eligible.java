@@ -109,16 +109,6 @@ public class eligible {
 
 
 
-    public static void main(String args[]){
-
-        HashMap<Integer,String> eligibility=new HashMap<Integer,String>();
-
-        eligibility.put(100,"Amit");
-        eligibility.put(101,"Vijay");
-        eligibility.put(102,"Rahul");
-
-
-    }
 
 
 
