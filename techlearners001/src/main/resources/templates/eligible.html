@@ -365,7 +365,7 @@
         var x = document.forms["myForm"]["subject1"].value;
         var y = document.forms["myForm"]["subject2"].value;
         var z = document.forms["myForm"]["subject3"].value;
-        if ((x==y)||(y==z)||(x==z)) {
+        if (((x==y)||(y==z)||(x==z))) {
             alert("There are same subjects in the form");
             return false;
         }
