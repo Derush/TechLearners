@@ -12,12 +12,8 @@ public class UGC_Course {
     @Id
     private String id;
     private String name;
-<<<<<<< HEAD
-    private Map<String, Double> eligibility = new HashMap();
-=======
 
     private Map<String, Integer> eligibility = new HashMap();
->>>>>>> 71b0e5153c0e1ffc40568f3414a639087a940849
 
     public String getId() {
         return id;
