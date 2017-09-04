@@ -54,7 +54,39 @@ public class EligibleController {
 
 
         List <UGC_Course> newList = course.findAll();
-        Map<String,Integer> checking = newList.get(2).getEligibility();
+       for(int i=0 ; i<newList.size() ; i++)
+       {
+           Map<String,Integer> checking = newList.get(i).getEligibility();
+           String coursename=newList.get(i).getname();
+
+           boolean check1=false;
+           boolean check2=false;
+           boolean check3=false;
+
+           for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+               String key = entry.getKey().toString();
+               Integer value = entry.getValue();
+               System.out.println("key, " + key + " value " + value);
+               if ((key.equals(subject1)) && (value < subject1R)) {
+                   check1 = true;
+               }
+
+               if ((key.equals(subject2)) && (value < subject2R)) {
+                   check2 = true;
+               }
+
+               if ((key.equals(subject3)) && (value < subject3R)) {
+                   check3 = true;
+               }
+
+
+           }
+           if(check1==true || check2==true ||  check3==true  ) {
+               System.out.println(coursename);
+
+           }
+       }
+/*        Map<String,Integer> checking = newList.get(2).getEligibility();
         String coursename=newList.get(2).getname();
 
         boolean check1=false;
@@ -79,10 +111,10 @@ public class EligibleController {
 
 
         }
-        if(check2==true) {
+        if(check1==true || check2==true ||  check3==true  ) {
             System.out.println(coursename);
 
-        }
+        }*/
         return "redirect:eligible";
     }
 
