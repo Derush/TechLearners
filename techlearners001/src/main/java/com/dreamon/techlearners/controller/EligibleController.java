@@ -36,7 +36,7 @@ public class EligibleController {
 //    }
     @RequestMapping("/showCourses")
     public String coursesShow(Model model) {
-//        ugcRepository.findAll();
+//         model.addAttribute("show", course.findAll());
 
     return "showCourses";
     }
@@ -90,7 +90,7 @@ public class EligibleController {
            }
            if(check1==true || check2==true ||  check3==true  ) {
                System.out.println(coursename);
-               model.addAttribute("search", coursename);
+               model.addAttribute("show", coursename);
 
            }
            else
