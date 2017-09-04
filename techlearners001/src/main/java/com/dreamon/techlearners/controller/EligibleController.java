@@ -34,9 +34,16 @@ public class EligibleController {
 //        eligible.save(z);
 //        return "redirect:eligible";
 //    }
+    @RequestMapping("/showCourses")
+    public String coursesShow(Model model) {
+//        ugcRepository.findAll();
 
+    return "showCourses";
+    }
     @RequestMapping(value = "/addstream", method = RequestMethod.POST)
-    public String addCar(HttpServletRequest request) {
+    public String addCar(HttpServletRequest request , Model model) {
+
+
 
         String subject1 = request.getParameter("subject1");
         String subject2 = request.getParameter("subject2");
@@ -83,8 +90,11 @@ public class EligibleController {
            }
            if(check1==true || check2==true ||  check3==true  ) {
                System.out.println(coursename);
+               model.addAttribute("search", coursename);
 
            }
+           else
+               System.out.println("no subject there to choose");
        }
 /*        Map<String,Integer> checking = newList.get(2).getEligibility();
         String coursename=newList.get(2).getname();
@@ -115,7 +125,10 @@ public class EligibleController {
             System.out.println(coursename);
 
         }*/
-        return "redirect:eligible";
+//        return "redirect:eligible";
+        return "showCourses";
+
+
     }
 
 
