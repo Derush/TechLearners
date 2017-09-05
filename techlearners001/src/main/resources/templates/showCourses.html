@@ -52,11 +52,21 @@
 </nav>
 
 <body>
-<tbody>
-<tr>
-    <td th:value="${showcourse}"></td>
-</tr>
-</tbody>
+<table>
+    <thead>
+    <tr>
+        <th>Course Name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+        <td th:text="${show}"></td>
+
+    </tr>
+    </tbody>
+</table>
 
 </body>
 
