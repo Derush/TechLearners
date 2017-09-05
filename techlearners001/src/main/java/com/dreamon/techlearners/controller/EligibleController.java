@@ -88,7 +88,7 @@ public class EligibleController {
 
 
            }
-           if(check1==true || check2==true ||  check3==true  ) {
+           if(check1==true && check2==true &&  check3==true  ) {
                System.out.println(coursename);
                model.addAttribute("search", coursename);
 
