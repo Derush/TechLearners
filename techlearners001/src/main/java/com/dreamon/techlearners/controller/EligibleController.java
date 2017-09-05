@@ -74,15 +74,15 @@ public class EligibleController {
                String key = entry.getKey().toString();
                Integer value = entry.getValue();
                System.out.println("key, " + key + " value " + value);
-               if ((key.equals(subject1)) && (value < subject1R)) {
+               if ((key.equals(subject1)) && (value <=subject1R)) {
                    check1 = true;
                }
 
-               if ((key.equals(subject2)) && (value < subject2R)) {
+               if ((key.equals(subject2)) && (value <= subject2R)) {
                    check2 = true;
                }
 
-               if ((key.equals(subject3)) && (value < subject3R)) {
+               if ((key.equals(subject3)) && (value <= subject3R)) {
                    check3 = true;
                }
 
