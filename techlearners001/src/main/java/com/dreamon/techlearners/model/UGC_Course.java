@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.HashMap;
 import java.util.Map;
 
-@Document(collection = "eligible_data")
+@Document(collection = "Eligi")
 public class UGC_Course {
 
     @Id
