@@ -289,6 +289,119 @@
         </div>
     </form>
 </div>
+<div id="id02" class="modal">
+    <form class="modal-content animate" action="/addstream" method="POST"  >
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <div id="page-wrapper" >
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 " >Your Results:</label>
+
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped" >
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list21" onchange="getSubject21();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Bio Science">Bio Science</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject21" name="subject21"/>
+
+                                            <td><select id="subject1Result21" class="form-control2" onchange="getSubject21Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject21R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list22" onchange="getSubject22();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Bio Science">Bio Science</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject22" name="subject2"/>
+
+                                            <td><select id="subject22Result" class="form-control2" onchange="getSubject22Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject22R" name="subject2R"/>
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list23" onchange="getSubject23();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Bio Science">Bio Science</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject23" name="subject3"/>
+
+
+                                            <td><select id="subject23Result" class="form-control2" onchange="getSubject23Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject23R" name="subject3R"/>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr />
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
 
 
 <script>
