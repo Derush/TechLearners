@@ -28,7 +28,7 @@ public class EligibleController {
 //        ugcRepository.findAll();
         return "eligible";
     }
-//    @RequestMapping(value = "/addstream", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/addstream", method = RequestMethod.POST)
 //    public String addCar(@ModelAttribute eligible z) {
 //
 //        eligible.save(z);
@@ -38,7 +38,7 @@ public class EligibleController {
     public String coursesShow(Model model) {
 //         model.addAttribute("show", course.findAll());
 
-    return "showCourses";
+        return "showCourses";
     }
     @RequestMapping(value = "/addstream", method = RequestMethod.POST)
     public String addCar(HttpServletRequest request , Model model) {
@@ -61,41 +61,41 @@ public class EligibleController {
 
 
         List <UGC_Course> newList = course.findAll();
-       for(int i=0 ; i<newList.size() ; i++)
-       {
-           Map<String,Integer> checking = newList.get(i).getEligibility();
-           String coursename=newList.get(i).getname();
+        for(int i=0 ; i<newList.size() ; i++)
+        {
+            Map<String,Integer> checking = newList.get(i).getEligibility();
+            String coursename=newList.get(i).getname();
 
-           boolean check1=false;
-           boolean check2=false;
-           boolean check3=false;
+            boolean check1=false;
+            boolean check2=false;
+            boolean check3=false;
 
-           for (Map.Entry<String, Integer> entry : checking.entrySet()) {
-               String key = entry.getKey().toString();
-               Integer value = entry.getValue();
-               System.out.println("key, " + key + " value " + value);
-               if ((key.equals(subject1)) && (value <=subject1R)) {
-                   check1 = true;
-               }
+            for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+                String key = entry.getKey().toString();
+                Integer value = entry.getValue();
+                System.out.println("key, " + key + " value " + value);
+                if ((key.equals(subject1)) && (value <=subject1R)) {
+                    check1 = true;
+                }
 
-               if ((key.equals(subject2)) && (value <= subject2R)) {
-                   check2 = true;
-               }
+                if ((key.equals(subject2)) && (value <= subject2R)) {
+                    check2 = true;
+                }
 
-               if ((key.equals(subject3)) && (value <= subject3R)) {
-                   check3 = true;
-               }
+                if ((key.equals(subject3)) && (value <= subject3R)) {
+                    check3 = true;
+                }
 
 
-           }
-           if(check1==true && check2==true &&  check3==true  ) {
-               System.out.println(coursename);
-               model.addAttribute("show", coursename);
+            }
+            if(check1==true && check2==true &&  check3==true  ) {
+                System.out.println(coursename);
+                model.addAttribute("show", coursename);
 
-           }
-           else
-               System.out.println("no subject there to choose");
-       }
+            }
+            else
+                System.out.println("no subject there to choose");
+        }
 /*        Map<String,Integer> checking = newList.get(2).getEligibility();
         String coursename=newList.get(2).getname();
 
