@@ -1,14 +1,18 @@
 package com.dreamon.techlearners.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.HashMap;
+import java.util.Map;
 
 @Document(collection = "Eli")
+
 public class eligible {
 
     private String id;
     private String subject1;
     private String subject2;
     private String subject3;
+<<<<<<< HEAD
     private String subject1R;
     private String subject2R;
     private String subject3R;
@@ -19,7 +23,40 @@ public class eligible {
     private String subject21R;
     private String subject22R;
     private String subject23R;
+=======
+    private Integer subject1R;
+    private Integer subject2R;
+    private Integer subject3R;
+
+>>>>>>> dedf708dea4b3e7dcafd76fc2ae4f05ebd6787e0
     private String stream;
+    private Map<String, Integer> eligi = new HashMap();
+
+
+    public Integer getSubject1R() {
+        return subject1R;
+    }
+
+    public void setSubject1R(Integer subject1R) {
+        this.subject1R = subject1R;
+    }
+
+    public Integer getSubject2R() {
+        return subject2R;
+    }
+
+    public void setSubject2R(Integer subject2R) {
+        this.subject2R = subject2R;
+    }
+
+    public Integer getSubject3R() {
+        return subject3R;
+    }
+
+    public void setSubject3R(Integer subject3R) {
+        this.subject3R = subject3R;
+    }
+
 
 
     public eligible() {}
@@ -43,12 +80,7 @@ public class eligible {
     }
 
 
-    public String getsubject1R() {
-        return subject1R;
-    }
-    public void setsubject1R(String subject1R) {
-        this.subject1R = subject1R;
-    }
+
 
 
 
@@ -60,12 +92,7 @@ public class eligible {
     }
 
 
-    public String getsubject2R() {
-        return subject2R;
-    }
-    public void setsubject2R(String subject2R) {
-        this.subject2R = subject2R;
-    }
+
 
 
 
@@ -78,6 +105,7 @@ public class eligible {
     }
 
 
+<<<<<<< HEAD
     public String getsubject3R() {
         return subject3R;
     }
@@ -87,6 +115,9 @@ public class eligible {
 
 
     public String getstream() {
+=======
+       public String getstream() {
+>>>>>>> dedf708dea4b3e7dcafd76fc2ae4f05ebd6787e0
         return stream;
     }
     public void setstream(String stream) {
@@ -101,6 +132,7 @@ public class eligible {
 
 
 
+<<<<<<< HEAD
     public String getsubject21() {
         return subject21;
     }
@@ -151,6 +183,8 @@ public class eligible {
         this.subject23R = subject23R;
     }
 
+=======
+>>>>>>> dedf708dea4b3e7dcafd76fc2ae4f05ebd6787e0
 
 
 }

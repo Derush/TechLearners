@@ -8,3 +8,14 @@ public interface UGCRepository extends MongoRepository<UGC_Course, String>{
 
 
 }
+
+
+
+
+
+
+
+
+
+
+

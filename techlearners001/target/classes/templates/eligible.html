@@ -168,8 +168,13 @@
 <button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts</button>
 <button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
 
+<<<<<<< HEAD
         <div id="id01" class="modal">
         <form class="modal-content animate" action="/addstream" method="POST"  >
+=======
+<div id="id01" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream" onsubmit="return validateForm()"method="POST"  >
+>>>>>>> dedf708dea4b3e7dcafd76fc2ae4f05ebd6787e0
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -205,7 +210,7 @@
                                                 <select id="list1" onchange="getSubject1();">
                                                     <option value="NONE">--select--</option>
                                                     <option value="Combined Mathematics">Combined Mathematics</option>
-                                                    <option value="Physics">Physics</option>
+                                                    <option value="physics">Physics</option>
                                                     <option value="Chemistry">Chemistry</option>
                                                 </select></td>
                                             <input type="hidden" id="subject1" name="subject1"/>
@@ -222,7 +227,7 @@
                                             <td><select id="list2" onchange="getSubject2();">
                                                 <option value="NONE">--select--</option>
                                                 <option value="Combined Mathematics">Combined Mathematics</option>
-                                                <option value="Physics">Physics</option>
+                                                <option value="physics">Physics</option>
                                                 <option value="Chemistry">Chemistry</option>
                                             </select></td>
                                             <input type="hidden" id="subject2" name="subject2"/>
@@ -240,7 +245,7 @@
                                             <td><select id="list3" onchange="getSubject3();">
                                                 <option value="NONE">--select--</option>
                                                 <option value="Combined Mathematics">Combined Mathematics</option>
-                                                <option value="Physics">Physics</option>
+                                                <option value="physics">Physics</option>
                                                 <option value="Chemistry">Chemistry</option>
                                             </select></td>
                                             <input type="hidden" id="subject3" name="subject3"/>
@@ -262,10 +267,19 @@
                             </div>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> dedf708dea4b3e7dcafd76fc2ae4f05ebd6787e0
                             <div class="form-group">
                                 <div class="col-sm-offset-6 col-sm-2">
                                     <input type="submit"/>
                                 </div>
+
                             </div>
 
 </div>
@@ -516,10 +530,7 @@
     }
     getStream();
 
-</script>
 
-        <script>
-    // Get the modal
     var modal = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
@@ -528,6 +539,23 @@
             modal.style.display = "none";
         }
     }
+
+
+
+
+    function validateForm() {
+        var x = document.forms["myForm"]["subject1"].value;
+        var y = document.forms["myForm"]["subject2"].value;
+        var z = document.forms["myForm"]["subject3"].value;
+        if (((x==y)||(y==z)||(x==z))) {
+            alert("There are same subjects in the form");
+            return false;
+        }
+    }
+
+
+
+
 </script>
 
 <script>
@@ -541,6 +569,8 @@
         }
     }
 </script>
+
+
 
 
 
