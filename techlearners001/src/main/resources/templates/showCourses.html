@@ -60,9 +60,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr th:each="show : ${show}">
 
-        <td th:text="${show}"></td>
+        <td th:text="${show.name}"></td>
 
     </tr>
     </tbody>

@@ -1,7 +1,9 @@
 package com.dreamon.techlearners.controller;
 
 import com.dreamon.techlearners.model.Eligi;
+import com.dreamon.techlearners.model.StoreList;
 import com.dreamon.techlearners.model.UGC_Course;
+import com.dreamon.techlearners.repository.StoreListRepository;
 import com.dreamon.techlearners.repository.UGCRepository;
 import com.dreamon.techlearners.repository.eligibleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class EligibleController {
     eligibleRepository eligi;
     @Autowired
     UGCRepository course;
+    @Autowired
+    StoreListRepository retrivelist;
 
     @RequestMapping("/eligible")
     public String pageform(Model model) {
@@ -34,12 +38,7 @@ public class EligibleController {
 //        eligible.save(z);
 //        return "redirect:eligible";
 //    }
-    @RequestMapping("/showCourses")
-    public String coursesShow(Model model) {
-//         model.addAttribute("show", course.findAll());
 
-        return "showCourses";
-    }
     @RequestMapping(value = "/addstream", method = RequestMethod.POST)
     public String addCar(HttpServletRequest request , Model model) {
 
@@ -57,10 +56,12 @@ public class EligibleController {
         eligi.put(subject2, subject2R);
         eligi.put(subject3, subject3R);
 
-
+        StoreList sl = new StoreList();
 
 
         List <UGC_Course> newList = course.findAll();
+        String coureses [] = new String[newList.size()];
+        int cou=0;
         for(int i=0 ; i<newList.size() ; i++)
         {
             Map<String,Integer> checking = newList.get(i).getEligibility();
@@ -89,8 +90,13 @@ public class EligibleController {
 
             }
             if(check1==true && check2==true &&  check3==true  ) {
-                System.out.println(coursename);
-                model.addAttribute("show", coursename);
+                coureses[i] =coursename;
+//                sl.setId(String.valueOf(cou));
+                sl.setName(coursename);
+                retrivelist.save(sl);
+//                System.out.println(coursename);
+//                model.addAttribute("show", coursename);
+                cou++;
 
             }
             else
@@ -126,6 +132,13 @@ public class EligibleController {
 
         }*/
 //        return "redirect:eligible";
+
+//        for (int i=0 ; i<cou ; i++)
+//        {
+//            model.addAttribute("show", coureses[i]);
+//            System.out.println(coureses[i]);
+//        }
+
         return "showCourses";
 
 
