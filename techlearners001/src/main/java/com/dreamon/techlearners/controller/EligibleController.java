@@ -59,8 +59,8 @@ public class EligibleController {
 
 
         List<UGC_Course> newList = course.findAll();
-        String coureses[] = new String[newList.size()];
-        int cou = 0;
+//        String coureses[] = new String[newList.size()];
+//        int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             String coursename = newList.get(i).getname();
@@ -94,7 +94,7 @@ public class EligibleController {
                 retrivelist.save(sl);
 //                System.out.println(coursename);
 //                model.addAttribute("show", coursename);
-                cou++;
+//                cou++;
 
             } else
                 System.out.println("no subject there to choose");
