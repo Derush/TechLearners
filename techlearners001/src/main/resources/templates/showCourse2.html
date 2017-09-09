@@ -33,15 +33,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">DreamOn</a>
+                <a class="navbar-brand" href="fragments/index.html">DreamOn</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Home</a>
-                    <a class="btn btn-info navbar-btn" href="index.html" role="button">About</a>
-                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Contact</a>
+                    <a class="btn btn-info navbar-btn" href="fragments/index.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="fragments/index.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="fragments/index.html" role="button">Contact</a>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -52,42 +52,21 @@
 </nav>
 
 <body>
+<table>
+    <thead>
+    <tr>
+        <th>Course Name</th>
 
-<div class="container">
+    </tr>
+    </thead>
+    <tbody>
+    <tr >
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="page0.html">
-                    <img src="/images/book.jpg" alt="Lights" style="width:100%">
-                    <div class="caption">
-                        <p>What are the eligible courses for me ?</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="page.html">
-                    <img src="/images/img.jpeg" alt="Nature" style="width:100%">
-                    <div class="caption">
-                        <p>Which are the courses to my Z-score ?</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="page2.html">
-                    <img src="/images/book.jpg" alt="Fjords" style="width:100%">
-                    <div class="caption">
-                        <p>Which are the courses suitable for me ?</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+        <td th:text="${show}"></td>
+
+    </tr>
+    </tbody>
+</table>
 
 </body>
 
