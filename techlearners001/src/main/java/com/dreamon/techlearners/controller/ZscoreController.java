@@ -40,6 +40,8 @@ public class ZscoreController {
         String District = request.getParameter("district1");
         Float zscore=Float.valueOf(request.getParameter("zid1"));
 
+//        System.out.println(District);
+//        System.out.println(zscore);
         Map<String, Integer> eligi = new HashMap<String, Integer>();
         Map<String, Float> zsc = new HashMap<String, Float>();
         eligi.put(subject1, subject1R);
@@ -86,7 +88,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
@@ -204,7 +206,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
@@ -322,7 +324,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
@@ -440,7 +442,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
@@ -558,7 +560,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
@@ -676,7 +678,7 @@ public class ZscoreController {
                 Float value = entry.getValue();
                 System.out.println("key, " + key + " value " + value);
                 if ((key.equals(District)) && (value <= zscore)) {
-                    check1 = true;
+                    check4 = true;
                 }
 
 
