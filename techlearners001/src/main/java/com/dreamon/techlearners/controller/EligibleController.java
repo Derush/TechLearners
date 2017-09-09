@@ -225,7 +225,7 @@ public class EligibleController {
             }
 
 
-        }
+        } 
         if(check1==true || check2==true ||  check3==true  ) {
             System.out.println(coursename);
 
@@ -286,6 +286,310 @@ public class EligibleController {
                 }
 
                 if ((key.equals(subject33)) && (value <= subject33R)) {
+                    check3 = true;
+                }
+
+
+            }
+            if (check1 == true && check2 == true && check3 == true) {
+//                coureses[i] =coursename;
+//                sl.setId(String.valueOf(cou));
+//                sl.setName(coursename);
+//                retrivelist.save(sl);
+                System.out.println(coursename);
+                model.addAttribute("show", coursename);
+                cou++;
+
+            } else
+                System.out.println("no subject there to choose");
+        }
+/*        Map<String,Integer> checking = newList.get(2).getEligibility();
+        String coursename=newList.get(2).getname();
+
+        boolean check1=false;
+        boolean check2=false;
+        boolean check3=false;
+
+        for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+            String key = entry.getKey().toString();
+            Integer value = entry.getValue();
+            System.out.println("key, " + key + " value " + value);
+            if ((key.equals(subject1)) && (value < subject1R)) {
+                check1 = true;
+            }
+
+            if ((key.equals(subject2)) && (value < subject2R)) {
+                check2 = true;
+            }
+
+            if ((key.equals(subject3)) && (value < subject3R)) {
+                check3 = true;
+            }
+
+
+        }
+        if(check1==true || check2==true ||  check3==true  ) {
+            System.out.println(coursename);
+
+        }*/
+//        return "redirect:eligible";
+
+//        for (int i=0 ; i<cou ; i++)
+//        {
+//            model.addAttribute("show", coureses[i]);
+//            System.out.println(coureses[i]);
+//        }
+
+        return "showCourses2";
+
+
+    }
+
+    @RequestMapping(value = "/addstream4", method = RequestMethod.POST)
+    public String addsSubject4(HttpServletRequest request, Model model) {
+
+
+        String subject41 = request.getParameter("subject41");
+        String subject42 = request.getParameter("subject42");
+        String subject43 = request.getParameter("subject43");
+        Integer subject41R = Integer.valueOf(request.getParameter("subject41R"));
+        Integer subject42R = Integer.valueOf(request.getParameter("subject42R"));
+        Integer subject43R = Integer.valueOf(request.getParameter("subject43R"));
+
+        Map<String, Integer> eligi = new HashMap<String, Integer>();
+        eligi.put(subject41, subject41R);
+        eligi.put(subject42, subject42R);
+        eligi.put(subject43, subject43R);
+
+        StoreList sl = new StoreList();
+
+
+        List<UGC_Course> newList = course.findAll();
+        String coureses[] = new String[newList.size()];
+        int cou = 0;
+        for (int i = 0; i < newList.size(); i++) {
+            Map<String, Integer> checking = newList.get(i).getEligibility();
+            String coursename = newList.get(i).getname();
+
+            boolean check1 = false;
+            boolean check2 = false;
+            boolean check3 = false;
+
+            for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+                String key = entry.getKey().toString();
+                Integer value = entry.getValue();
+                System.out.println("key, " + key + " value " + value);
+                if ((key.equals(subject41)) && (value <= subject41R)) {
+                    check1 = true;
+                }
+
+                if ((key.equals(subject42)) && (value <= subject42R)) {
+                    check2 = true;
+                }
+
+                if ((key.equals(subject43)) && (value <= subject43R)) {
+                    check3 = true;
+                }
+
+
+            }
+            if (check1 == true && check2 == true && check3 == true) {
+//                coureses[i] =coursename;
+//                sl.setId(String.valueOf(cou));
+//                sl.setName(coursename);
+//                retrivelist.save(sl);
+                System.out.println(coursename);
+                model.addAttribute("show", coursename);
+                cou++;
+
+            } else
+                System.out.println("no subject there to choose");
+        }
+/*        Map<String,Integer> checking = newList.get(2).getEligibility();
+        String coursename=newList.get(2).getname();
+
+        boolean check1=false;
+        boolean check2=false;
+        boolean check3=false;
+
+        for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+            String key = entry.getKey().toString();
+            Integer value = entry.getValue();
+            System.out.println("key, " + key + " value " + value);
+            if ((key.equals(subject1)) && (value < subject1R)) {
+                check1 = true;
+            }
+
+            if ((key.equals(subject2)) && (value < subject2R)) {
+                check2 = true;
+            }
+
+            if ((key.equals(subject3)) && (value < subject3R)) {
+                check3 = true;
+            }
+
+
+        }
+        if(check1==true || check2==true ||  check3==true  ) {
+            System.out.println(coursename);
+
+        }*/
+//        return "redirect:eligible";
+
+//        for (int i=0 ; i<cou ; i++)
+//        {
+//            model.addAttribute("show", coureses[i]);
+//            System.out.println(coureses[i]);
+//        }
+
+        return "showCourses2";
+
+    }
+
+    @RequestMapping(value = "/addstream5", method = RequestMethod.POST)
+    public String addsSubject5(HttpServletRequest request, Model model) {
+
+
+        String subject51 = request.getParameter("subject41");
+        String subject52 = request.getParameter("subject42");
+        String subject53 = request.getParameter("subject43");
+        Integer subject51R = Integer.valueOf(request.getParameter("subject51R"));
+        Integer subject52R = Integer.valueOf(request.getParameter("subject52R"));
+        Integer subject53R = Integer.valueOf(request.getParameter("subject53R"));
+
+        Map<String, Integer> eligi = new HashMap<String, Integer>();
+        eligi.put(subject51, subject51R);
+        eligi.put(subject52, subject52R);
+        eligi.put(subject53, subject53R);
+
+        StoreList sl = new StoreList();
+
+
+        List<UGC_Course> newList = course.findAll();
+        String coureses[] = new String[newList.size()];
+        int cou = 0;
+        for (int i = 0; i < newList.size(); i++) {
+            Map<String, Integer> checking = newList.get(i).getEligibility();
+            String coursename = newList.get(i).getname();
+
+            boolean check1 = false;
+            boolean check2 = false;
+            boolean check3 = false;
+
+            for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+                String key = entry.getKey().toString();
+                Integer value = entry.getValue();
+                System.out.println("key, " + key + " value " + value);
+                if ((key.equals(subject51)) && (value <= subject51R)) {
+                    check1 = true;
+                }
+
+                if ((key.equals(subject52)) && (value <= subject52R)) {
+                    check2 = true;
+                }
+
+                if ((key.equals(subject53)) && (value <= subject53R)) {
+                    check3 = true;
+                }
+
+
+            }
+            if (check1 == true && check2 == true && check3 == true) {
+//                coureses[i] =coursename;
+//                sl.setId(String.valueOf(cou));
+//                sl.setName(coursename);
+//                retrivelist.save(sl);
+                System.out.println(coursename);
+                model.addAttribute("show", coursename);
+                cou++;
+
+            } else
+                System.out.println("no subject there to choose");
+        }
+/*        Map<String,Integer> checking = newList.get(2).getEligibility();
+        String coursename=newList.get(2).getname();
+
+        boolean check1=false;
+        boolean check2=false;
+        boolean check3=false;
+
+        for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+            String key = entry.getKey().toString();
+            Integer value = entry.getValue();
+            System.out.println("key, " + key + " value " + value);
+            if ((key.equals(subject1)) && (value < subject1R)) {
+                check1 = true;
+            }
+
+            if ((key.equals(subject2)) && (value < subject2R)) {
+                check2 = true;
+            }
+
+            if ((key.equals(subject3)) && (value < subject3R)) {
+                check3 = true;
+            }
+
+
+        }
+        if(check1==true || check2==true ||  check3==true  ) {
+            System.out.println(coursename);
+
+        }*/
+//        return "redirect:eligible";
+
+//        for (int i=0 ; i<cou ; i++)
+//        {
+//            model.addAttribute("show", coureses[i]);
+//            System.out.println(coureses[i]);
+//        }
+
+        return "showCourses2";
+
+
+    }
+    @RequestMapping(value = "/addstream6", method = RequestMethod.POST)
+    public String addsSubject6(HttpServletRequest request, Model model) {
+
+
+        String subject61 = request.getParameter("subject41");
+        String subject62 = request.getParameter("subject42");
+        String subject63 = request.getParameter("subject43");
+        Integer subject61R = Integer.valueOf(request.getParameter("subject61R"));
+        Integer subject62R = Integer.valueOf(request.getParameter("subject62R"));
+        Integer subject63R = Integer.valueOf(request.getParameter("subject63R"));
+
+        Map<String, Integer> eligi = new HashMap<String, Integer>();
+        eligi.put(subject61, subject61R);
+        eligi.put(subject62, subject62R);
+        eligi.put(subject63, subject63R);
+
+        StoreList sl = new StoreList();
+
+
+        List<UGC_Course> newList = course.findAll();
+        String coureses[] = new String[newList.size()];
+        int cou = 0;
+        for (int i = 0; i < newList.size(); i++) {
+            Map<String, Integer> checking = newList.get(i).getEligibility();
+            String coursename = newList.get(i).getname();
+
+            boolean check1 = false;
+            boolean check2 = false;
+            boolean check3 = false;
+
+            for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+                String key = entry.getKey().toString();
+                Integer value = entry.getValue();
+                System.out.println("key, " + key + " value " + value);
+                if ((key.equals(subject61)) && (value <= subject61R)) {
+                    check1 = true;
+                }
+
+                if ((key.equals(subject62)) && (value <= subject62R)) {
+                    check2 = true;
+                }
+
+                if ((key.equals(subject63)) && (value <= subject63R)) {
                     check3 = true;
                 }
 
