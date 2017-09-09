@@ -88,12 +88,12 @@ public class EligibleController {
 
             }
             if (check1 == true && check2 == true && check3 == true) {
-                coureses[i] = coursename;
-                sl.setId(String.valueOf(cou));
-                sl.setName(coursename);
-                retrivelist.save(sl);
-//                System.out.println(coursename);
-//                model.addAttribute("show", coursename);
+//                coureses[i] = coursename;
+//                sl.setId(String.valueOf(cou));
+//                sl.setName(coursename);
+//                retrivelist.save(sl);
+                System.out.println(coursename);
+                model.addAttribute("show", coursename);
 //                cou++;
 
             } else
