@@ -174,7 +174,7 @@
 <button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
 
 <div id="id01" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstreamZ1" onsubmit="return validateForm()"
+    <form name="myForm" class="modal-content animate" action="/addstreamZ1" onsubmit="return validateForm1()"
           method="POST">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -333,7 +333,8 @@
     </form>
 </div>
 <div id="id02" class="modal">
-    <form class="modal-content animate" action="/addstreamZ2" method="POST">
+    <form name="myForm" class="modal-content animate" action="/addstreamZ2" onsubmit="return validateForm2()"
+          method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -493,7 +494,8 @@
     </form>
 </div>`
 <div id="id03" class="modal">
-    <form class="modal-content animate" action="/addstreamZ3" method="POST">
+    <form name="myForm" class="modal-content animate" action="/addstreamZ3" onsubmit="return validateForm3()"
+          method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -656,7 +658,8 @@
     </form>
 </div>
 <div id="id04" class="modal">
-    <form class="modal-content animate" action="/addstreamZ4" method="POST">
+    <form name="myForm" class="modal-content animate" action="/addstreamZ4" onsubmit="return validateForm4()"
+          method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -827,7 +830,8 @@
     </form>
 </div>
 <div id="id05" class="modal">
-    <form class="modal-content animate" action="/addstreamZ5" method="POST">
+    <form name="myForm" class="modal-content animate" action="/addstreamZ5" onsubmit="return validateForm5()"
+          method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -1021,7 +1025,8 @@
     </form>
 </div>
 <div id="id06" class="modal">
-    <form class="modal-content animate" action="/addstreamZ6" method="POST">
+    <form name="myForm" class="modal-content animate" action="/addstreamZ6" onsubmit="return validateForm6()"
+          method="POST"  >
         <div class="imgcontainer">
             <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -1199,19 +1204,11 @@
 
     getSubject1();
 
-<<<<<<< HEAD
-                <div class="form-group">
-                    <label class="control-label col-sm-5" for="pwd">Your z-score:</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" id="pwd" placeholder="z-score" name="pwd">
-                    </div>
-                </div>
-=======
     function getSubject1Result() {
         var subject1Result = document.getElementById("subject1Result1").value;
         document.getElementById("subject1R").value = subject1Result;
     }
->>>>>>> 1c42c000de27a7dde3dbf6c55d719a03afa2e005
+
 
     getSubject1Result();
 
@@ -1270,7 +1267,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm1() {
         var x = document.forms["myForm"]["subject1"].value;
         var y = document.forms["myForm"]["subject2"].value;
         var z = document.forms["myForm"]["subject3"].value;
@@ -1351,7 +1348,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm2() {
         var x = document.forms["myForm"]["subject21"].value;
         var y = document.forms["myForm"]["subject22"].value;
         var z = document.forms["myForm"]["subject23"].value;
@@ -1432,7 +1429,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm3() {
         var x = document.forms["myForm"]["subject31"].value;
         var y = document.forms["myForm"]["subject32"].value;
         var z = document.forms["myForm"]["subject33"].value;
@@ -1512,7 +1509,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm4() {
         var x = document.forms["myForm"]["subject41"].value;
         var y = document.forms["myForm"]["subject42"].value;
         var z = document.forms["myForm"]["subject43"].value;
@@ -1593,7 +1590,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm5() {
         var x = document.forms["myForm"]["subject51"].value;
         var y = document.forms["myForm"]["subject52"].value;
         var z = document.forms["myForm"]["subject53"].value;
@@ -1674,7 +1671,7 @@
     }
 
 
-    function validateForm() {
+    function validateForm6() {
         var x = document.forms["myForm"]["subject61"].value;
         var y = document.forms["myForm"]["subject62"].value;
         var z = document.forms["myForm"]["subject63"].value;
