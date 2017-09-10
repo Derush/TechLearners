@@ -1,0 +1,19 @@
+{ 
+    "_id" : ObjectId("59b4514d5f91cc58d647b6b2"), 
+    "name" : "BIOSYSTEMS TECHNOLOGY", 
+    "eligibility" : {
+        "Science for Technology" : NumberInt(1), 
+        "Biosystems Technology" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Home Economics" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Communication and Media Studies" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1), 
+        "Art" : NumberInt(1), 
+        "Business Studies" : NumberInt(1), 
+        "Agricultural Science" : NumberInt(1), 
+        "Accountancy" : NumberInt(1), 
+        "Mathematics" : NumberInt(1)
+    }
+}
