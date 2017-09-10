@@ -1,0 +1,98 @@
+{ 
+    "_id" : ObjectId("59b466105f91cc58d647b6c1"), 
+    "name" : "MANAGEMENT(PUBLIC) SPECIAL", 
+    "eligibility" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1), 
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59b466285f91cc58d647b6c2"), 
+    "name" : "MANAGEMENT", 
+    "eligibility" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1), 
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59b466425f91cc58d647b6c3"), 
+    "name" : "ESTATE MANAGEMENT AND VALUATION", 
+    "eligibility" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1), 
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59b466585f91cc58d647b6c4"), 
+    "name" : "COMMERCE", 
+    "eligibility" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1), 
+        "Agricultural Science" : NumberInt(1), 
+        "Geography" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "German " : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "History" : NumberInt(1), 
+        "Political Science" : NumberInt(1), 
+        "English" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "French" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59b4666a5f91cc58d647b6c5"), 
+    "name" : "BUSINESS INFORMATION SYSTEMS(SPECIAL)", 
+    "eligibility" : {
+        "Business Studies" : NumberInt(1), 
+        "Economics" : NumberInt(1), 
+        "Accounting" : NumberInt(1), 
+        "Business Statistics" : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(1), 
+        "Logic & Scientific Method" : NumberInt(1), 
+        "Physics" : NumberInt(1), 
+        "Information and Communication Technology" : NumberInt(1)
+    }
+}
