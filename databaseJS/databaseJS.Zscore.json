@@ -6,7 +6,7 @@
         "physics" : NumberInt(4), 
         "Chemistry" : NumberInt(4)
     }, 
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":2.1232,
         "GALLE":2.3213,
         "KANDY":2.3423
@@ -40,7 +40,7 @@
         "physics" : NumberInt(1), 
         "Chemistry" : NumberInt(1)
     }, 
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -72,7 +72,7 @@
         "physics" : NumberInt(2), 
         "Chemistry" : NumberInt(1)
     }, 
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -104,7 +104,7 @@
         "physics" : NumberInt(2), 
         "Chemistry" : NumberInt(2)
     }, 
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -142,7 +142,7 @@
         "physics" : 1.0,
         "chemistry" : 1.0,
         "biology" : 1.0
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":2.1232,
         "GALLE":2.3213,
         "KANDY":2.3423
@@ -186,7 +186,7 @@
         "Accountancy" : NumberInt(1),
         "Mathematics" : NumberInt(1)
     },
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -230,7 +230,7 @@
         "Physics" : NumberInt(1),
         "Information and Communication Technology" : NumberInt(1)
     },
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -267,7 +267,7 @@
         "Physics" : NumberInt(1),
         "Information and Communication Technology" : NumberInt(1)
     },
-    "Zscore" : {
+    "zscore" : {
         "COLOMBO":1.1232,
         "GALLE":1.3213,
         "KANDY":1.3423
@@ -289,5 +289,90 @@
         "MONARAGALA" : 1.2536,
         "KEGALLE" : 1.1087,
         "RATNAPURA" : 1.1291
+    }
+}
+
+
+
+
+{
+    "_id" : ObjectId("59b3bd722e5ddc73cc57c770"),
+    "name" : "ENGINEERING TECHNOLOGY",
+    "eligibility" : {
+        "Science for Technology" : NumberInt(1),
+        "Engineering Technology" : NumberInt(1),
+        "Economics" : NumberInt(1),
+        "Geography" : NumberInt(1),
+        "Home Economics" : NumberInt(1),
+        "English" : NumberInt(1),
+        "Communication and Media Studies" : NumberInt(1),
+        "Information and Communication Technology" : NumberInt(1),
+        "Art" : NumberInt(1),
+        "Business Studies" : NumberInt(1),
+        "Agricultural Science" : NumberInt(1),
+        "Accountancy" : NumberInt(1),
+        "Mathematics" : NumberInt(1)
+    },
+    "zscore" : {
+        "COLOMBO":2.1232,
+        "GALLE":2.3213,
+        "KANDY":2.3423
+        "NUWARAELIYA":2.3212
+        "MATARA" : 2.2859,
+        "HAMBANTOTA" : 2.3039,
+        "JAFFNA" : 2.2886,
+        "KILINOCHCHI" : 0.0,
+        "MANNAR" : 2.3196,
+        "MULLAITIVU" : 0.0,
+        "VAVUNIYA" : 2.446,
+        "TRINCOMALEE" : 2.3097,
+        "BATTICALOA" : 2.2951,
+        "AMPARA" : 2.3784,
+        "PUTTALAM" : 2.3288,
+        "KURUNEGALA" : 2.2988,
+        "ANURADHAPURA" : 2.3563,
+        "POLONNARUWA" : 0.0,
+        "BADULLA" : 2.3328,
+        "MONARAGALA" : 2.3536,
+        "KEGALLE" : 2.3087,
+        "RATNAPURA" : 2.3291
+
+    }
+}
+
+
+
+
+
+{
+    "_id" : ObjectId("59b3c0a0e80b04fbce77b88d"),
+    "name" : "PHYSICAL SCIENCE",
+    "eligibility" : {
+        "Combined Mathematics" : NumberInt(1),
+        "physics" : NumberInt(1),
+        "Chemistry" : NumberInt(1)
+    },
+    "zscore" : {
+        "COLOMBO":1.1232,
+        "GALLE":1.3213,
+        "KANDY":1.3423
+        "MATARA" : 0.2859,
+        "HAMBANTOTA" : 0.3039,
+        "JAFFNA" : 1.2886,
+        "KILINOCHCHI" : 0.946,
+        "MANNAR" : 1.3196,
+        "MULLAITIVU" : 0.2343,
+        "VAVUNIHYA" : 1.446,
+        "TRINNCOMALEE" : 1.3097,
+        "BATTICALOA" : 0.2951,
+        "AMPARA" : 1.3784,
+        "PUTTALAM" : 1.3288,
+        "KURUNEGALA" : 1.2988,
+        "ANURADHAPURA" : 2.3563,
+        "POLONNARUWA" : 0.9213,
+        "BADULLA" : 1.3328,
+        "MONARAGALA" : 0.3536,
+        "KEGALLE" : 1.3087,
+        "RATNAPURA" : 1.3291
     }
 }
