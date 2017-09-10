@@ -13,7 +13,7 @@ public class ShowCoursesController {
 
     @RequestMapping("/showCourses")
     public String coursesShow(Model model) {
-         model.addAttribute("show", retrivelist.findAll());
+//         model.addAttribute("show", retrivelist.findAll());
 
         return "showCourses";
     }
