@@ -238,7 +238,7 @@ public class EligibleController {
 //            System.out.println(coureses[i]);
 //        }
 
-        return "showCourses2";
+        return "showCourses";
 
 
     }
@@ -340,7 +340,7 @@ public class EligibleController {
 //            System.out.println(coureses[i]);
 //        }
 
-        return "showCourses2";
+        return "showCourses";
 
 
     }
@@ -442,7 +442,7 @@ public class EligibleController {
 //            System.out.println(coureses[i]);
 //        }
 
-        return "showCourses2";
+        return "showCourses";
 
     }
 
@@ -450,9 +450,9 @@ public class EligibleController {
     public String addsSubject5(HttpServletRequest request, Model model) {
 
 
-        String subject51 = request.getParameter("subject41");
-        String subject52 = request.getParameter("subject42");
-        String subject53 = request.getParameter("subject43");
+        String subject51 = request.getParameter("subject5   1");
+        String subject52 = request.getParameter("subject52");
+        String subject53 = request.getParameter("subject53");
         Integer subject51R = Integer.valueOf(request.getParameter("subject51R"));
         Integer subject52R = Integer.valueOf(request.getParameter("subject52R"));
         Integer subject53R = Integer.valueOf(request.getParameter("subject53R"));
@@ -543,7 +543,7 @@ public class EligibleController {
 //            System.out.println(coureses[i]);
 //        }
 
-        return "showCourses2";
+        return "showCourses";
 
 
     }
@@ -551,9 +551,9 @@ public class EligibleController {
     public String addsSubject6(HttpServletRequest request, Model model) {
 
 
-        String subject61 = request.getParameter("subject41");
-        String subject62 = request.getParameter("subject42");
-        String subject63 = request.getParameter("subject43");
+        String subject61 = request.getParameter("subject61");
+        String subject62 = request.getParameter("subject62");
+        String subject63 = request.getParameter("subject63");
         Integer subject61R = Integer.valueOf(request.getParameter("subject61R"));
         Integer subject62R = Integer.valueOf(request.getParameter("subject62R"));
         Integer subject63R = Integer.valueOf(request.getParameter("subject63R"));
@@ -644,7 +644,7 @@ public class EligibleController {
 //            System.out.println(coureses[i]);
 //        }
 
-        return "showCourses2";
+        return "showCourses";
 
 
     }
