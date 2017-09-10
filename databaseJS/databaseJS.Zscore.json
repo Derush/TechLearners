@@ -258,11 +258,6 @@
     "_id" : ObjectId("59b3c4b0e90789ab9ecb08de"),
     "name" : "BUSINESS INFORMATION SYSTEMS(SPECIAL)",
     "eligibility" : {
-        "Combined Mathematics" : NumberInt(1),
-        "physics" : NumberInt(2),
-        "Chemistry" : NumberInt(2)
-    },
-    "Zscore" : {
         "Business Studies" : NumberInt(1),
         "Economics" : NumberInt(1),
         "Accounting" : NumberInt(1),
@@ -271,5 +266,28 @@
         "Logic & Scientific Method" : NumberInt(1),
         "Physics" : NumberInt(1),
         "Information and Communication Technology" : NumberInt(1)
+    },
+    "Zscore" : {
+        "COLOMBO":1.1232,
+        "GALLE":1.3213,
+        "KANDY":1.3423
+        "MATARA" : 1.2859,
+        "HAMBANTOTA" : 1.3039,
+        "JAFFNA" : 1.2886,
+        "KILINOCHCHI" : 1.0,
+        "MANNAR" : 1.3196,
+        "MULLAITIVU" : 0.9458,
+        "VAVUNIHYA" : 1.446,
+        "TRINNCOMALEE" : 1.3097,
+        "BATTICALOA" : 1.2951,
+        "AMPARA" : 1.3784,
+        "PUTTALAM" : 0.9288,
+        "KURUNEGALA" : 1.2988,
+        "ANURADHAPURA" : 1.3563,
+        "POLONNARUWA" : 0.8564,
+        "BADULLA" : 1.2328,
+        "MONARAGALA" : 1.2536,
+        "KEGALLE" : 1.1087,
+        "RATNAPURA" : 1.1291
     }
 }
