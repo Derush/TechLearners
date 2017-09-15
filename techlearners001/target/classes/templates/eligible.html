@@ -691,7 +691,6 @@
                                                     <option value="Logic and Scientific method">Logic and Scientific method</option>
                                                     <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
                                                     <option value="Accounting">Accounting </option>
-
                                                     <option value="Business Statistics">Business Statistics</option>
                                                     <option value="Agriculture ">Agriculture </option>
                                                     <option value="mathematics">mathematics</option>
@@ -718,9 +717,7 @@
                                                 <option value="Geography">Geography</option>
                                                 <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
                                                 <option value="Geography">Geography</option>
-
                                                 <option value="Political Sciences">Political Sciences</option>
-
                                                 <option value="Accounting">Accounting </option>
                                                 <option value="Home Economics">Business Statistics</option>
                                                 <option value="Agriculture ">Agriculture </option>
@@ -752,8 +749,6 @@
                                                 <option value="Accounting">Accounting </option>
                                                 <option value="Home Economics">Business Statistics</option>
                                                 <option value="Agriculture">Agriculture </option>
-
-
                                                 <option value="Buddhism or Buddhist Civilization">Buddhism or Buddhist Civilization</option>
                                                 <option value="Christianity">Christianity</option>
                                                 <option value="Christian Culture">Christian Culture</option>
@@ -926,12 +921,27 @@
 </div>
 <script>
 
-    function getSubject1() {
+    function getSubject1()
+    {
         var subject1sel = document.getElementById("list1").value;
         document.getElementById("subject1").value = subject1sel;
+        var op = document.getElementById("list2");
+        for (var i = 0; i < op.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (op[i].value ==subject1sel )
+                ? op[i].disabled = true
+                : op[i].disabled = false ;
+        }
+        var opr3 = document.getElementById("list3");
+        for (var i = 0; i < opr3.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (opr3[i].value ==subject1sel )
+                ? opr3[i].disabled = true
+                : opr3[i].disabled = false ;
+        }
     }
-
     getSubject1();
+
 
     function getSubject1Result() {
         var subject1Result = document.getElementById("subject1Result1").value;
@@ -945,20 +955,48 @@
         document.getElementById("subject2").value = subject2sel;
     }
 
-    getSubject2();
+    function getSubject2()
+    {
+        var subject2sel = document.getElementById("list2").value;
+        var subject1sel = document.getElementById("list1").value;
+        document.getElementById("subject2").value = subject2sel;
+        var op2 = document.getElementById("list3");
+        for (var i = 0; i < op2.length; i++) {
+            // lowercase comparison for case-insensitivity
+            ((op2[i].value ==subject2sel )||(op2[i].value ==subject1sel ))
+                ? op2[i].disabled = true
+                : op2[i].disabled = false ;
+        }
+        var opR = document.getElementById("list1");
+        for (var i = 0; i < opR.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (opR[i].value ==subject2sel )
+                ? opR[i].disabled = true
+                : opR[i].disabled = false ;
+        }
 
 
-    function getSubject2Result() {
-        var subject2Result = document.getElementById("subject2Result").value;
-        document.getElementById("subject2R").value = subject2Result;
+
     }
-
-    getSubject2Result();
-
+    getSubject2();
 
     function getSubject3() {
         var subject3sel = document.getElementById("list3").value;
         document.getElementById("subject3").value = subject3sel;
+        var op3R = document.getElementById("list1");
+        for (var i = 0; i < op3R.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (  (op3R[i].value ==subject3sel  ))
+                ? op3R[i].disabled = true
+                : op3R[i].disabled = false ;
+        }
+        var opR2 = document.getElementById("list2");
+        for (var i = 0; i < opR2.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (  (opR2[i].value ==subject3sel  ))
+                ? opR2[i].disabled = true
+                : opR2[i].disabled = false ;
+        }
     }
 
     getSubject3();
@@ -967,6 +1005,8 @@
     function getSubject3Result() {
         var subject3Result = document.getElementById("subject3Result").value;
         document.getElementById("subject3R").value = subject3Result;
+
+
     }
 
     getSubject3Result();
@@ -989,17 +1029,6 @@
         }
     }
 
-
-    function validateForm1() {
-        var x = document.forms["myForm"]["subject1"].value;
-        var y = document.forms["myForm"]["subject2"].value;
-        var z = document.forms["myForm"]["subject3"].value;
-
-        if (((x == y) || (y == z) || (x == z))) {
-            alert("There are same subjects in the form");
-            return false;
-        }
-    }
 
     <!-- script for pop up -->
 
@@ -1067,15 +1096,7 @@
     }
 
 
-    function validateForm2() {
-        var x = document.forms["myForm"]["subject21"].value;
-        var y = document.forms["myForm"]["subject22"].value;
-        var z = document.forms["myForm"]["subject23"].value;
-        if (((x == y) || (y == z) || (x == z))) {
-            alert("There are same subjects in the form");
-            return false;
-        }
-    }
+
 
     <!-- script for pop up -->
 
@@ -1143,15 +1164,8 @@
     }
 
 
-    function validateForm3() {
-        var x = document.forms["myForm"]["subject31"].value;
-        var y = document.forms["myForm"]["subject32"].value;
-        var z = document.forms["myForm"]["subject33"].value;
-        if (((x == y) || (y == z) || (x == z))) {
-            alert("There are same subjects in the form");
-            return false;
-        }
-    }
+
+
 
     <!-- script for pop up -->
 
