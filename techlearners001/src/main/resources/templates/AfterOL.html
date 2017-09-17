@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DreamOn Home</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav>
+
+
+    <div class="navbar navbar-customs">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">DreamOn</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Contact</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+
+</nav>
+
+<form name="myForm" action="/addstream1" onsubmit="return validateForm1()"
+      method="POST">
+
+    <div class="container">
+        <div id="page-wrapper1">
+            <div id="page-inner1">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+                            <div class="col-sm-5">
+
+                                <table class="table table-striped">
+
+                                    <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Grade</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+
+                                        <td>
+                                        <input type="text" id="subject1" name="subject1" value="Maths">
+                                        <td><select id="subject1Result1" class="form-control2"
+                                                    onchange="getSubject1Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject1R" name="subject1R"/>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><input type="text" id="subject2" name="subject2" value="Science"></td>
+
+                                        <td><select id="subject2Result" class="form-control2"
+                                                    onchange="getSubject2Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject2R" name="subject2R"/>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><input type="text" id="subject3" name="subject3" value="English"></td>
+
+                                        <td><select id="subject3Result" class="form-control2"
+                                                    onchange="getSubject3Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject3R" name="subject3R"/>
+
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><input type="text" id="subject4" name="subject4" value="History"></td>
+
+                                        <td><select id="subject4Result" class="form-control2"
+                                                    onchange="getSubject4Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject4R" name="subject4R"/>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><select id="list5" onchange="getSubject5();">
+                                            <option value="NONE">First Language</option>
+                                            <option value="Combined Mathematics">Tamil Language and Literature</option>
+                                            <option value="physics">Sinhala Language and Literature</option>
+
+                                        </select></td>
+                                        <input type="hidden" id="subject5" name="subject5"/>
+                                        <td><select id="subject5Result" class="form-control2"
+                                                    onchange="getSubject5Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject5R" name="subject5R"/>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><select id="list9" onchange="getSubject9();">
+                                            <option value="NONE">Religion</option>
+                                            <option value="Combined Mathematics">Buddhism</option>
+                                            <option value="physics">Hinduism</option>
+                                            <option value="physics">Christianity</option>
+                                            <option value="physics">Islam</option>
+
+                                        </select></td>
+                                        <input type="hidden" id="subject5" name="subject5"/>
+                                        <td><select id="subject5Result" class="form-control2"
+                                                    onchange="getSubject5Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject5R" name="subject5R"/>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><select id="list6" onchange="getSubject6();">
+                                            <option value="NONE">Basket 1</option>
+                                            <option value="Combined Mathematics">basket-1-1</option>
+                                            <option value="physics">basket-1-2</option>
+                                            <option value="Chemistry">basket-1-3</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject6" name="subject3"/>
+                                        <td><select id="subject6Result" class="form-control2"
+                                                    onchange="getSubject6Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject6R" name="subject6R"/>
+
+                                    </tr>
+                                    <tr>
+                                        <td><select id="list7" onchange="getSubject7();">
+                                            <option value="NONE">Basket 2</option>
+                                            <option value="Combined Mathematics">basket-2-1</option>
+                                            <option value="physics">basket-2-2</option>
+                                            <option value="Chemistry">basket-2-3</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject7" name="subject7"/>
+                                        <td><select id="subject7Result" class="form-control2"
+                                                    onchange="getSubject7Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject7R" name="subject7R"/>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><select id="list8" onchange="getSubject8();">
+                                            <option value="NONE">Basket 3</option>
+                                            <option value="Combined Mathematics">basket-3-1</option>
+                                            <option value="physics">basket-3-2</option>
+                                            <option value="Chemistry">basket-3-3</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject8" name="subject8"/>
+                                        <td><select id="subject8Result" class="form-control2"
+                                                    onchange="getSubject8Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject8R" name="subject8R"/>
+
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-6 col-sm-2">
+                                <input type="submit"/>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <hr/>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+</form>
+</div>
+</body>
+</html>

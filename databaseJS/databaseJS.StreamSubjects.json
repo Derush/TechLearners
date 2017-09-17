@@ -1,0 +1,145 @@
+{ 
+    "_id" : 1.0, 
+    "name" : "PHYSICAL SCIENCE", 
+    "combo1" : {
+        "Combined Mathematics" : 1.0, 
+        "physics" : 1.0, 
+        "Chemistry" : 1.0
+    }
+}
+{ 
+    "_id" : 2.0, 
+    "name" : "BIOLOGICAL SCIENCE", 
+    "combo1" : {
+        "Biology" : 1.0, 
+        "physics" : 1.0, 
+        "Chemistry" : 1.0
+    }
+}
+{ 
+    "_id" : 3.0, 
+    "name" : "COMMERCE", 
+    "combo1" : {
+        "Accounting" : 1.0, 
+        "Business Studies" : 1.0, 
+        "Economics" : 1.0
+    }, 
+    "combo2" : {
+        "Agricultural Science" : 1.0, 
+        "Business Statistics " : 1.0, 
+        "Geography" : 1.0, 
+        "German" : 1.0, 
+        "French" : 1.0, 
+        "Physics" : 1.0, 
+        "Logic & Scientific Method" : 1.0, 
+        "Information & Communication Technology" : 1.0, 
+        "English" : 1.0, 
+        "Political Science" : 1.0, 
+        "Combined Mathematics" : 1.0, 
+        "History" : 1.0
+    }
+}
+{ 
+    "_id" : 4.0, 
+    "name" : "ARTS", 
+    "combo1" : {
+        "Economics" : 1.0, 
+        "Geography" : 1.0, 
+        "History" : 1.0, 
+        "Home Economics" : 1.0, 
+        "Agricultural Science" : 1.0, 
+        "Mathematics" : 1.0, 
+        "Combined Mathematics" : 1.0, 
+        "Communication & Media Studies" : 1.0, 
+        "Information & Communication Technology" : 1.0, 
+        "Accounting" : 1.0, 
+        "Business Statistics" : 1.0, 
+        "Political Science" : 1.0, 
+        "Logic & Scientific Method" : 1.0, 
+        "Civil Technology" : 1.0, 
+        "Electrical, Electronic and Information Technology" : 1.0, 
+        "Agro Technology" : 1.0, 
+        "Mechanical Technology" : 1.0, 
+        "Food Technology" : 1.0, 
+        "Bio-Resource Technology" : 1.0, 
+        "Sinhala" : 1.0, 
+        "Tamil " : 1.0, 
+        "Arabic" : 1.0, 
+        "Pali" : 1.0, 
+        "Sanskrit" : 1.0, 
+        "Buddhism" : 1.0, 
+        "Hinduism" : 1.0, 
+        "Christianity" : 1.0, 
+        "English" : 1.0, 
+        "Islam" : 1.0, 
+        "Buddhist Civilization" : 1.0, 
+        "Hindu Civilization" : 1.0, 
+        "Christian Civilization" : 1.0, 
+        "Islamic Civilization " : 1.0, 
+        "Greek & Roman Civilization" : 1.0, 
+        "Art" : 1.0, 
+        "Dancing" : 1.0, 
+        "Music" : 1.0, 
+        "Drama & Theatre" : 1.0
+    }
+}
+{ 
+    "_id" : 5.0, 
+    "name" : "ENGINEERING TECHNOLOGY", 
+    "combo1" : {
+        "Science for Technology" : 1.0
+    }, 
+    "combo2" : {
+        "Engineering Technology" : 1.0
+    }, 
+    "combo3" : {
+        "Economics" : 1.0, 
+        "Geography" : 1.0, 
+        "Home Economics" : 1.0, 
+        "English" : 1.0, 
+        "Communication and Media Studies" : 1.0, 
+        "Art" : 1.0, 
+        "Information & Communication Technology" : 1.0, 
+        "Accountancy" : 1.0, 
+        "Agricultural Science" : 1.0, 
+        "Business Studies" : 1.0, 
+        "Mathematics" : 1.0
+    }
+}
+{ 
+    "_id" : 6.0, 
+    "name" : "ENGINEERING TECHNOLOGY", 
+    "combo1" : {
+        "Science for Technology" : 1.0
+    }, 
+    "combo2" : {
+        "Biosystems Technology" : 1.0
+    }, 
+    "combo3" : {
+        "Economics" : 1.0, 
+        "Geography" : 1.0, 
+        "Home Economics" : 1.0, 
+        "English" : 1.0, 
+        "Communication and Media Studies" : 1.0, 
+        "Art" : 1.0, 
+        "Information & Communication Technology" : 1.0, 
+        "Accountancy" : 1.0, 
+        "Agricultural Science" : 1.0, 
+        "Business Studies" : 1.0, 
+        "Mathematics" : 1.0
+    }
+}
+{ 
+    "_id" : 7.0, 
+    "name" : "Information Communication Technology", 
+    "combo1" : {
+        "Science for Technology" : 1.0, 
+        "Information & Communication Technology" : 1.0
+    }, 
+    "combo2" : {
+        "Biosystems Technology" : 1.0
+    }, 
+    "combo3" : {
+        "Engineering Technology" : 1.0
+    }
+}
