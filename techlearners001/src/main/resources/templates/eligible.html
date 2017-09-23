@@ -56,14 +56,14 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <form class="form-horizontal" >
+                    <form class="form-horizontal"action="/addstream" method="POST"  >
                         <div class="form-group">
                             <label class="control-label col-sm-5">Your Stream:</label>
                             <div class="col-sm-5">
-                                <form action="/addZscore" method="POST">
-                                <input type="text" class="form-control" id="stream" placeholder="Stream" name="stream">
-                                    <input type="submit"/>
-                                </form>
+
+                                <input type="text" id="stream" name="stream"/><br/>
+
+
                             </div>
                         </div>
 
@@ -86,48 +86,57 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><select id="subject1" class="form-control2">
-                                            <option>Maths</option>
-                                            <option>Physics</option>
-                                            <option>Chemistry</option>
-
+                                        <td>
+                                            <select id="list1" onchange="getSubject1();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                        <input type="hidden" id="subject1" name="subject1"/>
+                                        <td><select id="subject1Result1" class="form-control2" onchange="getSubject1Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
                                         </select></td>
-                                        <td><select id="subject1Result1" class="form-control2">
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>S</option>
+                                        <input type="hidden" id="subject1R" name="subject1R"/>
+                                    </tr>
+                                    <tr>
+                                        <td><select id="list2" onchange="getSubject2();">
+                                            <option value="NONE">--select--</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="Physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
                                         </select></td>
+                                        <input type="hidden" id="subject2" name="subject2"/>
+                                        <td><select id="subject2Result" class="form-control2" onchange="getSubject2Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject2R" name="subject2R"/>
 
                                     </tr>
                                     <tr>
-                                        <td><select id="subject2" class="form-control2">
-                                            <option>Maths</option>
-                                            <option>Physics</option>
-                                            <option>Chemistry</option>
-
+                                        <td><select id="list3" onchange="getSubject3();">
+                                            <option value="NONE">--select--</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="Physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
                                         </select></td>
-                                        <td><select id="subject2Result2" class="form-control2">
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>S</option>
+                                        <input type="hidden" id="subject3" name="subject3"/>
+                                        <td><select id="subject3Result" class="form-control2" onchange="getSubject3Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
                                         </select></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><select id="subject3" class="form-control2">
-                                            <option>Maths</option>
-                                            <option>Physics</option>
-                                            <option>Chemistry</option>
-
-                                        </select></td>
-                                        <td><select id="subject3Result3" class="form-control2">
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>S</option>
-                                        </select></td>
+                                        <input type="hidden" id="subject3R" name="subject3R"/>
 
                                     </tr>
                                     </tbody>
@@ -144,7 +153,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-6 col-sm-2">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <input type="submit"/>
                             </div>
                         </div>
                     </form>
@@ -158,6 +167,59 @@
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
+<script>
+
+    function getSubject1()
+    {
+        var subject1sel = document.getElementById("list1").value;
+        document.getElementById("subject1").value = subject1sel;
+    }
+    getSubject1();
+
+    function getSubject1Result()
+    {
+        var subject1Result = document.getElementById("subject1Result1").value;
+        document.getElementById("subject1R").value =subject1Result ;
+    }
+    getSubject1Result();
+
+    function getSubject2()
+    {
+        var subject2sel = document.getElementById("list2").value;
+        document.getElementById("subject2").value = subject2sel;
+    }
+    getSubject2();
+
+
+
+    function getSubject2Result()
+    {
+        var subject2Result = document.getElementById("subject2Result").value;
+        document.getElementById("subject2R").value =subject2Result ;
+    }
+    getSubject2Result();
+
+
+    function getSubject3()
+    {
+        var subject3sel = document.getElementById("list3").value;
+        document.getElementById("subject3").value = subject3sel;
+    }
+    getSubject3();
+
+
+
+    function getSubject3Result()
+    {
+        var subject3Result = document.getElementById("subject3Result").value;
+        document.getElementById("subject3R").value =subject3Result ;
+    }
+    getSubject3Result();
+
+
+
+
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

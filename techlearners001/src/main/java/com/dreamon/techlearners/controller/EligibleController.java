@@ -1,10 +1,17 @@
 package com.dreamon.techlearners.controller;
-
-import com.dreamon.techlearners.repository.UGCRepository;
+import com.dreamon.techlearners.repository.eligibleRepository;
+import com.dreamon.techlearners.model.eligible;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+
+
 
 import java.util.Map;
 
@@ -12,18 +19,18 @@ import java.util.Map;
 public class EligibleController {
 
     @Autowired
-    UGCRepository ugcRepository;
+    eligibleRepository eligible;
 
     @RequestMapping("/eligible")
     public  String pageform(Model model)
     {
-        ugcRepository.findAll();
+//        ugcRepository.findAll();
         return "eligible";
     }
-    @RequestMapping(value = "/addZscore", method = RequestMethod.POST)
-    public String addCar(@ModelAttribute ZSCORE z) {
-        ZscoreRepository.save(z);
-        return "redirect:Zscore";
+    @RequestMapping(value = "/addstream", method = RequestMethod.POST)
+    public String addCar(@ModelAttribute eligible z) {
+        eligible.save(z);
+        return "redirect:eligible";
     }
 
 
