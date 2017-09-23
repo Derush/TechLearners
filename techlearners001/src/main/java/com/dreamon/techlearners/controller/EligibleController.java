@@ -20,6 +20,12 @@ public class EligibleController {
         ugcRepository.findAll();
         return "eligible";
     }
+    @RequestMapping(value = "/addZscore", method = RequestMethod.POST)
+    public String addCar(@ModelAttribute ZSCORE z) {
+        ZscoreRepository.save(z);
+        return "redirect:Zscore";
+    }
+
 
 
 
