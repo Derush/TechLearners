@@ -56,12 +56,21 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <form class="form-horizontal"action="/addstream" method="POST"  >
+                    <form class="form-horizontal" action="/addstream" method="POST"  >
                         <div class="form-group">
                             <label class="control-label col-sm-5">Your Stream:</label>
                             <div class="col-sm-5">
 
-                                <input type="text" id="stream" name="stream"/><br/>
+
+                                <select id="list" onchange="getStream();">
+                                    <option value="NONE">--select--</option>
+                                    <option value="PhysicalScience">Physical Science</option>
+                                    <option value="BioScience">Bio Science</option>
+                                    <option value="Commerce">Commerce</option>
+                                    <option value="Technology">Technology</option>
+                                </select>
+                                <input type="hidden" id="stream" name="stream"/>
+
 
 
                             </div>
@@ -215,6 +224,14 @@
         document.getElementById("subject3R").value =subject3Result ;
     }
     getSubject3Result();
+
+
+    function getStream()
+    {
+        var streamval = document.getElementById("list").value;
+        document.getElementById("stream").value =streamval ;
+    }
+    getStream();
 
 
 

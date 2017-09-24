@@ -2,7 +2,7 @@ package com.dreamon.techlearners.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Eligible")
+@Document(collection = "Eli")
 public class eligible {
 
     private String id;
@@ -12,8 +12,9 @@ public class eligible {
     private String subject1R;
     private String subject2R;
     private String subject3R;
-
     private String stream;
+
+
     public eligible() {}
 
     public String getId() {
@@ -24,12 +25,7 @@ public class eligible {
         this.id = id;
     }
 
-    public String getstream() {
-        return stream;
-    }
-    public void setstream(String stream) {
-        this.stream = stream;
-    }
+
 
 
     public String getsubject1() {
@@ -80,5 +76,11 @@ public class eligible {
     }
     public void setsubject3R(String subject3R) {
         this.subject3R = subject3R;
+    }
+    public String getstream() {
+        return stream;
+    }
+    public void setstream(String stream) {
+        this.stream = stream;
     }
 }
