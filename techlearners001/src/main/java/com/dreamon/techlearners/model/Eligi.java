@@ -19,11 +19,11 @@ public class Eligi {
         this.id = id;
     }
 
-    public Map<String, Integer> getEli1() {
+    public Map<String, Integer> geteli1() {
         return eli1;
     }
 
-    public void setEli1(Map<String, Integer> eli1) {
+    public void seteli1(Map<String, Integer> eli1) {
         this.eli1 = eli1;
     }
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 @Document(collection = "Eli")
 
 public class eligible {
-    private Map<String, Double> eligibility = new HashMap();
+
     private String id;
     private String subject1;
     private String subject2;
@@ -17,7 +17,7 @@ public class eligible {
     private Integer subject3R;
 
     private String stream;
-
+    private Map<String, Integer> eligi = new HashMap();
 
 
     public Integer getSubject1R() {
@@ -99,13 +99,10 @@ public class eligible {
         this.stream = stream;
     }
 
-    public Map<String, Double> getEligibility() {
-        return eligibility;
-    }
 
-    public void setEligibility(Map<String, Double> eligibility) {
-        this.eligibility = eligibility;
-    }
+
+
+
 
 
 
