@@ -1,6 +1,6 @@
 { 
-    "_id" : ObjectId("59d34572fd3cae61c0cb434e"), 
-    "name" : "Bio Systems Technology", 
+    "_id" : ObjectId("59d34732fd3cae61c0cb434f"), 
+    "name" : "Technology", 
     "eligibility" : {
         "Maths" : NumberInt(1), 
         "Science" : NumberInt(1), 
