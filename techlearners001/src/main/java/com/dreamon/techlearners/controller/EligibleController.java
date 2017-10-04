@@ -46,18 +46,19 @@ public class EligibleController {
         List<option> optionList = getoption.findAll();
         int count=0;
         String a=optionList.get(0).getOption3();
+
         for(int j=0;j<a.length();j++)
         {
             if(a.charAt(j)==',')
             {
-               count++;
+                count++;
             }
         }
         for(int i=0;i<=count;i++)
         {
 
-                String first_word = a.split(",")[i];
-                 if(!first_word.equals("English Language")) {
+            String first_word = a.split(",")[i];
+            if(!first_word.equals("English Language")) {
                 System.out.println(first_word);
             }
         }
