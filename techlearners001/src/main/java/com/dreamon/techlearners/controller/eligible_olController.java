@@ -119,6 +119,10 @@ public String Qual(HttpServletRequest request, Model model)
     {
    System.out.print("your are qualified");
     }
+    else
+    {
+        System.out.print("you are not qualified");
+    }
 
 
 
