@@ -348,7 +348,7 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <select id="list1" onchange="getSubject1();">
+                                            <select id="list7" onchange="getSubject7();">
                                                 <option value="NONE">--select--</option>
                                                 <option value="Combined Mathematics">Combined Mathematics</option>
                                                 <option value="physics">Science</option>
@@ -357,8 +357,8 @@
                                                 <option value="Chemistry">Chemistry</option>
                                                 <option value="Chemistry">Chemistry</option>
                                             </select></td>
-                                        <input type="hidden" id="subject1" name="subject1"/>
-                                        <td><select id="subject1Result1" class="form-control2"
+                                        <input type="hidden" id="subject7" name="subject1"/>
+                                        <td><select id="subject1Result7" class="form-control2"
                                                     onchange="getSubject1Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
@@ -366,10 +366,10 @@
                                             <option value=2>C</option>
                                             <option value=1>S</option>
                                         </select></td>
-                                        <input type="hidden" id="subject1R" name="subject1R"/>
+                                        <input type="hidden" id="subject7R" name="subject7R"/>
                                     </tr>
                                     <tr>
-                                        <td><select id="list2" onchange="getSubject2();">
+                                        <td><select id="list8" onchange="getSubject8();">
                                             <option value="NONE">--select--</option>
                                             <option value="Combined Mathematics">Combined Mathematics</option>
                                             <option value="physics">Physics</option>
@@ -378,8 +378,8 @@
                                             <option value="physics">Physics</option>
                                             <option value="Chemistry">Chemistry</option>
                                         </select></td>
-                                        <input type="hidden" id="subject2" name="subject2"/>
-                                        <td><select id="subject2Result" class="form-control2"
+                                        <input type="hidden" id="subject8" name="subject2"/>
+                                        <td><select id="subject8Result" class="form-control2"
                                                     onchange="getSubject2Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
@@ -387,11 +387,11 @@
                                             <option value=2>C</option>
                                             <option value=1>S</option>
                                         </select></td>
-                                        <input type="hidden" id="subject2R" name="subject2R"/>
+                                        <input type="hidden" id="subject8R" name="subject8R"/>
 
                                     </tr>
                                     <tr>
-                                        <td><select id="list3" onchange="getSubject3();">
+                                        <td><select id="list9" onchange="getSubject9();">
                                             <option value="NONE">--select--</option>
                                             <option value="Combined Mathematics">Combined Mathematics</option>
                                             <option value="physics">Physics</option>
@@ -400,8 +400,8 @@
                                             <option value="physics">Physics</option>
                                             <option value="Chemistry">Chemistry</option>
                                         </select></td>
-                                        <input type="hidden" id="subject3" name="subject3"/>
-                                        <td><select id="subject3Result" class="form-control2"
+                                        <input type="hidden" id="subject9" name="subject9"/>
+                                        <td><select id="subject9Result" class="form-control2"
                                                     onchange="getSubject3Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
@@ -409,7 +409,7 @@
                                             <option value=2>C</option>
                                             <option value=1>S</option>
                                         </select></td>
-                                        <input type="hidden" id="subject3R" name="subject3R"/>
+                                        <input type="hidden" id="subject9R" name="subject9R"/>
 
                                     </tr>
 
@@ -455,60 +455,39 @@
     {
         var subject1sel = document.getElementById("list1").value;
         document.getElementById("subject1").value = subject1sel;
-        var op = document.getElementById("list2");
-        for (var i = 0; i < op.length; i++) {
-            // lowercase comparison for case-insensitivity
-            (op[i].value ==subject1sel )
-                ? op[i].disabled = true
-                : op[i].disabled = false ;
-        }
-        var opr3 = document.getElementById("list3");
-        for (var i = 0; i < opr3.length; i++) {
-            // lowercase comparison for case-insensitivity
-            (opr3[i].value ==subject1sel )
-                ? opr3[i].disabled = true
-                : opr3[i].disabled = false ;
-        }
-    }
-    getSubject1();
+            getSubject1();
 
 
     function getSubject1Result() {
         var subject1Result = document.getElementById("subject1Result1").value;
         document.getElementById("subject1R").value = subject1Result;
     }
-
     getSubject1Result();
 
-    function getSubject2() {
-        var subject2sel = document.getElementById("list2").value;
-        document.getElementById("subject2").value = subject2sel;
-    }
-
-    function getSubject2()
-    {
-        var subject2sel = document.getElementById("list2").value;
-        var subject1sel = document.getElementById("list1").value;
-        document.getElementById("subject2").value = subject2sel;
-        var op2 = document.getElementById("list3");
-        for (var i = 0; i < op2.length; i++) {
-            // lowercase comparison for case-insensitivity
-            ((op2[i].value ==subject2sel )||(op2[i].value ==subject1sel ))
-                ? op2[i].disabled = true
-                : op2[i].disabled = false ;
-        }
-        var opR = document.getElementById("list1");
-        for (var i = 0; i < opR.length; i++) {
-            // lowercase comparison for case-insensitivity
-            (opR[i].value ==subject2sel )
-                ? opR[i].disabled = true
-                : opR[i].disabled = false ;
-        }
 
 
 
-    }
-    getSubject2();
+        function getSubject2()
+        {
+            var subject2sel = document.getElementById("list2").value;
+            document.getElementById("subject2").value = subject1sel;
+            getSubject2();
+
+
+            function getSubject1Result() {
+                var subject2Result = document.getElementById("subject1Result2").value;
+                document.getElementById("subject2R").value = subject2Result;
+            }
+            getSubject2Result();
+
+
+
+
+
+
+
+
+
 
     function getSubject3() {
         var subject3sel = document.getElementById("list3").value;
@@ -522,14 +501,106 @@
     function getSubject3Result() {
         var subject3Result = document.getElementById("subject3Result").value;
         document.getElementById("subject3R").value = subject3Result;
+    }    getSubject3Result();
 
 
-    }
+        function getSubject4() {
+            var subject4sel = document.getElementById("list4").value;
+            document.getElementById("subject4").value = subject4sel;
 
-    getSubject3Result();
+        }
+
+        getSubject4();
 
 
-    function getStream() {
+        function getSubject4Result() {
+            var subject4Result = document.getElementById("subject4Result").value;
+            document.getElementById("subject4R").value = subject4Result;
+
+
+        }
+
+        getSubject4Result();
+
+
+
+            function getSubject5()
+            {
+                var subject5sel = document.getElementById("list5").value;
+                document.getElementById("subject5").value = subject5sel;
+                getSubject5();
+
+
+                function getSubject5Result() {
+                    var subject5Result = document.getElementById("subject1Result2").value;
+                    document.getElementById("subject5R").value = subject5Result;
+                }
+                getSubject5Result();
+
+
+
+                function getSubject6()
+                {
+                    var subject6sel = document.getElementById("list6").value;
+                    document.getElementById("subject6").value = subject6sel;
+                    getSubject6();
+
+
+                    function getSubject6Result() {
+                        var subject6Result = document.getElementById("subject1Result6").value;
+                        document.getElementById("subject6R").value = subject6Result;
+                    }
+                    getSubject6Result();
+
+
+                    function getSubject7()
+                    {
+                        var subject7sel = document.getElementById("list7").value;
+                        document.getElementById("subject7").value = subject7sel;
+                        getSubject7();
+
+
+                        function getSubject7Result() {
+                            var subject7Result = document.getElementById("subject1Result7").value;
+                            document.getElementById("subject7R").value = subject7Result;
+                        }
+                        getSubject7Result();
+
+
+
+
+                        function getSubject8()
+                        {
+                            var subject8sel = document.getElementById("list8").value;
+                            document.getElementById("subject8").value = subject8sel;
+                            getSubject8();
+
+
+                            function getSubject8Result() {
+                                var subject8Result = document.getElementById("subject1Result8").value;
+                                document.getElementById("subject8R").value = subject8Result;
+                            }
+                            getSubject8Result();
+
+
+
+
+                            function getSubject9()
+                            {
+                                var subject9sel = document.getElementById("list9").value;
+                                document.getElementById("subject9").value = subject9sel;
+                                getSubject9();
+
+
+                                function getSubject9Result() {
+                                    var subject9Result = document.getElementById("subject1Result9").value;
+                                    document.getElementById("subject9R").value = subject9Result;
+                                }
+                                getSubject5Result();
+
+
+
+                    function getStream() {
         var streamval = document.getElementById("list").value;
         document.getElementById("stream").value = streamval;
     }
