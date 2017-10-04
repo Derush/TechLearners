@@ -1,0 +1,8 @@
+{ 
+    "_id" : ObjectId("59d330b8fff7b62198ab84de"), 
+    "name" : "Biological Science", 
+    "eligibility" : {
+        "Maths" : NumberInt(1), 
+        "Science" : NumberInt(2)
+    }
+}

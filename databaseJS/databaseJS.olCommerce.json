@@ -1,0 +1,9 @@
+{ 
+    "_id" : ObjectId("59d335c7fff7b62198ab84df"), 
+    "name" : "Commerce", 
+    "eligibility" : {
+        "Maths" : NumberInt(1), 
+        "Business Studies and Accounting" : NumberInt(1), 
+        "Entrepreneurship Studies" : NumberInt(1)
+    }
+}
