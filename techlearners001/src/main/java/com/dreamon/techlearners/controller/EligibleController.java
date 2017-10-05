@@ -1,11 +1,13 @@
 package com.dreamon.techlearners.controller;
 
 import com.dreamon.techlearners.model.Eligi;
+import com.dreamon.techlearners.model.option;
 import com.dreamon.techlearners.model.StoreList;
 import com.dreamon.techlearners.model.UGC_Course;
 import com.dreamon.techlearners.repository.StoreListRepository;
 import com.dreamon.techlearners.repository.UGCRepository;
 import com.dreamon.techlearners.repository.eligibleRepository;
+import com.dreamon.techlearners.repository.optionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import java.util.Map;
 
 @Controller
@@ -26,18 +31,56 @@ public class EligibleController {
     UGCRepository course;
     @Autowired
     StoreListRepository retrivelist;
+    @Autowired
+    optionRepository getoption;
 
     @RequestMapping("/eligible")
     public String pageform(Model model) {
-//        ugcRepository.findAll();
+//        optionRepository.findAll();
         return "eligible";
     }
-    //    @RequestMapping(value = "/addstream", method = RequestMethod.POST)
-//    public String addCar(@ModelAttribute eligible z) {
-//
-//        eligible.save(z);
-//        return "redirect:eligible";
-//    }
+
+
+    @RequestMapping("/getoption")
+    public String getoption1(Model model) {
+        List<option> optionList = getoption.findAll();
+        int count=0;
+        String a=optionList.get(0).getOption3();
+
+        for(int j=0;j<a.length();j++)
+        {
+            if(a.charAt(j)==',')
+            {
+                count++;
+            }
+        }
+        for(int i=0;i<=count;i++)
+        {
+
+            String first_word = a.split(",")[i];
+            if(!first_word.equals("English Language")) {
+                System.out.println(first_word);
+            }
+        }
+        return "getoption";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @RequestMapping(value = "/addstream1", method = RequestMethod.POST)
     public String addSubject1(HttpServletRequest request, Model model) {

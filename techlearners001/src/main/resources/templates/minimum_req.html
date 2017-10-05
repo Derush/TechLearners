@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<style>
+    /* Full-width input fields */
+
+    /* Set a style for all buttons */
+    button {
+        background-color: pink;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+        text-align: left;
+        margin: 28px 0 12px 0;
+        position: relative;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 250px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DreamOn Home</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<nav>
+
+
+    <div class="navbar navbar-customs">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">DreamOn</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Contact</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+
+</nav>
+
+
+<h2>Choose your Stream</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Physical Science</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">BioScience</button>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Technology</button>
+<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Comerce</button>
+<button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts</button>
+<button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
+
+<div id="id01" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+
+<div id="id02" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream2" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+    </form>
+</div>
+
+<div id="id03" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+    </form>
+</div>
+
+<div id="id04" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+    </form>
+</div>
+
+<div id="id05" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+    </form>
+</div>
+
+
+<div id="id06" class="modal">
+    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+    </form>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

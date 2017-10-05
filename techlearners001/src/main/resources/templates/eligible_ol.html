@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<style>
+    /* Full-width input fields */
+
+    /* Set a style for all buttons */
+    button {
+        background-color: pink;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+        text-align: left;
+        margin: 28px 0 12px 0;
+        position: relative;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 250px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DreamOn Home</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<nav>
+
+
+    <div class="navbar navbar-customs">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">DreamOn</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="index.html" role="button">Contact</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+
+</nav>
+
+
+<div>
+    <form name="myForm" class="modal-content animate" action="/Qualification" )
+          method="POST">
+
+
+    <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results for compulsory subjects:</label>
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list1" onchange="getSubject1();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics</option>
+                                                    <option value="physics">Science</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                    <option value="physics">Science</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject1" name="subject1"/>
+                                            <td><select id="subject1Result1" class="form-control2"
+                                                        onchange="getSubject1Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject1R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list2" onchange="getSubject2();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject2" name="subject2"/>
+                                            <td><select id="subject2Result" class="form-control2"
+                                                        onchange="getSubject2Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject2R" name="subject2R"/>
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list3" onchange="getSubject3();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3" name="subject3"/>
+                                            <td><select id="subject3Result" class="form-control2"
+                                                        onchange="getSubject3Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3R" name="subject3R"/>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td><select id="list4" onchange="getSubject4();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject4" name="subject4"/>
+                                            <td><select id="subjeResult" class="form-control2"
+                                                        onchange="getSubject4Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject4R" name="subject4R"/>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td><select id="list5" onchange="getSubject5();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject5" name="subject5"/>
+                                            <td><select id="subject5Result" class="form-control2"
+                                                        onchange="getSubject5Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject5R" name="subject5R"/>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td><select id="list6" onchange="getSubject6();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject6" name="subject6"/>
+                                            <td><select id="subject6Result" class="form-control2"
+                                                        onchange="getSubject6Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject6R" name="subject6R"/>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-5 ">Your Results for optional subjects:</label>
+
+
+                            <div class="col-sm-5">
+
+                                <table class="table table-striped">
+
+
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <select id="list7" onchange="getSubject7();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="physics">Science</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="physics">Science</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                        <input type="hidden" id="subject7" name="subject1"/>
+                                        <td><select id="subject1Result7" class="form-control2"
+                                                    onchange="getSubject1Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject7R" name="subject7R"/>
+                                    </tr>
+                                    <tr>
+                                        <td><select id="list8" onchange="getSubject8();">
+                                            <option value="NONE">--select--</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject8" name="subject2"/>
+                                        <td><select id="subject8Result" class="form-control2"
+                                                    onchange="getSubject2Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject8R" name="subject8R"/>
+
+                                    </tr>
+                                    <tr>
+                                        <td><select id="list9" onchange="getSubject9();">
+                                            <option value="NONE">--select--</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
+                                            <option value="Combined Mathematics">Combined Mathematics</option>
+                                            <option value="physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject9" name="subject9"/>
+                                        <td><select id="subject9Result" class="form-control2"
+                                                    onchange="getSubject3Result()">
+                                            <option value="NONE">--select--</option>
+                                            <option value=4>A</option>
+                                            <option value=3>B</option>
+                                            <option value=2>C</option>
+                                            <option value=1>S</option>
+                                        </select></td>
+                                        <input type="hidden" id="subject9R" name="subject9R"/>
+
+                                    </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-6 col-sm-2">
+                                <input type="submit"/>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+    function getSubject1()
+    {
+        var subject1sel = document.getElementById("list1").value;
+        document.getElementById("subject1").value = subject1sel;
+            getSubject1();
+
+
+    function getSubject1Result() {
+        var subject1Result = document.getElementById("subject1Result1").value;
+        document.getElementById("subject1R").value = subject1Result;
+    }
+    getSubject1Result();
+
+
+
+
+        function getSubject2()
+        {
+            var subject2sel = document.getElementById("list2").value;
+            document.getElementById("subject2").value = subject1sel;
+            getSubject2();
+
+
+            function getSubject1Result() {
+                var subject2Result = document.getElementById("subject1Result2").value;
+                document.getElementById("subject2R").value = subject2Result;
+            }
+            getSubject2Result();
+
+
+
+
+
+
+
+
+
+
+    function getSubject3() {
+        var subject3sel = document.getElementById("list3").value;
+        document.getElementById("subject3").value = subject3sel;
+
+    }
+
+    getSubject3();
+
+
+    function getSubject3Result() {
+        var subject3Result = document.getElementById("subject3Result").value;
+        document.getElementById("subject3R").value = subject3Result;
+    }    getSubject3Result();
+
+
+        function getSubject4() {
+            var subject4sel = document.getElementById("list4").value;
+            document.getElementById("subject4").value = subject4sel;
+
+        }
+
+        getSubject4();
+
+
+        function getSubject4Result() {
+            var subject4Result = document.getElementById("subject4Result").value;
+            document.getElementById("subject4R").value = subject4Result;
+
+
+        }
+
+        getSubject4Result();
+
+
+
+            function getSubject5()
+            {
+                var subject5sel = document.getElementById("list5").value;
+                document.getElementById("subject5").value = subject5sel;
+                getSubject5();
+
+
+                function getSubject5Result() {
+                    var subject5Result = document.getElementById("subject1Result2").value;
+                    document.getElementById("subject5R").value = subject5Result;
+                }
+                getSubject5Result();
+
+
+
+                function getSubject6()
+                {
+                    var subject6sel = document.getElementById("list6").value;
+                    document.getElementById("subject6").value = subject6sel;
+                    getSubject6();
+
+
+                    function getSubject6Result() {
+                        var subject6Result = document.getElementById("subject1Result6").value;
+                        document.getElementById("subject6R").value = subject6Result;
+                    }
+                    getSubject6Result();
+
+
+                    function getSubject7()
+                    {
+                        var subject7sel = document.getElementById("list7").value;
+                        document.getElementById("subject7").value = subject7sel;
+                        getSubject7();
+
+
+                        function getSubject7Result() {
+                            var subject7Result = document.getElementById("subject1Result7").value;
+                            document.getElementById("subject7R").value = subject7Result;
+                        }
+                        getSubject7Result();
+
+
+
+
+                        function getSubject8()
+                        {
+                            var subject8sel = document.getElementById("list8").value;
+                            document.getElementById("subject8").value = subject8sel;
+                            getSubject8();
+
+
+                            function getSubject8Result() {
+                                var subject8Result = document.getElementById("subject1Result8").value;
+                                document.getElementById("subject8R").value = subject8Result;
+                            }
+                            getSubject8Result();
+
+
+
+
+                            function getSubject9()
+                            {
+                                var subject9sel = document.getElementById("list9").value;
+                                document.getElementById("subject9").value = subject9sel;
+                                getSubject9();
+
+
+                                function getSubject9Result() {
+                                    var subject9Result = document.getElementById("subject1Result9").value;
+                                    document.getElementById("subject9R").value = subject9Result;
+                                }
+                                getSubject5Result();
+
+
+
+                    function getStream() {
+        var streamval = document.getElementById("list").value;
+        document.getElementById("stream").value = streamval;
+    }
+
+    getStream();
+
+
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    <!-- script for pop up -->
+
+
+
+
+
+    function getStream() {
+        var streamval = document.getElementById("list").value;
+        document.getElementById("stream").value = streamval;
+    }
+
+    getStream();
+
+
+    var modal = document.getElementById('id06');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    function validateForm6() {
+        var x = document.forms["myForm"]["subject61"].value;
+        var y = document.forms["myForm"]["subject62"].value;
+        var z = document.forms["myForm"]["subject63"].value;
+        if (((x == y) || (y == z) || (x == z))) {
+            alert("There are same subjects in the form");
+            return false;
+        }
+    }
+
+
+</script>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
