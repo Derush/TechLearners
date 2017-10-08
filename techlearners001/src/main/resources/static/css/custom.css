@@ -1,4 +1,15 @@
+/*nav background color*/
 .navbar-customs {
     background-color: #2069ff;
     border-color: #e7e7e7;
+}
+
+/*choose your stream font style*/
+p.sansserif {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+
+p.sansserif1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
