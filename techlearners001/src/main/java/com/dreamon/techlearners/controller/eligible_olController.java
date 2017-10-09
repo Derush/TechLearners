@@ -1,5 +1,6 @@
 package com.dreamon.techlearners.controller;
 
+import com.dreamon.techlearners.model.eligible_ol;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.stereotype.Controller;
@@ -41,6 +42,8 @@ public String Qual(HttpServletRequest request, Model model)
     boolean check2=false;
     boolean check3=false;
     boolean check4=false;
+    eligible_ol eligible_ol1 =new eligible_ol();
+
     int count=0;
     int num=0;
     if((subject1R>=1)&&(subject2R>=1))

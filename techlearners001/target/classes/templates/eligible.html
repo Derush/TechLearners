@@ -20,7 +20,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
 </head>
 <body background="/images/back3.jpg">
 
@@ -65,774 +67,847 @@
                 <p class="sansserif1"><font size="7"><strong>Choose Your Stream</strong></font></p>
             </div>
             <ul class="button-group fix_button_group">
-                <button type="button" class="btn btn-primary btn-lg" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Physical Science</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">BioScience</button>
-                <button type="button" class="btn btn-primary btn-lg"  onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Technology</button>
-                <button type="button" class="btn btn-primary btn-lg"  onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Comerce</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts</button>
-                <button type="button" class="btn btn-primary btn-lg" onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Physical
+                    Science
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id02').style.display='block'" style="width:auto;">BioScience
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Technology
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Comerce
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other
+                </button>
             </ul>
         </div>
     </div>
 
-<form name="myForm" class="modal-content animate" action="/getoption" onsubmit="return validateForm1()"
-      method="POST">
-
-
-
-    <input type="submit"/>
-</form>
-<div id="id01" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+    <form name="myForm" class="modal-content animate" action="/getoption" onsubmit="return validateForm1()"
           method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-        </div>
-
-        <div class="container">
-            <div id="page-wrapper1">
-                <div id="page-inner1">
-                    <div class="row">
-                        <div class="col-md-12">
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-5 ">Your Results:</label>
+        <input type="submit"/>
+    </form>
+    <div id="id01" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container">
+                <div id="page-wrapper1">
+                    <div id="page-inner1">
+                        <div class="row">
+                            <div class="col-md-12">
 
 
-                                <div class="col-sm-5">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5 ">Your Results:</label>
 
-                                    <table class="table table-striped">
 
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
+                                    <div class="col-sm-5">
 
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list1" onchange="getSubject1();">
+                                        <table class="table table-striped">
+
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list1" onchange="getSubject1();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Combined Mathematics">Combined Mathematics
+                                                        </option>
+                                                        <option value="physics">Physics</option>
+                                                        <option value="Chemistry">Chemistry</option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject1" name="subject1"/>
+                                                <td><select id="subject1Result1" class="form-control2"
+                                                            onchange="getSubject1Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject1R" name="subject1R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list2" onchange="getSubject2();">
                                                     <option value="NONE">--select--</option>
                                                     <option value="Combined Mathematics">Combined Mathematics</option>
                                                     <option value="physics">Physics</option>
                                                     <option value="Chemistry">Chemistry</option>
                                                 </select></td>
-                                            <input type="hidden" id="subject1" name="subject1"/>
-                                            <td><select id="subject1Result1" class="form-control2"
-                                                        onchange="getSubject1Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject1R" name="subject1R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list2" onchange="getSubject2();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Combined Mathematics">Combined Mathematics</option>
-                                                <option value="physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject2" name="subject2"/>
-                                            <td><select id="subject2Result" class="form-control2"
-                                                        onchange="getSubject2Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject2R" name="subject2R"/>
+                                                <input type="hidden" id="subject2" name="subject2"/>
+                                                <td><select id="subject2Result" class="form-control2"
+                                                            onchange="getSubject2Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject2R" name="subject2R"/>
 
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list3" onchange="getSubject3();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Combined Mathematics">Combined Mathematics</option>
-                                                <option value="physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject3" name="subject3"/>
-                                            <td><select id="subject3Result" class="form-control2"
-                                                        onchange="getSubject3Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject3R" name="subject3R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list3" onchange="getSubject3();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics</option>
+                                                    <option value="physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject3" name="subject3"/>
+                                                <td><select id="subject3Result" class="form-control2"
+                                                            onchange="getSubject3Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject3R" name="subject3R"/>
 
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
 
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
+                                    </div>
                                 </div>
 
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
+
+                                </div>
+
+
                             </div>
-
-
                         </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
                     </div>
-                    <!-- /. ROW  -->
-                    <hr/>
-
+                    <!-- /. PAGE INNER  -->
                 </div>
-                <!-- /. PAGE INNER  -->
+                <!-- /. PAGE WRAPPER  -->
             </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
-<div id="id02" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream2" onsubmit="return validateForm2()"
-          method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <div id="page-wrapper2">
-                <div id="page-inner2">
-                    <div class="row">
-                        <div class="col-md-12">
+        </form>
+    </div>
+    <div id="id02" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream2" onsubmit="return validateForm2()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <div id="page-wrapper2">
+                    <div id="page-inner2">
+                        <div class="row">
+                            <div class="col-md-12">
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-5 ">Your Results:</label>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5 ">Your Results:</label>
 
 
-                                <div class="col-sm-5">
+                                    <div class="col-sm-5">
 
-                                    <table class="table table-striped">
+                                        <table class="table table-striped">
 
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
 
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list21" onchange="getSubject21();">
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list21" onchange="getSubject21();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Bio Science">Bio Science</option>
+                                                        <option value="Physics">Physics</option>
+                                                        <option value="Chemistry">Chemistry</option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject21" name="subject21"/>
+
+                                                <td><select id="subject1Result21" class="form-control2"
+                                                            onchange="getSubject21Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject21R" name="subject21R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list22" onchange="getSubject22();">
                                                     <option value="NONE">--select--</option>
                                                     <option value="Bio Science">Bio Science</option>
                                                     <option value="Physics">Physics</option>
                                                     <option value="Chemistry">Chemistry</option>
                                                 </select></td>
-                                            <input type="hidden" id="subject21" name="subject21"/>
+                                                <input type="hidden" id="subject22" name="subject22"/>
 
-                                            <td><select id="subject1Result21" class="form-control2"
-                                                        onchange="getSubject21Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject21R" name="subject21R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list22" onchange="getSubject22();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Bio Science">Bio Science</option>
-                                                <option value="Physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject22" name="subject22"/>
-
-                                            <td><select id="subject22Result" class="form-control2"
-                                                        onchange="getSubject22Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject22R" name="subject22R"/>
-
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list23" onchange="getSubject23();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Bio Science">Bio Science</option>
-                                                <option value="Physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject23" name="subject23"/>
-
-
-                                            <td><select id="subject23Result" class="form-control2"
-                                                        onchange="getSubject23Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject23R" name="subject23R"/>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- /. ROW  -->
-                    <hr/>
-
-                </div>
-                <!-- /. PAGE INNER  -->
-            </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
-<div id="id03" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream3" onsubmit="return validateForm3()"
-          method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <div id="page-wrapper3">
-                <div id="page-inner3">
-                    <div class="row">
-                        <div class="col-md-12">
-
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-5 ">Your Results:</label>
-
-
-                                <div class="col-sm-5">
-
-                                    <table class="table table-striped">
-
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
-
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list31" onchange="getSubject31();">
+                                                <td><select id="subject22Result" class="form-control2"
+                                                            onchange="getSubject22Result()">
                                                     <option value="NONE">--select--</option>
-                                                    <option value="Science for Technology">Science for Technology</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
                                                 </select></td>
-                                            <input type="hidden" id="subject31" name="subject31"/>
+                                                <input type="hidden" id="subject22R" name="subject22R"/>
 
-                                            <td><select id="subject1Result31" class="form-control2"
-                                                        onchange="getSubject31Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject31R" name="subject31R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list32" onchange="getSubject32();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Engineering Technology">Engineering Technology</option>
-                                                <option value="Bio-system technology">Bio-system technology</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject32" name="subject32"/>
-
-                                            <td><select id="subject32Result" class="form-control2"
-                                                        onchange="getSubject32Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject32R" name="subject32R"/>
-
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list33" onchange="getSubject33();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Economics">Economics</option>
-                                                <option value="Geography">Geography</option>
-                                                <option value="Home Economics">Home Economics</option>
-                                                <option value="Accountancy">Accountancy</option>
-                                                <option value="Communication and Media Study">Communication and Media Study</option>
-                                                <option value="Arts">Arts</option>
-                                                <option value="Business Studies">Business Studies</option>
-                                                <option value="Agriculture">Agriculture</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject33" name="subject33"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list23" onchange="getSubject23();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Bio Science">Bio Science</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject23" name="subject23"/>
 
 
-                                            <td><select id="subject33Result" class="form-control2"
-                                                        onchange="getSubject33Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject33R" name="subject33R"/>
+                                                <td><select id="subject23Result" class="form-control2"
+                                                            onchange="getSubject23Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject23R" name="subject23R"/>
 
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
 
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
                     </div>
-                    <!-- /. ROW  -->
-                    <hr/>
-
+                    <!-- /. PAGE INNER  -->
                 </div>
-                <!-- /. PAGE INNER  -->
+                <!-- /. PAGE WRAPPER  -->
             </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
-<div id="id04" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream4" onsubmit="return validateForm4()"
-          method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <div id="page-wrapper4">
-                <div id="page-inner4">
-                    <div class="row">
-                        <div class="col-md-12">
+        </form>
+    </div>
+    <div id="id03" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream3" onsubmit="return validateForm3()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <div id="page-wrapper3">
+                    <div id="page-inner3">
+                        <div class="row">
+                            <div class="col-md-12">
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-5 ">Your Results:</label>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5 ">Your Results:</label>
 
 
-                                <div class="col-sm-5">
+                                    <div class="col-sm-5">
 
-                                    <table class="table table-striped">
+                                        <table class="table table-striped">
 
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
 
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list41" onchange="getSubject41();">
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list31" onchange="getSubject31();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Science for Technology">Science for Technology
+                                                        </option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject31" name="subject31"/>
+
+                                                <td><select id="subject1Result31" class="form-control2"
+                                                            onchange="getSubject31Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject31R" name="subject31R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list32" onchange="getSubject32();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Engineering Technology">Engineering Technology
+                                                    </option>
+                                                    <option value="Bio-system technology">Bio-system technology</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject32" name="subject32"/>
+
+                                                <td><select id="subject32Result" class="form-control2"
+                                                            onchange="getSubject32Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject32R" name="subject32R"/>
+
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list33" onchange="getSubject33();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Economics">Economics</option>
+                                                    <option value="Geography">Geography</option>
+                                                    <option value="Home Economics">Home Economics</option>
+                                                    <option value="Accountancy">Accountancy</option>
+                                                    <option value="Communication and Media Study">Communication and
+                                                        Media Study
+                                                    </option>
+                                                    <option value="Arts">Arts</option>
+                                                    <option value="Business Studies">Business Studies</option>
+                                                    <option value="Agriculture">Agriculture</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject33" name="subject33"/>
+
+
+                                                <td><select id="subject33Result" class="form-control2"
+                                                            onchange="getSubject33Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject33R" name="subject33R"/>
+
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+        </form>
+    </div>
+    <div id="id04" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream4" onsubmit="return validateForm4()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <div id="page-wrapper4">
+                    <div id="page-inner4">
+                        <div class="row">
+                            <div class="col-md-12">
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+                                    <div class="col-sm-5">
+
+                                        <table class="table table-striped">
+
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list41" onchange="getSubject41();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Accountancy">Accountancy</option>
+                                                        <option value="Business Studies">Business Studies</option>
+                                                        <option value="Economics">Economics</option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject41" name="subject41"/>
+
+                                                <td><select id="subject1Result41" class="form-control2"
+                                                            onchange="getSubject41Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject41R" name="subject41R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list42" onchange="getSubject42();">
                                                     <option value="NONE">--select--</option>
                                                     <option value="Accountancy">Accountancy</option>
                                                     <option value="Business Studies">Business Studies</option>
                                                     <option value="Economics">Economics</option>
                                                 </select></td>
-                                            <input type="hidden" id="subject41" name="subject41"/>
+                                                <input type="hidden" id="subject42" name="subject42"/>
 
-                                            <td><select id="subject1Result41" class="form-control2"
-                                                        onchange="getSubject41Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject41R" name="subject41R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list42" onchange="getSubject42();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Accountancy">Accountancy</option>
-                                                <option value="Business Studies">Business Studies</option>
-                                                <option value="Economics">Economics</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject42" name="subject42"/>
-
-                                            <td><select id="subject42Result" class="form-control2"
-                                                        onchange="getSubject42Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject42R" name="subject42R"/>
-
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list43" onchange="getSubject43();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Business Statistics">Business Statistics</option>
-                                                <option value="Geography">Geography</option>
-                                                <option value="Political Science">Political Science</option>
-                                                <option value="History">History</option>
-                                                <option value="The logic and the scientific method">The logic and the scientific method</option>
-                                                <option value="English">English</option>
-                                                <option value="German">German</option>
-                                                <option value="French">French</option>
-                                                <option value="Agricultural Sciences">Agricultural Sciences</option>
-                                                <option value="Combined Mathematics">Combined Mathematics</option>
-                                                <option value="Information and Communication Technology (ICT)">Information and Communication Technology (ICT)</option>
-                                                <option value="Accountancy">Accountancy</option>
-                                                <option value="Business Studies">Business Studies</option>
-                                                <option value="Economics">Economics</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject43" name="subject43"/>
-
-
-                                            <td><select id="subject43Result" class="form-control2"
-                                                        onchange="getSubject43Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject43R" name="subject43R"/>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- /. ROW  -->
-                    <hr/>
-
-                </div>
-                <!-- /. PAGE INNER  -->
-            </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
-<div id="id05" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream5" onsubmit="return validateForm5()"
-          method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <div id="page-wrapper5">
-                <div id="page-inner5">
-                    <div class="row">
-                        <div class="col-md-12">
-
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-4 ">Your Results:</label>
-
-
-                                <div class="col-sm-5">
-
-                                    <table class="table table-striped">
-
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
-
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list51" onchange="getSubject51();">
+                                                <td><select id="subject42Result" class="form-control2"
+                                                            onchange="getSubject42Result()">
                                                     <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject42R" name="subject42R"/>
+
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list43" onchange="getSubject43();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Business Statistics">Business Statistics</option>
+                                                    <option value="Geography">Geography</option>
+                                                    <option value="Political Science">Political Science</option>
+                                                    <option value="History">History</option>
+                                                    <option value="The logic and the scientific method">The logic and
+                                                        the scientific method
+                                                    </option>
+                                                    <option value="English">English</option>
+                                                    <option value="German">German</option>
+                                                    <option value="French">French</option>
+                                                    <option value="Agricultural Sciences">Agricultural Sciences</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics</option>
+                                                    <option value="Information and Communication Technology (ICT)">
+                                                        Information and Communication Technology (ICT)
+                                                    </option>
+                                                    <option value="Accountancy">Accountancy</option>
+                                                    <option value="Business Studies">Business Studies</option>
+                                                    <option value="Economics">Economics</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject43" name="subject43"/>
+
+
+                                                <td><select id="subject43Result" class="form-control2"
+                                                            onchange="getSubject43Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject43R" name="subject43R"/>
+
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
+                    </div>
+                    <!-- /. PAGE INNER  -->
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+        </form>
+    </div>
+    <div id="id05" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream5" onsubmit="return validateForm5()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <div id="page-wrapper5">
+                    <div id="page-inner5">
+                        <div class="row">
+                            <div class="col-md-12">
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4 ">Your Results:</label>
+
+
+                                    <div class="col-sm-5">
+
+                                        <table class="table table-striped">
+
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list51" onchange="getSubject51();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Economics">Economics</option>
+                                                        <option value="Geography">Geography</option>
+                                                        <option value="History (Sri Lankan history and Indian history or European history or World history)">
+                                                            History (Sri Lankan history and Indian history or European
+                                                            history or World history)
+                                                        </option>
+                                                        <option value="Home Economics">Home Economics</option>
+                                                        <option value="Political Sciences">Political Sciences</option>
+                                                        <option value="Logic and Scientific method">Logic and Scientific
+                                                            method
+                                                        </option>
+                                                        <option value="History (Sri Lankan history and Indian history or European history or World history)">
+                                                            History (Sri Lankan history and Indian history or European
+                                                            history or World history)
+                                                        </option>
+                                                        <option value="Accounting">Accounting</option>
+                                                        <option value="Business Statistics">Business Statistics</option>
+                                                        <option value="Agriculture ">Agriculture</option>
+                                                        <option value="mathematics">mathematics</option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject51" name="subject51"/>
+
+                                                <td><select id="subject1Result51" class="form-control2"
+                                                            onchange="getSubject51Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject51R" name="subject51R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list52" onchange="getSubject52();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Civil/Mechanical or Electrical/Electronic and information Technology ">
+                                                        Civil/Mechanical or Electrical/Electronic and information
+                                                        Technology
+                                                    </option>
+                                                    <option value="Communication and Mass media">Communication and Mass
+                                                        media
+                                                    </option>
+                                                    <option value="Information and Communicational Technology">
+                                                        Information and Communicational Technology
+                                                    </option>
                                                     <option value="Economics">Economics</option>
                                                     <option value="Geography">Geography</option>
-                                                    <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option>
+                                                    <option value="History (Sri Lankan history and Indian history or European history or World history)">
+                                                        History (Sri Lankan history and Indian history or European
+                                                        history or World history)
+                                                    </option
+                                                    <option value="Geography">Geography</option>
+                                                    <option value="Political Sciences">Political Sciences</option>
+                                                    <option value="Accounting">Accounting</option>
+                                                    <option value="Home Economics">Business Statistics</option>
+                                                    <option value="Agriculture ">Agriculture</option>
+                                                    <option value="mathematics">Logic and mathematics</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject52" name="subject52"/>
+
+                                                <td><select id="subject52Result" class="form-control2"
+                                                            onchange="getSubject52Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject52R" name="subject52R"/>
+
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list53" onchange="getSubject53();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Geography">Geography</option>
+                                                    <option value="History (Sri Lankan history and Indian history or European history or World history)">
+                                                        History (Sri Lankan history and Indian history or European
+                                                        history or World history)
+                                                    </option
+                                                    <option value="Geography">Geography</option>
                                                     <option value="Home Economics">Home Economics</option>
                                                     <option value="Political Sciences">Political Sciences</option>
-                                                    <option value="Logic and Scientific method">Logic and Scientific method</option>
-                                                    <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
-                                                    <option value="Accounting">Accounting </option>
-                                                    <option value="Business Statistics">Business Statistics</option>
-                                                    <option value="Agriculture ">Agriculture </option>
-                                                    <option value="mathematics">mathematics</option>
+                                                    <option value="Logic and Scientific method">Logic and Scientific
+                                                        method
+                                                    </option>
+                                                    <option value="History (Sri Lankan history and Indian history or European history or World history)">
+                                                        History (Sri Lankan history and Indian history or European
+                                                        history or World history)
+                                                    </option
+                                                    <option value="Accounting">Accounting</option>
+                                                    <option value="Home Economics">Business Statistics</option>
+                                                    <option value="Agriculture">Agriculture</option>
+                                                    <option value="Buddhism or Buddhist Civilization">Buddhism or
+                                                        Buddhist Civilization
+                                                    </option>
+                                                    <option value="Christianity">Christianity</option>
+                                                    <option value="Christian Culture">Christian Culture</option>
+
                                                 </select></td>
-                                            <input type="hidden" id="subject51" name="subject51"/>
-
-                                            <td><select id="subject1Result51" class="form-control2"
-                                                        onchange="getSubject51Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject51R" name="subject51R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list52" onchange="getSubject52();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Civil/Mechanical or Electrical/Electronic and information Technology ">Civil/Mechanical or Electrical/Electronic and information Technology</option>
-                                                <option value="Communication and Mass media">Communication and Mass media</option>
-                                                <option value="Information and Communicational Technology">Information and Communicational Technology</option>
-                                                <option value="Economics">Economics</option>
-                                                <option value="Geography">Geography</option>
-                                                <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
-                                                <option value="Geography">Geography</option>
-                                                <option value="Political Sciences">Political Sciences</option>
-                                                <option value="Accounting">Accounting </option>
-                                                <option value="Home Economics">Business Statistics</option>
-                                                <option value="Agriculture ">Agriculture </option>
-                                                <option value="mathematics">Logic and mathematics</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject52" name="subject52"/>
-
-                                            <td><select id="subject52Result" class="form-control2"
-                                                        onchange="getSubject52Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject52R" name="subject52R"/>
-
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list53" onchange="getSubject53();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Geography">Geography</option>
-                                                <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
-                                                <option value="Geography">Geography</option>
-                                                <option value="Home Economics">Home Economics</option>
-                                                <option value="Political Sciences">Political Sciences</option>
-                                                <option value="Logic and Scientific method">Logic and Scientific method</option>
-                                                <option value="History (Sri Lankan history and Indian history or European history or World history)">History (Sri Lankan history and Indian history or European history or World history)</option
-                                                <option value="Accounting">Accounting </option>
-                                                <option value="Home Economics">Business Statistics</option>
-                                                <option value="Agriculture">Agriculture </option>
-                                                <option value="Buddhism or Buddhist Civilization">Buddhism or Buddhist Civilization</option>
-                                                <option value="Christianity">Christianity</option>
-                                                <option value="Christian Culture">Christian Culture</option>
-
-                                            </select></td>
-                                            <input type="hidden" id="subject53" name="subject53"/>
+                                                <input type="hidden" id="subject53" name="subject53"/>
 
 
-                                            <td><select id="subject53Result" class="form-control2"
-                                                        onchange="getSubject53Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject53R" name="subject53R"/>
+                                                <td><select id="subject53Result" class="form-control2"
+                                                            onchange="getSubject53Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject53R" name="subject53R"/>
 
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
 
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
+                        <!-- /. ROW  -->
+                        <hr/>
+
                     </div>
-                    <!-- /. ROW  -->
-                    <hr/>
-
+                    <!-- /. PAGE INNER  -->
                 </div>
-                <!-- /. PAGE INNER  -->
+                <!-- /. PAGE WRAPPER  -->
             </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
-<div id="id06" class="modal">
-    <form name="myForm" class="modal-content animate" action="/addstream6" onsubmit="return validateForm6()"
-          method="POST">
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <div id="page-wrapper6">
-                <div id="page-inner6">
-                    <div class="row">
-                        <div class="col-md-12">
+        </form>
+    </div>
+    <div id="id06" class="modal">
+        <form name="myForm" class="modal-content animate" action="/addstream6" onsubmit="return validateForm6()"
+              method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <div id="page-wrapper6">
+                    <div id="page-inner6">
+                        <div class="row">
+                            <div class="col-md-12">
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-5 ">Your Results:</label>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5 ">Your Results:</label>
 
 
-                                <div class="col-sm-5">
+                                    <div class="col-sm-5">
 
-                                    <table class="table table-striped">
+                                        <table class="table table-striped">
 
-                                        <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
+                                            <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Grade</th>
 
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="list61" onchange="getSubject61();">
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="list61" onchange="getSubject61();">
+                                                        <option value="NONE">--select--</option>
+                                                        <option value="Bio Science">Bio Science</option>
+                                                        <option value="Physics">Physics</option>
+                                                        <option value="Chemistry">Chemistry</option>
+                                                        <option value="Information and Communicational Technology">
+                                                            Information and Communicational Technology
+                                                        </option>
+                                                        <option value="Agriculture ">Agriculture</option>
+                                                        <option value="Bio Science">Bio Science</option>
+                                                    </select></td>
+                                                <input type="hidden" id="subject61" name="subject61"/>
+
+                                                <td><select id="subject1Result61" class="form-control2"
+                                                            onchange="getSubject61Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject61R" name="subject61R"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list62" onchange="getSubject52();">
                                                     <option value="NONE">--select--</option>
                                                     <option value="Bio Science">Bio Science</option>
                                                     <option value="Physics">Physics</option>
                                                     <option value="Chemistry">Chemistry</option>
-                                                    <option value="Information and Communicational Technology">Information and Communicational Technology</option>
-                                                    <option value="Agriculture ">Agriculture </option>
+                                                    <option value="Information and Communicational Technology">
+                                                        Information and Communicational Technology
+                                                    </option>
+                                                    <option value="Agriculture ">Agriculture</option>
                                                     <option value="Bio Science">Bio Science</option>
                                                 </select></td>
-                                            <input type="hidden" id="subject61" name="subject61"/>
+                                                <input type="hidden" id="subject62" name="subject62"/>
 
-                                            <td><select id="subject1Result61" class="form-control2"
-                                                        onchange="getSubject61Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject61R" name="subject61R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list62" onchange="getSubject52();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Bio Science">Bio Science</option>
-                                                <option value="Physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                                <option value="Information and Communicational Technology">Information and Communicational Technology</option>
-                                                <option value="Agriculture ">Agriculture </option>
-                                                <option value="Bio Science">Bio Science</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject62" name="subject62"/>
+                                                <td><select id="subject62Result" class="form-control2"
+                                                            onchange="getSubject62Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject62R" name="subject62R"/>
 
-                                            <td><select id="subject62Result" class="form-control2"
-                                                        onchange="getSubject62Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject62R" name="subject62R"/>
-
-                                        </tr>
-                                        <tr>
-                                            <td><select id="list63" onchange="getSubject63();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Bio Science">Bio Science</option>
-                                                <option value="Physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                                <option value="Information and Communicational Technology">Information and Communicational Technology</option>
-                                                <option value="Agriculture ">Agriculture </option>
-                                                <option value="Bio Science">Bio Science</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject63" name="subject63"/>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="list63" onchange="getSubject63();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Bio Science">Bio Science</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                    <option value="Information and Communicational Technology">
+                                                        Information and Communicational Technology
+                                                    </option>
+                                                    <option value="Agriculture ">Agriculture</option>
+                                                    <option value="Bio Science">Bio Science</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject63" name="subject63"/>
 
 
-                                            <td><select id="subject63Result" class="form-control2"
-                                                        onchange="getSubject63Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option>
-                                            </select></td>
-                                            <input type="hidden" id="subject63R" name="subject63R"/>
+                                                <td><select id="subject63Result" class="form-control2"
+                                                            onchange="getSubject63Result()">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value=4>A</option>
+                                                    <option value=3>B</option>
+                                                    <option value=2>C</option>
+                                                    <option value=1>S</option>
+                                                </select></td>
+                                                <input type="hidden" id="subject63R" name="subject63R"/>
 
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
 
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="form-group">
-                                <div class="col-sm-offset-6 col-sm-2">
-                                    <input type="submit"/>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-6 col-sm-2">
+                                        <input type="submit"/>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <!-- /. ROW  -->
-                    <hr/>
+                        <!-- /. ROW  -->
+                        <hr/>
 
+                    </div>
+                    <!-- /. PAGE INNER  -->
                 </div>
-                <!-- /. PAGE INNER  -->
+                <!-- /. PAGE WRAPPER  -->
             </div>
-            <!-- /. PAGE WRAPPER  -->
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>
 <script type="text/javascript" src="js/validateFormPopup.js"></script>
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="js/bootstrap.min.js"></script><div class="footer" id="bottom_link">    <div id ="footer">        <div class="container">            <div class="text-center center-block">            <p class="txt-railway"><font size="3"><strong>AROUND THE DREAM ON</strong></font></p>                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>            <p class="txt-railway"><font size="1"><em >copyright&copy;DreamOn</em></font></p>            </div>        </div>    </div></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<div class="footer" id="bottom_link">
+    <div id="footer">
+        <div class="container">
+            <div class="text-center center-block"><p class="txt-railway"><font size="3"><strong>ABOUT THE DREAM
+                ON</strong></font></p>                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                                                                                                      class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                                                                     class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:bootsnipp@gmail.com"><i id="social-em"
+                                                        class="fa fa-envelope-square fa-3x social"></i></a>
+                <p class="txt-railway"><font size="1"><em>copyright&copy;DreamOn</em></font></p></div>
+        </div>
+    </div>
+</div>
 
 
 </body>
