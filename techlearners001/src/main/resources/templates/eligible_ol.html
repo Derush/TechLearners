@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
           integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
           crossorigin="anonymous">
 </head>
-<body background="/images/back3.jpg">
 
 
 <nav>
@@ -54,16 +53,15 @@
 
 
 </nav>
-
+<body background="/images/back3.jpg">
 
 <div>
-    <form name="myForm" class="modal-content animate" action="/Qualification" )
-          method="POST">
+    <form name="myForm" class="modal-content animate" action="/Qualification" method="POST">
 
 
         <div class="container">
-            <div id="page-wrapper1">
-                <div id="page-inner1">
+            <div id="page-wrapper">
+                <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
 
@@ -158,7 +156,7 @@
 
                                             </select></td>
                                             <input type="hidden" id="subject4" name="subject4"/>
-                                            <td><select id="subjeResult" class="form-control2"
+                                            <td><select id="subject4Result" class="form-control2"
                                                         onchange="getSubject4Result()">
                                                 <option value="NONE">--select--</option>
                                                 <option value=4>A</option>
@@ -218,9 +216,7 @@
                             </div>
 
 
-                        </div>
 
-                        <div class="form-group">
                             <label class="control-label col-sm-5 ">Your Results for optional subjects:</label>
 
 
@@ -253,7 +249,7 @@
                                             </select></td>
                                         <input type="hidden" id="subject7" name="subject7"/>
                                         <td><select id="subject1Result7" class="form-control2"
-                                                    onchange="getSubject1Result()">
+                                                    onchange="getSubject7Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
                                             <option value=3>B</option>
@@ -278,9 +274,9 @@
                                             <option value="Chemistry">Arabic Literature</option>
 
                                         </select></td>
-                                        <input type="hidden" id="subject8" name="subject2"/>
+                                        <input type="hidden" id="subject8" name="subject8"/>
                                         <td><select id="subject8Result" class="form-control2"
-                                                    onchange="getSubject2Result()">
+                                                    onchange="getSubject8Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
                                             <option value=3>B</option>
@@ -306,7 +302,7 @@
                                         </select></td>
                                         <input type="hidden" id="subject9" name="subject9"/>
                                         <td><select id="subject9Result" class="form-control2"
-                                                    onchange="getSubject3Result()">
+                                                    onchange="getSubject9Result()">
                                             <option value="NONE">--select--</option>
                                             <option value=4>A</option>
                                             <option value=3>B</option>
@@ -322,7 +318,7 @@
                                 </table>
 
 
-                            </div>
+
                         </div>
 
 
@@ -333,7 +329,7 @@
 
                         </div>
 
-
+                        </div>
                     </div>
 
 
@@ -345,8 +341,9 @@
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->
+    </form>
 </div>
-</form>
+
 </div>
 
 

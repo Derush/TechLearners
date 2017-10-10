@@ -3,7 +3,6 @@ function getSubject1() {
     document.getElementById("subject1").value = subject1sel;
 
 }
-
 getSubject1();
 
 
@@ -17,15 +16,15 @@ getSubject1Result();
 
 function getSubject2() {
     var subject2sel = document.getElementById("list2").value;
-    document.getElementById("subject2").value = subject1sel;
+    document.getElementById("subject2").value = subject2sel;
 
 }
 
 getSubject2();
 
 
-function getSubject1Result() {
-    var subject2Result = document.getElementById("subject1Result2").value;
+function getSubject2Result() {
+    var subject2Result = document.getElementById("subject2Result").value;
     document.getElementById("subject2R").value = subject2Result;
 }
 
@@ -76,7 +75,7 @@ function getSubject5() {
 getSubject5();
 
 function getSubject5Result() {
-    var subject5Result = document.getElementById("subject1Result2").value;
+    var subject5Result = document.getElementById("subject5Result").value;
     document.getElementById("subject5R").value = subject5Result;
 }
 
@@ -92,7 +91,7 @@ getSubject6();
 
 
 function getSubject6Result() {
-    var subject6Result = document.getElementById("subject1Result6").value;
+    var subject6Result = document.getElementById("subject6Result").value;
     document.getElementById("subject6R").value = subject6Result;
 }
 
@@ -124,7 +123,7 @@ getSubject8();
 
 
 function getSubject8Result() {
-    var subject8Result = document.getElementById("subject1Result8").value;
+    var subject8Result = document.getElementById("subject8Result").value;
     document.getElementById("subject8R").value = subject8Result;
 }
 
@@ -140,43 +139,43 @@ getSubject9();
 
 
 function getSubject9Result() {
-    var subject9Result = document.getElementById("subject1Result9").value;
+    var subject9Result = document.getElementById("subject9Result").value;
     document.getElementById("subject9R").value = subject9Result;
 }
 
 getSubject9Result();
 
 
-function getStream() {
+/*function getStream() {
     var streamval = document.getElementById("list").value;
     document.getElementById("stream").value = streamval;
 }
 
-getStream();
+getStream();*/
 
 
-var modal = document.getElementById('id01');
+/*var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+}*/
 
 
 <!-- script for pop up -->
 
 
-function getStream() {
+/*function getStream() {
     var streamval = document.getElementById("list").value;
     document.getElementById("stream").value = streamval;
 }
 
-getStream();
+getStream();*/
 
 
-var modal = document.getElementById('id06');
+/*var modal = document.getElementById('id06');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -194,4 +193,4 @@ function validateForm6() {
         alert("There are same subjects in the form");
         return false;
     }
-}
+}*/

@@ -41,7 +41,7 @@ public String Qual(HttpServletRequest request, Model model)
     boolean check1=false;
     boolean check2=false;
     boolean check3=false;
-    boolean check4=false;
+
     eligible_ol eligible_ol1 =new eligible_ol();
 
     int count=0;
@@ -118,7 +118,7 @@ public String Qual(HttpServletRequest request, Model model)
             check3=true;
         }
     }
-    if(check1==true && check2==true && check4==true)
+    if(check1==true && check2 && check3==true)
     {
    System.out.print("your are qualified");
     }
@@ -126,7 +126,7 @@ public String Qual(HttpServletRequest request, Model model)
     {
         System.out.print("you are not qualified");
     }
-    System.out.print("you are not qualified");
+
 
 
 
