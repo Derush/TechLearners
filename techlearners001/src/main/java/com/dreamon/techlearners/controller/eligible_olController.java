@@ -118,7 +118,7 @@ public String Qual(HttpServletRequest request, Model model)
             check3=true;
         }
     }
-    if(check1==true&&check2==true&&check4==true)
+    if(check1==true && check2==true && check4==true)
     {
    System.out.print("your are qualified");
     }
@@ -126,6 +126,7 @@ public String Qual(HttpServletRequest request, Model model)
     {
         System.out.print("you are not qualified");
     }
+    System.out.print("you are not qualified");
 
 
 
