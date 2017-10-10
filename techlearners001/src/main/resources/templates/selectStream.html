@@ -147,6 +147,129 @@
 
                                         </tr>
                                         <tr>
+                                            <td><select id="lis3" onchange="getSubject3();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics
+                                                </option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="sub3" name="subject3"/>
+                                            <td><select id="sub3R" class="form-control2"
+                                                        onchange="getSubject3Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subj3R" name="subject3R"/>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+
+
+
+<div id="id02" class="modal">
+    <form name="myForm" class="modal-content animate" action="/other" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper2">
+                <div id="page-inner2">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="lis1" onchange="getSubject1();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics
+                                                    </option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="sub1" name="subject1"/>
+                                            <td><select id="sub1R" class="form-control2"
+                                                        onchange="getSubject1Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subj1R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="lis2" onchange="getSubject2();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics
+                                                </option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="sub2" name="subject2"/>
+                                            <td><select id="sub2R" class="form-control2"
+                                                        onchange="getSubject2Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subj2R" name="subject2R"/>
+
+                                        </tr>
+                                        <tr>
                                             <td><select id="list3" onchange="getSubject3();">
                                                 <option value="NONE">--select--</option>
                                                 <option value="NONE">--select--</option>
