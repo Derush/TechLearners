@@ -6,12 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.HashMap;
 import java.util.Map;
 
-@Document(collection = "eligible_data")
+@Document(collection = "cutOffNew")
 public class UGC_Course {
 
     @Id
     private String id;
     private String name;
+    private String university;
+    private Integer year;
 
     private Map<String, Integer> eligibility = new HashMap();
 
@@ -23,12 +25,28 @@ public class UGC_Course {
         this.id = id;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
-    public void setname(String name) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public Map<String, Integer> getEligibility() {
@@ -38,5 +56,15 @@ public class UGC_Course {
     public void setEligibility(Map<String, Integer> eligibility) {
         this.eligibility = eligibility;
     }
+
+    public Map<String, Float> getZscore() {
+        return zscore;
+    }
+
+    public void setZscore(Map<String, Float> zscore) {
+        this.zscore = zscore;
+    }
+
+    private Map<String, Float> zscore = new HashMap();
 
     }

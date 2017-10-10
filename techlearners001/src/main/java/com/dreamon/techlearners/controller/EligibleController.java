@@ -84,7 +84,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -111,6 +112,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -140,7 +142,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -167,6 +170,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -199,7 +203,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -226,6 +231,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -257,7 +263,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -284,6 +291,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -315,7 +323,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -342,6 +351,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -373,7 +383,8 @@ public class EligibleController {
         int cou = 0;
         for (int i = 0; i < newList.size(); i++) {
             Map<String, Integer> checking = newList.get(i).getEligibility();
-            String coursename = newList.get(i).getname();
+            String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -400,6 +411,7 @@ public class EligibleController {
             if (check1 == true && check2 == true && check3 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 

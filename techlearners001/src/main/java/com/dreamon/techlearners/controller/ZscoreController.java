@@ -54,6 +54,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -91,6 +92,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -117,13 +119,6 @@ public class ZscoreController {
         String District = request.getParameter("district2");
         Float zscore=Float.valueOf(request.getParameter("zid2"));
 
-        Map<String, Integer> eligi = new HashMap<String, Integer>();
-        Map<String, Float> zsc = new HashMap<String, Float>();
-        eligi.put(subject21, subject21R);
-        eligi.put(subject22, subject22R);
-        eligi.put(subject23, subject23R);
-        zsc.put(District,zscore);
-
         StoreList sl = new StoreList();
 
 
@@ -133,6 +128,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -170,6 +166,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -197,13 +194,6 @@ public class ZscoreController {
         String District = request.getParameter("district3");
         Float zscore=Float.valueOf(request.getParameter("zid3"));
 
-        Map<String, Integer> eligi = new HashMap<String, Integer>();
-        Map<String, Float> zsc = new HashMap<String, Float>();
-        eligi.put(subject31, subject31R);
-        eligi.put(subject32, subject32R);
-        eligi.put(subject33, subject33R);
-        zsc.put(District,zscore);
-
         StoreList sl = new StoreList();
 
 
@@ -213,6 +203,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -250,6 +241,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -278,12 +270,6 @@ public class ZscoreController {
         String District = request.getParameter("district4");
         Float zscore=Float.valueOf(request.getParameter("zid4"));
 
-        Map<String, Integer> eligi = new HashMap<String, Integer>();
-        Map<String, Float> zsc = new HashMap<String, Float>();
-        eligi.put(subject41, subject41R);
-        eligi.put(subject42, subject42R);
-        eligi.put(subject43, subject43R);
-        zsc.put(District,zscore);
 
         StoreList sl = new StoreList();
 
@@ -294,6 +280,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -331,6 +318,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -368,6 +356,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -405,6 +394,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
@@ -440,6 +430,7 @@ public class ZscoreController {
             Map<String, Integer> checking = newList.get(i).getEligibility();
             Map<String, Float> checking2 = newList.get(i).getZscore();
             String coursename = newList.get(i).getName();
+            String university = newList.get(i).getUniversity();
 
             boolean check1 = false;
             boolean check2 = false;
@@ -477,6 +468,7 @@ public class ZscoreController {
             if (check1 == true && check2 == true && check3 == true && check4 == true) {
                 sl.setId(String.valueOf(cou));
                 sl.setName(coursename);
+                sl.setUniversity(university);
                 retrivelist.save(sl);
                 cou++;
 
