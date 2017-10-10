@@ -44,28 +44,25 @@ public class EligibleController {
     @RequestMapping("/getoption")
     public String getoption1(Model model) {
         List<option> optionList = getoption.findAll();
-        int count=0;
-        String a=optionList.get(0).getOption3();
+        int count = 0;
+        String a = optionList.get(0).getOption3();
 
-        for(int j=0;j<a.length();j++)
-        {
-            if(a.charAt(j)==',')
-            {
+        for (int j = 0; j < a.length(); j++) {
+            if (a.charAt(j) == ',') {
                 count++;
             }
         }
-        for(int i=0;i<=count;i++)
-        {
+        for (int i = 0; i <= count; i++) {
 
             String first_word = a.split(",")[i];
-            if(!first_word.equals("English Language")) {
+            if (!first_word.equals("English Language")) {
                 System.out.println(first_word);
             }
         }
         return "getoption";
     }
 
-    @RequestMapping(name="/showcourse",value = "/addstream1", method = RequestMethod.POST)
+    @RequestMapping(name = "/showcourse", value = "/addstream1", method = RequestMethod.POST)
     public String addSubject1(HttpServletRequest request, Model model) {
 
         retrivelist.deleteAll();
@@ -364,6 +361,7 @@ public class EligibleController {
 
 
     }
+
     @RequestMapping(value = "/addstream6", method = RequestMethod.POST)
     public String addsSubject6(HttpServletRequest request, Model model) {
 

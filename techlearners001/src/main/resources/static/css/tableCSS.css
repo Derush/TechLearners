@@ -1,14 +1,13 @@
-.scroll-thead{
+.scroll-thead {
     width: 100%;
     display: inline-table;
 }
 
-.scroll-tbody-y
-{
+.scroll-tbody-y {
     display: block;
     overflow-y: scroll;
 }
 
-.table-body{
+.table-body {
     height: 600px;
 }

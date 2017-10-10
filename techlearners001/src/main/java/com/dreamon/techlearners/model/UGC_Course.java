@@ -67,4 +67,4 @@ public class UGC_Course {
 
     private Map<String, Float> zscore = new HashMap();
 
-    }
+}

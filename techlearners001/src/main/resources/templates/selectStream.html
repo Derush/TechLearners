@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DreamOn Home</title>    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <link rel="stylesheet" th:href="@{css/Popup.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/tableCSS.css}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+</head>
+<body background="/images/back3.jpg">
+
+
+<nav>
+
+    <div class="navbar navbar-customs">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="Home.html"><img alt="light" src="/images/logo7.gif" class="logo" height="45" width="175"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-info navbar-btn" href="Home.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="about.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="contact.html" role="button">Contact</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+
+</nav>
+
+<body background="/images/back3.jpg">
+<div class="container">
+    <div class="row ">
+        <div class="large-12 text-center columns">
+            <div class="text-center center-block">
+                <p class="sansserif1"><font size="7"><strong>Choose Your Stream</strong></font></p>
+            </div>
+            <ul class="button-group fix_button_group">
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Arts
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Other
+                </button>
+
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="id01" class="modal">
+    <form name="myForm" class="modal-content animate" action="/arts" onsubmit="return validateForm1()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        </div>
+
+        <div class="container">
+            <div id="page-wrapper1">
+                <div id="page-inner1">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Grade</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list1" onchange="getSubject1();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics
+                                                    </option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject1" name="subject1"/>
+                                            <td><select id="subject1Result1" class="form-control2"
+                                                        onchange="getSubject1Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject1R" name="subject1R"/>
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list2" onchange="getSubject2();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics
+                                                </option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject2" name="subject2"/>
+                                            <td><select id="subject2Result" class="form-control2"
+                                                        onchange="getSubject2Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject2R" name="subject2R"/>
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list3" onchange="getSubject3();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="NONE">--select--</option>
+                                                <option value="Combined Mathematics">Combined Mathematics
+                                                </option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3" name="subject3"/>
+                                            <td><select id="subject3Result" class="form-control2"
+                                                        onchange="getSubject3Result()">
+                                                <option value="NONE">--select--</option>
+                                                <option value=4>A</option>
+                                                <option value=3>B</option>
+                                                <option value=2>C</option>
+                                                <option value=1>S</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject3R" name="subject3R"/>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+</body>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<div class="footer" id="bottom_link">
+    <div id="footer">
+        <div class="container">
+            <div class="text-center center-block"><p class="txt-railway"><font size="3"><strong>ABOUT THE DREAM
+                ON</strong></font></p>                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                                                                                                      class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                                                                     class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:bootsnipp@gmail.com"><i id="social-em"
+                                                        class="fa fa-envelope-square fa-3x social"></i></a>
+                <p class="txt-railway"><font size="1"><em>copyright&copy;DreamOn</em></font></p></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

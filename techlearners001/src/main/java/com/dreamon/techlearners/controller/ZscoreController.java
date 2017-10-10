@@ -42,7 +42,7 @@ public class ZscoreController {
         Integer subject2R = Integer.valueOf(request.getParameter("subject2R"));
         Integer subject3R = Integer.valueOf(request.getParameter("subject3R"));
         String District = request.getParameter("district1");
-        Float zscore=Float.valueOf(request.getParameter("zid1"));
+        Float zscore = Float.valueOf(request.getParameter("zid1"));
 
 
         StoreList sl = new StoreList();
@@ -117,7 +117,7 @@ public class ZscoreController {
         Integer subject22R = Integer.valueOf(request.getParameter("subject22R"));
         Integer subject23R = Integer.valueOf(request.getParameter("subject23R"));
         String District = request.getParameter("district2");
-        Float zscore=Float.valueOf(request.getParameter("zid2"));
+        Float zscore = Float.valueOf(request.getParameter("zid2"));
 
         StoreList sl = new StoreList();
 
@@ -192,7 +192,7 @@ public class ZscoreController {
         Integer subject32R = Integer.valueOf(request.getParameter("subject32R"));
         Integer subject33R = Integer.valueOf(request.getParameter("subject33R"));
         String District = request.getParameter("district3");
-        Float zscore=Float.valueOf(request.getParameter("zid3"));
+        Float zscore = Float.valueOf(request.getParameter("zid3"));
 
         StoreList sl = new StoreList();
 
@@ -268,7 +268,7 @@ public class ZscoreController {
         Integer subject42R = Integer.valueOf(request.getParameter("subject42R"));
         Integer subject43R = Integer.valueOf(request.getParameter("subject43R"));
         String District = request.getParameter("district4");
-        Float zscore=Float.valueOf(request.getParameter("zid4"));
+        Float zscore = Float.valueOf(request.getParameter("zid4"));
 
 
         StoreList sl = new StoreList();
@@ -344,7 +344,7 @@ public class ZscoreController {
         Integer subject52R = Integer.valueOf(request.getParameter("subject52R"));
         Integer subject53R = Integer.valueOf(request.getParameter("subject53R"));
         String District = request.getParameter("district5");
-        Float zscore=Float.valueOf(request.getParameter("zid5"));
+        Float zscore = Float.valueOf(request.getParameter("zid5"));
 
 
         StoreList sl = new StoreList();
@@ -420,7 +420,7 @@ public class ZscoreController {
         Integer subject62R = Integer.valueOf(request.getParameter("subject62R"));
         Integer subject63R = Integer.valueOf(request.getParameter("subject63R"));
         String District = request.getParameter("district6");
-        Float zscore=Float.valueOf(request.getParameter("zid6"));
+        Float zscore = Float.valueOf(request.getParameter("zid6"));
 
         StoreList sl = new StoreList();
 

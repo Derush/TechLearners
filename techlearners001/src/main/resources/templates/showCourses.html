@@ -56,25 +56,25 @@
 
 <body background="/images/back3.jpg">
 <div class="container">
-<table class="table scroll-thead scroll-tbody-y table-body">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Course Name</th>
-        <th>University Details</th>
+    <table class="table scroll-thead scroll-tbody-y table-body">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Course Name</th>
+            <th>University Details</th>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="show1 : ${show}">
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="show1 : ${show}">
 
-        <td th:text="${show1.id}"></td>
-        <td th:text="${show1.name}"></td>
-        <td th:text="${show1.university}"></td>
+            <td th:text="${show1.id}"></td>
+            <td th:text="${show1.name}"></td>
+            <td th:text="${show1.university}"></td>
 
-    </tr>
-    </tbody>
-</table>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 

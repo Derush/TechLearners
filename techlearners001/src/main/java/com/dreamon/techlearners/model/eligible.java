@@ -1,6 +1,7 @@
 package com.dreamon.techlearners.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,8 +46,8 @@ public class eligible {
     }
 
 
-
-    public eligible() {}
+    public eligible() {
+    }
 
     public String getId() {
         return id;
@@ -57,36 +58,28 @@ public class eligible {
     }
 
 
-
-
     public String getsubject1() {
         return subject1;
     }
+
     public void setsubject1(String subject1) {
         this.subject1 = subject1;
     }
 
 
-
-
-
-
     public String getsubject2() {
         return subject2;
     }
+
     public void setsubject2(String subject2) {
         this.subject2 = subject2;
     }
 
 
-
-
-
-
-
     public String getsubject3() {
         return subject3;
     }
+
     public void setsubject3(String subject3) {
         this.subject3 = subject3;
     }
@@ -95,13 +88,10 @@ public class eligible {
     public String getstream() {
         return stream;
     }
+
     public void setstream(String stream) {
         this.stream = stream;
     }
-
-
-
-
 
 
 }

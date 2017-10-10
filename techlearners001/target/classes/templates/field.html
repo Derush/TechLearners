@@ -1,108 +1,126 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->    <title>DreamOn Home</title>    <!-- Bootstrap -->    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">    <link rel="stylesheet" th:href="@{css/custom.css}">    <link rel="stylesheet" th:href="@{css/Popup.css}">    <link rel="stylesheet" th:href="@{css/footer.css}">    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"></head>
-  <body background="/images/back3.jpg">
-  
-  
-  
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DreamOn Home</title>    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <link rel="stylesheet" th:href="@{css/Popup.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+</head>
+<body background="/images/back3.jpg">
+
+
 <nav>
 
 
-  <div class="navbar navbar-customs">
-     <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="Home.html"><img alt="light" src="/images/logo7.gif" class="logo" height="45" width="175"></a>
-    </div>
+    <div class="navbar navbar-customs">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="Home.html"><img alt="light" src="/images/logo7.gif" class="logo" height="45" width="175"></a>
+            </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-		<a class="btn btn-info navbar-btn" href="Home.html" role="button">Home</a>
-		<a class="btn btn-info navbar-btn" href="about.html" role="button">About</a>
-		<a class="btn btn-info navbar-btn" href="contact.html" role="button">Contact</a>
-		
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-info navbar-btn" href="Home.html" role="button">Home</a>
+                    <a class="btn btn-info navbar-btn" href="about.html" role="button">About</a>
+                    <a class="btn btn-info navbar-btn" href="contact.html" role="button">Contact</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
 
 
 </nav>
 <div class="container">
-<div id="page-wrapper" >
+    <div id="page-wrapper">
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                       <label>Which field are you interested in?</label>
-                                           <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Engineering
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Information Technology
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Mathematics
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Statistics/ Analysis
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Designing/ Architecture
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Construction
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Teaching/ Education
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Administration
-                                                </label>
-                                            </div>          
+                        <label>Which field are you interested in?</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Engineering
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Information Technology
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Mathematics
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Statistics/ Analysis
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Designing/ Architecture
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Construction
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Teaching/ Education
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""/>Administration
+                            </label>
+                        </div>
                     </div>
 
 
                     <div class="form-group">
                         <label>Are you concerned about location of universities? </label>
 
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />Yes
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>No
-                                                </label>
-                                            </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked/>Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>No
+                            </label>
+                        </div>
                     </div>
 
 
                     <div class="form-group">
-                        <label >Select your district that you want: </label>
+                        <label>Select your district that you want: </label>
                         <select id="disabledSelect1" class="form-control">
                             <option>jaffna</option>
                             <option>kandy</option>
@@ -111,11 +129,11 @@
 
                     <div class="form-group">
                         <label>Enter your Z-score:</label>
-                        <input class="form-control" />
+                        <input class="form-control"/>
                         <!--   <p class="help-block">Help text here.</p> -->
                     </div>
                     <div class="form-group">
-                        <label >Enter your own district: </label>
+                        <label>Enter your own district: </label>
                         <select id="disabledSelect2" class="form-control">
                             <option>jaffna</option>
                             <option>kandy</option>
@@ -124,16 +142,13 @@
 
 
                     <div class="form-group">
-                        <label >Fill the result:</label>
+                        <label>Fill the result:</label>
                         <a href="result_maths.html" class="btn btn-default">Go</a>
                     </div>
 
 
-
-
-                    
                     <div class="form-group">
-                        <label >Fill the questionnaire:</label>
+                        <label>Fill the questionnaire:</label>
                         <a href="questionInterest.html" class="btn btn-default">Go</a>
                     </div>
 
@@ -143,17 +158,17 @@
                 </div>
             </div>
             <!-- /. ROW  -->
-            <hr />
+            <hr/>
 
         </div>
         <!-- /. PAGE INNER  -->
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
-   
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>

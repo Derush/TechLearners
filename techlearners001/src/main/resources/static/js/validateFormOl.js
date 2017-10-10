@@ -3,6 +3,7 @@ function getSubject1() {
     document.getElementById("subject1").value = subject1sel;
 
 }
+
 getSubject1();
 
 

@@ -46,6 +46,7 @@ function getSubject2() {
             : opR[i].disabled = false;
     }
 }
+
 getSubject2();
 
 function getSubject2Result() {
@@ -122,26 +123,27 @@ function getSubject21Result() {
 
 getSubject21Result();
 
-function getSubject22(){
+function getSubject22() {
 
     var subject22sel = document.getElementById("list22").value;
     // var subject21sel = document.getElementById("list21").value;
     document.getElementById("subject22").value = subject22sel;
-   /* var op22 = document.getElementById("list23");
-    for (var i = 0; i < op22.length; i++) {
-        // lowercase comparison for case-insensitivity
-        ((op22[i].value == subject22sel ) || (op22[i].value == subject21sel ))
-            ? op22[i].disabled = true
-            : op22[i].disabled = false;
-    }
-    var opR1 = document.getElementById("list21");
-    for (var i = 0; i < opR1.length; i++) {
-        // lowercase comparison for case-insensitivity
-        (opR1[i].value == subject22sel )
-            ? opR1[i].disabled = true
-            : opR1[i].disabled = false;
-    }*/
+    /* var op22 = document.getElementById("list23");
+     for (var i = 0; i < op22.length; i++) {
+         // lowercase comparison for case-insensitivity
+         ((op22[i].value == subject22sel ) || (op22[i].value == subject21sel ))
+             ? op22[i].disabled = true
+             : op22[i].disabled = false;
+     }
+     var opR1 = document.getElementById("list21");
+     for (var i = 0; i < opR1.length; i++) {
+         // lowercase comparison for case-insensitivity
+         (opR1[i].value == subject22sel )
+             ? opR1[i].disabled = true
+             : opR1[i].disabled = false;
+     }*/
 }
+
 getSubject22();
 
 
