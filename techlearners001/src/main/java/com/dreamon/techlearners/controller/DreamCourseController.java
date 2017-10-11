@@ -33,6 +33,7 @@ public class DreamCourseController {
     @RequestMapping(value="/Dream",method = RequestMethod.POST)
     public  String search(HttpServletRequest request, Model model)
     {
+        String key= null;
 
         String course = request.getParameter("course");
         String subject1 = request.getParameter("subject1");
@@ -41,6 +42,7 @@ public class DreamCourseController {
         StoreList sl = new StoreList();
 
         List<UGC_Course> newList = cou.findAll();
+        boolean checking1 = false;
 
 
         int cou = 0;
@@ -50,15 +52,15 @@ public class DreamCourseController {
 
             if (coursename.equals(course)) {
                 for (Map.Entry<String, Integer> entry : checking.entrySet()) {
-                    String key = entry.getKey().toString();
+                    key = entry.getKey().toString();
 
                     {
                         System.out.println(key + " ");
                     }
                 }
-
-
             }
+
+
         }
 
         return "favCourse";

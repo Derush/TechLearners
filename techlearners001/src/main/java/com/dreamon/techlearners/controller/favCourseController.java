@@ -32,9 +32,11 @@ public String pageform(Model model)
     String subject1 = request.getParameter("subject1");
     String subject2 = request.getParameter("subject2");
     String subject3 = request.getParameter("subject3");
-    Integer subject1R = Integer.valueOf(request.getParameter("subject1R"));
-    Integer subject2R = Integer.valueOf(request.getParameter("subject2R"));
-    Integer subject3R = Integer.valueOf(request.getParameter("subject3R"));
+
+    System.out.print(subject1);
+    System.out.print(subject2);
+    System.out.print(subject3);
+
 
     StoreList sl = new StoreList();
 
@@ -45,7 +47,6 @@ public String pageform(Model model)
       Map<String, Integer> checking = newList.get(i).getEligibility();
       String coursename = newList.get(i).getName();
       String university = newList.get(i).getUniversity();
-
       boolean check1 = false;
       boolean check2 = false;
       boolean check3 = false;
