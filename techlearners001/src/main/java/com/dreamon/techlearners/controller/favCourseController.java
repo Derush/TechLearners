@@ -301,7 +301,7 @@ public class favCourseController {
     String subject61 = request.getParameter("subject61");
     String subject62 = request.getParameter("subject62");
     String subject63 = request.getParameter("subject63");
-
+    System.out.println(subject61+subject62+subject63);
 
     StoreList sl = new StoreList();
 
