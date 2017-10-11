@@ -176,22 +176,7 @@ public class eligible_olController {
             s3=true;
             retrivelist.save(SL);
         }
-//        if(s1==true)
-//        {
-//            retrivelist.save(SL);
-//        }
-//        if(s2==true)
-//        {
-//            retrivelist.save(SL);
-//        }
-//        if(s3==true)
-//        {
-//            retrivelist.save(SL);
-//        }
-//        if(s4==true)
-//        {
-//            retrivelist.save(SL);
-//        }
+
 
 
 
