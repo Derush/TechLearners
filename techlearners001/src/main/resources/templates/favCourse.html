@@ -187,7 +187,7 @@
         </form>
     </div>
     <div id="id02" class="modal">
-        <form name="myForm" class="modal-content animate" action="/addstream2" onsubmit="return validateForm2()"
+        <form name="myForm" class="modal-content animate" action="/selectBio" onsubmit="return validateForm2()"
               method="POST">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -738,7 +738,7 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src="js/validateFormPopup.js"></script>
+<script type="text/javascript" src="js/favScript.js"></script>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -763,27 +763,6 @@
 
 
 </body>
-<script>
 
-    function getSubject1() {
-        var subject1sel = document.getElementById("list1").value;
-        document.getElementById("subject1").value = subject1sel;
-
-    }
-    getSubject1();
-    function getSubject2() {
-        var subject2sel = document.getElementById("list2").value;
-        document.getElementById("subject2").value = subject2sel;
-
-    }
-    getSubject2();
-    function getSubject3() {
-        var subject3sel = document.getElementById("list3").value;
-        document.getElementById("subject3").value = subject3sel;
-
-    }
-    getSubject3();
-
-</script>
 
 </html>
