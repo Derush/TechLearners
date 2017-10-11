@@ -237,4 +237,112 @@ public class favCourseController {
     model.addAttribute("show", retrivelist.findAll());
     return "showCourses";
   }
+
+
+
+
+  @RequestMapping(value = "/selectart", method = RequestMethod.POST)
+  public String search5(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
+
+    String subject51 = request.getParameter("subject51");
+    String subject52 = request.getParameter("subject52");
+    String subject53 = request.getParameter("subject53");
+
+
+    StoreList sl = new StoreList();
+
+    List<UGC_Course> newList = course.findAll();
+
+    int cou = 0;
+    for (int i = 0; i < newList.size(); i++) {
+      Map<String, Integer> checking = newList.get(i).getEligibility();
+      String coursename = newList.get(i).getName();
+      String university = newList.get(i).getUniversity();
+      boolean check1 = false;
+      boolean check2 = false;
+      boolean check3 = false;
+
+      for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+        String key = entry.getKey().toString();
+        if (key.equals(subject51)) {
+          check1 = true;
+        }
+
+        if (key.equals(subject52)) {
+          check2 = true;
+        }
+
+        if (key.equals(subject53)) {
+          check3 = true;
+        }
+
+
+      }
+      if (check1 == true && check2 == true && check3 == true) {
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
+        System.out.print(coursename);
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
+
+      }
+    }
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
+  }
+
+
+  @RequestMapping(value = "/selectother", method = RequestMethod.POST)
+  public String search6(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
+
+    String subject61 = request.getParameter("subject61");
+    String subject62 = request.getParameter("subject62");
+    String subject63 = request.getParameter("subject63");
+
+
+    StoreList sl = new StoreList();
+
+    List<UGC_Course> newList = course.findAll();
+
+    int cou = 0;
+    for (int i = 0; i < newList.size(); i++) {
+      Map<String, Integer> checking = newList.get(i).getEligibility();
+      String coursename = newList.get(i).getName();
+      String university = newList.get(i).getUniversity();
+      boolean check1 = false;
+      boolean check2 = false;
+      boolean check3 = false;
+
+      for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+        String key = entry.getKey().toString();
+        if (key.equals(subject61)) {
+          check1 = true;
+        }
+
+        if (key.equals(subject62)) {
+          check2 = true;
+        }
+
+        if (key.equals(subject63)) {
+          check3 = true;
+        }
+
+
+      }
+      if (check1 == true && check2 == true && check3 == true) {
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
+        System.out.print(coursename);
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
+
+      }
+    }
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
+  }
 }
