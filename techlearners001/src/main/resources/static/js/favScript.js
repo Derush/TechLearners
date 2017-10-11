@@ -116,12 +116,9 @@ function getSubject21() {
 
 getSubject21();
 
-function getSubject21Result() {
-    var subject21Result = document.getElementById("subject1Result21").value;
-    document.getElementById("subject21R").value = subject21Result;
-}
 
-getSubject21Result();
+
+
 
 function getSubject22() {
 
@@ -147,13 +144,6 @@ function getSubject22() {
 getSubject22();
 
 
-function getSubject22Result() {
-    var subject22Result = document.getElementById("subject22Result").value;
-    document.getElementById("subject22R").value = subject22Result;
-}
-
-getSubject22Result();
-
 
 function getSubject23() {
     var subject23sel = document.getElementById("list23").value;
@@ -163,12 +153,6 @@ function getSubject23() {
 getSubject23();
 
 
-function getSubject23Result() {
-    var subject23Result = document.getElementById("subject23Result").value;
-    document.getElementById("subject23R").value = subject23Result;
-}
-
-getSubject23Result();
 
 
 function getStream() {
