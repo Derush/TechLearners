@@ -340,12 +340,8 @@ function getSubject51() {
 
 getSubject51();
 
-function getSubject51Result() {
-    var subject51Result = document.getElementById("subject1Result51").value;
-    document.getElementById("subject51R").value = subject51Result;
-}
 
-getSubject51Result();
+
 
 function getSubject52() {
     var subject52sel = document.getElementById("list52").value;
@@ -355,12 +351,7 @@ function getSubject52() {
 getSubject52();
 
 
-function getSubject52Result() {
-    var subject52Result = document.getElementById("subject52Result").value;
-    document.getElementById("subject52R").value = subject52Result;
-}
 
-getSubject52Result();
 
 
 function getSubject53() {
@@ -369,15 +360,6 @@ function getSubject53() {
 }
 
 getSubject53();
-
-
-function getSubject53Result() {
-    var subject53Result = document.getElementById("subject53Result").value;
-    document.getElementById("subject53R").value = subject53Result;
-}
-
-getSubject53Result();
-
 
 function getStream() {
     var streamval = document.getElementById("list").value;
@@ -430,12 +412,6 @@ function getSubject61() {
 
 getSubject61();
 
-function getSubject61Result() {
-    var subject61Result = document.getElementById("subject1Result61").value;
-    document.getElementById("subject61R").value = subject61Result;
-}
-
-getSubject61Result();
 
 function getSubject62() {
     var subject62sel = document.getElementById("list62").value;
@@ -445,12 +421,7 @@ function getSubject62() {
 getSubject62();
 
 
-function getSubject62Result() {
-    var subject62Result = document.getElementById("subject62Result").value;
-    document.getElementById("subject62R").value = subject62Result;
-}
 
-getSubject62Result();
 
 
 function getSubject63() {
@@ -460,13 +431,6 @@ function getSubject63() {
 
 getSubject63();
 
-
-function getSubject63Result() {
-    var subject63Result = document.getElementById("subject63Result").value;
-    document.getElementById("subject63R").value = subject63Result;
-}
-
-getSubject63Result();
 
 
 function getStream() {
