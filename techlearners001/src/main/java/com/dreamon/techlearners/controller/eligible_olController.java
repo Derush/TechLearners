@@ -130,6 +130,7 @@ public class eligible_olController {
             if ((subject1R >= 2)) {
                 phyeligibility = true;
                 System.out.print("physicalScience");
+
             }
             if ( subject2R >= 2)
             {
@@ -152,24 +153,28 @@ public class eligible_olController {
             SL.setId(String.valueOf(01));
             SL.setStream("Physical Science");
             s1=true;
+            retrivelist.save(SL);
         }
         if(bioeligibility == true)
         {
             SL.setId(String.valueOf(02));
             SL.setStream("Bio Science");
             s2=true;
+            retrivelist.save(SL);
         }
         if(techeligibility == true)
         {
             SL.setId(String.valueOf(03));
             SL.setStream("Technology");
             s3=true;
+            retrivelist.save(SL);
         }
         if(comeligibility == true)
         {
             SL.setId(String.valueOf(04));
             SL.setStream("Commerce");
             s3=true;
+            retrivelist.save(SL);
         }
 //        if(s1==true)
 //        {
@@ -187,19 +192,7 @@ public class eligible_olController {
 //        {
 //            retrivelist.save(SL);
 //        }
-        if(s1==true && s2==true)
-        {
-            retrivelist.save(SL);
-        }
 
-        if(s1==true && s2==true && s3==true)
-        {
-            retrivelist.save(SL);
-        }
-        if(s1==true && s2==true && s3==true && s4==true)
-        {
-            retrivelist.save(SL);
-        }
 
 
 
