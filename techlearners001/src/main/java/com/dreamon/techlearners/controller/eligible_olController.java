@@ -1,7 +1,10 @@
 package com.dreamon.techlearners.controller;
 
+import com.dreamon.techlearners.model.StreamList;
 import com.dreamon.techlearners.model.eligible_ol;
+import com.dreamon.techlearners.repository.StreamListRepository;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class eligible_olController {
 
+    @Autowired
+    StreamListRepository retrivelist;
+
     @RequestMapping("/eligible_ol")
     public String pageform(Model model) {
 //        optionRepository.findAll();
@@ -19,6 +25,9 @@ public class eligible_olController {
 
     @RequestMapping(value = "/Qualification", method = RequestMethod.POST)
     public String Qual(HttpServletRequest request, Model model) {
+
+        retrivelist.deleteAll();
+
         String statement = null;
         String subject1 = request.getParameter("subject1");
         String subject2 = request.getParameter("subject2");
@@ -46,8 +55,12 @@ public class eligible_olController {
         boolean bioeligibility=false;
         boolean techeligibility=false;
         boolean comeligibility=false;
+        boolean s1=false;
+        boolean s2=false;
+        boolean s3=false;
+        boolean s4=false;
         eligible_ol eligible_ol1 = new eligible_ol();
-
+        StreamList SL =new StreamList();
         int count = 0;
         int num = 0;
         if ((subject1R >= 1) && (subject2R >= 1)) {
@@ -106,12 +119,12 @@ public class eligible_olController {
         }
         if (check1 == true && check2 == true && check3 == true) {
             System.out.print("your are qualified");
-            statement = "selectStream";
+//            statement = "selectStream";
             check4 = true;
 
         } else {
             System.out.print("you are not qualified");
-            statement = "showCourses";
+//            statement = "showCourses";
         }
         if (check4 == true ) {
             if ((subject1R >= 2)) {
@@ -134,10 +147,64 @@ public class eligible_olController {
                 System.out.print("Commerce");
             }
         }
+        if(phyeligibility == true)
+        {
+            SL.setId(String.valueOf(01));
+            SL.setStream("Physical Science");
+            s1=true;
+        }
+        if(bioeligibility == true)
+        {
+            SL.setId(String.valueOf(02));
+            SL.setStream("Bio Science");
+            s2=true;
+        }
+        if(techeligibility == true)
+        {
+            SL.setId(String.valueOf(03));
+            SL.setStream("Technology");
+            s3=true;
+        }
+        if(comeligibility == true)
+        {
+            SL.setId(String.valueOf(04));
+            SL.setStream("Commerce");
+            s3=true;
+        }
+//        if(s1==true)
+//        {
+//            retrivelist.save(SL);
+//        }
+//        if(s2==true)
+//        {
+//            retrivelist.save(SL);
+//        }
+//        if(s3==true)
+//        {
+//            retrivelist.save(SL);
+//        }
+//        if(s4==true)
+//        {
+//            retrivelist.save(SL);
+//        }
+        if(s1==true && s2==true)
+        {
+            retrivelist.save(SL);
+        }
+
+        if(s1==true && s2==true && s3==true)
+        {
+            retrivelist.save(SL);
+        }
+        if(s1==true && s2==true && s3==true && s4==true)
+        {
+            retrivelist.save(SL);
+        }
 
 
 
-            return statement;
+        model.addAttribute("show",retrivelist.findAll());
+        return "selectStream";
 
 
     }

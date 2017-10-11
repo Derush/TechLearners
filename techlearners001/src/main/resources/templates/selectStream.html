@@ -55,6 +55,27 @@
 </nav>
 
 <body background="/images/back3.jpg">
+
+<div class="container">
+    <table class="table scroll-thead scroll-tbody-y table-body">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Stream</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="show1 : ${show}">
+
+            <td th:text="${show1.id}"></td>
+            <td th:text="${show1.stream}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 <div class="container">
     <div class="row ">
         <div class="large-12 text-center columns">
