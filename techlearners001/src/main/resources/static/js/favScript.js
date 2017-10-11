@@ -196,12 +196,7 @@ function getSubject31() {
 
 getSubject31();
 
-function getSubject31Result() {
-    var subject31Result = document.getElementById("subject1Result31").value;
-    document.getElementById("subject31R").value = subject31Result;
-}
 
-getSubject31Result();
 
 function getSubject32() {
     var subject32sel = document.getElementById("list32").value;
@@ -211,12 +206,6 @@ function getSubject32() {
 getSubject32();
 
 
-function getSubject32Result() {
-    var subject32Result = document.getElementById("subject32Result").value;
-    document.getElementById("subject32R").value = subject32Result;
-}
-
-getSubject32Result();
 
 
 function getSubject33() {
@@ -227,12 +216,9 @@ function getSubject33() {
 getSubject33();
 
 
-function getSubject33Result() {
-    var subject33Result = document.getElementById("subject33Result").value;
-    document.getElementById("subject33R").value = subject33Result;
-}
 
-getSubject33Result();
+
+
 
 
 function getStream() {
@@ -276,12 +262,8 @@ function getSubject41() {
 
 getSubject41();
 
-function getSubject41Result() {
-    var subject41Result = document.getElementById("subject1Result41").value;
-    document.getElementById("subject41R").value = subject41Result;
-}
 
-getSubject41Result();
+
 
 function getSubject42() {
     var subject42sel = document.getElementById("list42").value;
@@ -291,12 +273,7 @@ function getSubject42() {
 getSubject42();
 
 
-function getSubject42Result() {
-    var subject42Result = document.getElementById("subject42Result").value;
-    document.getElementById("subject42R").value = subject42Result;
-}
 
-getSubject42Result();
 
 
 function getSubject43() {
@@ -307,12 +284,9 @@ function getSubject43() {
 getSubject43();
 
 
-function getSubject43Result() {
-    var subject43Result = document.getElementById("subject43Result").value;
-    document.getElementById("subject43R").value = subject43Result;
-}
 
-getSubject43Result();
+
+
 
 
 function getStream() {

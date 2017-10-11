@@ -2,6 +2,7 @@ package com.dreamon.techlearners.controller;
 
 import com.dreamon.techlearners.model.StoreList;
 import com.dreamon.techlearners.model.UGC_Course;
+import com.dreamon.techlearners.repository.StoreListRepository;
 import com.dreamon.techlearners.repository.UGCRepository;
 import com.dreamon.techlearners.repository.eligibleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +21,17 @@ public class favCourseController {
   eligibleRepository eligi;
   @Autowired
   UGCRepository course;
-  @RequestMapping("/favCourse")
-public String pageform(Model model)
-  {
-    return  "favCourse";
-  }
-  @RequestMapping(value="/selectphisical",method = RequestMethod.POST)
-  public  String search(HttpServletRequest request,Model model)
-  {
+  @Autowired
+  StoreListRepository retrivelist;
 
+  @RequestMapping("/favCourse")
+  public String pageform(Model model) {
+    return "favCourse";
+  }
+
+  @RequestMapping(value = "/selectphisical", method = RequestMethod.POST)
+  public String search(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
     String subject1 = request.getParameter("subject1");
     String subject2 = request.getParameter("subject2");
     String subject3 = request.getParameter("subject3");
@@ -62,30 +65,79 @@ public String pageform(Model model)
 
       }
       if (check1 == true && check2 == true && check3 == true) {
-        //sl.setId(String.valueOf(cou));
-        // sl.setName(coursename);
-        System.out.print(coursename);
-        //sl.setUniversity(university);
-        // retrivelist.save(sl);
-        //cou++;
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
+        System.out.println(coursename + " " + university);
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
 
       }
     }
-    return "favCourse";
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
   }
 
 
+  @RequestMapping(value = "/selectTech", method = RequestMethod.POST)
+  public String search3(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
+
+    String subject31 = request.getParameter("subject31");
+    String subject32 = request.getParameter("subject32");
+    String subject33 = request.getParameter("subject33");
 
 
-  @RequestMapping(value="/selectBio",method = RequestMethod.POST)
-  public  String search2(HttpServletRequest request,Model model)
-  {
+    StoreList sl = new StoreList();
+
+    List<UGC_Course> newList = course.findAll();
+
+    int cou = 0;
+    for (int i = 0; i < newList.size(); i++) {
+      Map<String, Integer> checking = newList.get(i).getEligibility();
+      String coursename = newList.get(i).getName();
+      String university = newList.get(i).getUniversity();
+      boolean check1 = false;
+      boolean check2 = false;
+      boolean check3 = false;
+
+      for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+        String key = entry.getKey().toString();
+        if (key.equals(subject31)) {
+          check1 = true;
+        }
+
+        if (key.equals(subject32)) {
+          check2 = true;
+        }
+
+        if (key.equals(subject33)) {
+          check3 = true;
+        }
+
+
+      }
+      if (check1 == true && check2 == true && check3 == true) {
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
+        System.out.print(coursename);
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
+
+      }
+    }
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
+  }
+
+  @RequestMapping(value = "/selectBio", method = RequestMethod.POST)
+  public String search2(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
 
     String subject21 = request.getParameter("subject21");
     String subject22 = request.getParameter("subject22");
     String subject23 = request.getParameter("subject23");
-
-
 
 
     StoreList sl = new StoreList();
@@ -118,15 +170,71 @@ public String pageform(Model model)
 
       }
       if (check1 == true && check2 == true && check3 == true) {
-        //sl.setId(String.valueOf(cou));
-        // sl.setName(coursename);
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
         System.out.print(coursename);
-        //sl.setUniversity(university);
-        // retrivelist.save(sl);
-        //cou++;
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
 
       }
     }
-    return "favCourse";
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
+  }
+
+
+
+
+  @RequestMapping(value = "/selectcom", method = RequestMethod.POST)
+  public String search4(HttpServletRequest request, Model model) {
+    retrivelist.deleteAll();
+
+    String subject41 = request.getParameter("subject41");
+    String subject42 = request.getParameter("subject42");
+    String subject43 = request.getParameter("subject43");
+
+
+    StoreList sl = new StoreList();
+
+    List<UGC_Course> newList = course.findAll();
+
+    int cou = 0;
+    for (int i = 0; i < newList.size(); i++) {
+      Map<String, Integer> checking = newList.get(i).getEligibility();
+      String coursename = newList.get(i).getName();
+      String university = newList.get(i).getUniversity();
+      boolean check1 = false;
+      boolean check2 = false;
+      boolean check3 = false;
+
+      for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+        String key = entry.getKey().toString();
+        if (key.equals(subject41)) {
+          check1 = true;
+        }
+
+        if (key.equals(subject42)) {
+          check2 = true;
+        }
+
+        if (key.equals(subject43)) {
+          check3 = true;
+        }
+
+
+      }
+      if (check1 == true && check2 == true && check3 == true) {
+        sl.setId(String.valueOf(cou));
+        sl.setName(coursename);
+        System.out.print(coursename);
+        sl.setUniversity(university);
+        retrivelist.save(sl);
+        cou++;
+
+      }
+    }
+    model.addAttribute("show", retrivelist.findAll());
+    return "showCourses";
   }
 }
