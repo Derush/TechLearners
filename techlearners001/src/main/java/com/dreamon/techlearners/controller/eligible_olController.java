@@ -19,7 +19,6 @@ public class eligible_olController {
 
     @RequestMapping("/eligible_ol")
     public String pageform(Model model) {
-//        optionRepository.findAll();
         return "eligible_ol";
     }
 
@@ -54,7 +53,6 @@ public class eligible_olController {
         boolean phyeligibility = false;
         boolean bioeligibility=false;
         boolean techeligibility=false;
-        boolean comeligibility=false;
         boolean s1=false;
         boolean s2=false;
         boolean s3=false;
@@ -118,13 +116,11 @@ public class eligible_olController {
             }
         }
         if (check1 == true && check2 == true && check3 == true) {
-            System.out.print("your are qualified");
-//            statement = "selectStream";
+
             check4 = true;
 
         } else {
             System.out.print("you are not qualified");
-//            statement = "showCourses";
         }
         if (check4 == true ) {
             if ((subject1R >= 2)) {
@@ -141,11 +137,6 @@ public class eligible_olController {
             {
             techeligibility=true;
                 System.out.print("Technology");
-            }
-            if(subject7.equals("Business Studies and Accounting")&&(subject7R>=1))
-            {
-                comeligibility=true;
-                System.out.print("Commerce");
             }
         }
         if(phyeligibility == true)
@@ -169,13 +160,7 @@ public class eligible_olController {
             s3=true;
             retrivelist.save(SL);
         }
-        if(comeligibility == true)
-        {
-            SL.setId(String.valueOf(04));
-            SL.setStream("Commerce");
-            s3=true;
-            retrivelist.save(SL);
-        }
+
 
 
 
