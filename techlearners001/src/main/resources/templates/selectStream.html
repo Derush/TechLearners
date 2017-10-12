@@ -283,63 +283,52 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <select id="lis1" onchange="getSubject1();">
+                                                <select id="list61" onchange="getSubject61();">
                                                     <option value="NONE">--select--</option>
-                                                    <option value="Combined Mathematics">Combined Mathematics
-                                                    </option>
+                                                    <option value="Biology">Biology</option>
                                                     <option value="Physics">Physics</option>
+                                                    <option value="Combined Mathematics">Combined Mathematics</option>
                                                     <option value="Chemistry">Chemistry</option>
+                                                    <option value="Information and Communication Technology">
+                                                        Information and Communication Technology
+                                                    </option>
+                                                    <option value="Agricultural Science ">Agricultural Science
+                                                    </option>
                                                 </select></td>
-                                            <input type="hidden" id="sub1" name="subject1"/>
-                                            <td><select id="sub1R" class="form-control2"
-                                                        onchange="getSubject1Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option><option value=0>F</option>
-                                            </select></td>
-                                            <input type="hidden" id="subj1R" name="subject1R"/>
-                                        </tr>
-                                        <tr>
-                                            <td><select id="lis2" onchange="getSubject2();">
-                                                <option value="NONE">--select--</option>
-                                                <option value="Combined Mathematics">Combined Mathematics
-                                                </option>
-                                                <option value="Physics">Physics</option>
-                                                <option value="Chemistry">Chemistry</option>
-                                            </select></td>
-                                            <input type="hidden" id="sub2" name="subject2"/>
-                                            <td><select id="sub2R" class="form-control2"
-                                                        onchange="getSubject2Result()">
-                                                <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option><option value=0>F</option>
-                                            </select></td>
-                                            <input type="hidden" id="subj2R" name="subject2R"/>
+                                            <input type="hidden" id="subject61" name="subject61"/>
+
 
                                         </tr>
                                         <tr>
-                                            <td><select id="list3" onchange="getSubject3();">
+                                            <td><select id="list62" onchange="getSubject62();">
                                                 <option value="NONE">--select--</option>
-                                                <option value="NONE">--select--</option>
-                                                <option value="Combined Mathematics">Combined Mathematics
-                                                </option>
+                                                <option value="Biology">Biology</option>
                                                 <option value="Physics">Physics</option>
                                                 <option value="Chemistry">Chemistry</option>
+                                                <option value="Information and Communication Technology">
+                                                    Information and Communicational Technology
+                                                </option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="Agricultural Science ">Agricultural Science</option>
                                             </select></td>
-                                            <input type="hidden" id="subject3" name="subject3"/>
-                                            <td><select id="subject3Result" class="form-control2"
-                                                        onchange="getSubject3Result()">
+                                            <input type="hidden" id="subject62" name="subject62"/>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list63" onchange="getSubject63();">
                                                 <option value="NONE">--select--</option>
-                                                <option value=4>A</option>
-                                                <option value=3>B</option>
-                                                <option value=2>C</option>
-                                                <option value=1>S</option><option value=0>F</option>
+                                                <option value="Biology">Biology</option>
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Information and Communication Technology">
+                                                    Information and Communicational Technology
+                                                </option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="Agricultural Science ">Agricultural Science</option>
                                             </select></td>
-                                            <input type="hidden" id="subject3R" name="subject3R"/>
+                                            <input type="hidden" id="subject63" name="subject63"/>
 
                                         </tr>
                                         </tbody>
@@ -436,6 +425,55 @@
     }
 
     getSubject53();
+
+    function getStream() {
+        var streamval = document.getElementById("list").value;
+        document.getElementById("stream").value = streamval;
+    }
+
+    getStream();
+
+    function getSubject61() {
+        var subject61sel = document.getElementById("list61").value;
+        document.getElementById("subject61").value = subject61sel;
+        var op62 = document.getElementById("list62");
+        for (var i = 0; i < op62.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (op62[i].value == subject61sel )
+                ? op62[i].disabled = true
+                : op62[i].disabled = false;
+        }
+        var op63 = document.getElementById("list63");
+        for (var i = 0; i < op63.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (op63[i].value == subject61sel )
+                ? op63[i].disabled = true
+                : op63[i].disabled = false;
+        }
+    }
+
+    getSubject61();
+
+
+    function getSubject62() {
+        var subject62sel = document.getElementById("list62").value;
+        document.getElementById("subject62").value = subject62sel;
+    }
+
+    getSubject62();
+
+
+
+
+
+    function getSubject63() {
+        var subject63sel = document.getElementById("list63").value;
+        document.getElementById("subject63").value = subject63sel;
+    }
+
+    getSubject63();
+
+
 
     function getStream() {
         var streamval = document.getElementById("list").value;

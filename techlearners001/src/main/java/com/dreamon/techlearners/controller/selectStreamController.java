@@ -67,7 +67,7 @@ public class selectStreamController {
         return "showCourses";
     }
 
-    @RequestMapping(name = "/arts", value = "/arts", method = RequestMethod.POST)
+    @RequestMapping(name = "/other", value = "/other", method = RequestMethod.POST)
     public String check2(HttpServletRequest request, Model model) {
 
         // retrivelist.deleteAll();
