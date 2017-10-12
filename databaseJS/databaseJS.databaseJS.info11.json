@@ -1,0 +1,115 @@
+{ 
+    "_id" : ObjectId("59dea47827547e7296cdc7af"), 
+    "name" : "Music (Carnatic)", 
+    "eligibility" : {
+        "Music (Carnatic)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea4d027547e7296cdc7b0"), 
+    "name" : "Geography", 
+    "eligibility" : {
+        "Geography" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea5cf27547e7296cdc7b1"), 
+    "name" : "Dancing (Baratha)", 
+    "eligibility" : {
+        "Dancing (Baratha)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea5d227547e7296cdc7b2")
+}
+{ 
+    "_id" : ObjectId("59dea61727547e7296cdc7b3"), 
+    "name" : "Mathematics", 
+    "eligibility" : {
+        "Mathematics" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59deddd22427d0fcfd3a80b9"), 
+    "name" : "Information and Communication Technology", 
+    "eligibility" : {
+        "Information & Communication Technology" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8a8337d2d7b16d9de800"), 
+    "name" : "Music (Western)", 
+    "eligibility" : {
+        "Music (Western)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8aab37d2d7b16d9de801"), 
+    "name" : "Music (Oriental)", 
+    "eligibility" : {
+        "Music (Oriental)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8b5a37d2d7b16d9de802"), 
+    "name" : "Dancing (Sinhala)", 
+    "eligibility" : {
+        "Dancing (Sinhala)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8ec737d2d7b16d9de803"), 
+    "name" : "Sinhala", 
+    "eligibility" : {
+        "Sinhala Language & Literature" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8f0537d2d7b16d9de804"), 
+    "name" : "Tamil", 
+    "eligibility" : {
+        "Tamil Language & Literature" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df8f4137d2d7b16d9de805"), 
+    "name" : "English", 
+    "eligibility" : {
+        "English" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df91a037d2d7b16d9de806"), 
+    "name" : "Islamic Civilization", 
+    "eligibility" : {
+        "Islam" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df91f637d2d7b16d9de807"), 
+    "name" : "Buddhism", 
+    "eligibility" : {
+        "Buddhism" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df920537d2d7b16d9de808"), 
+    "name" : "Hinduism", 
+    "eligibility" : {
+        "Hinduism" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df921337d2d7b16d9de809"), 
+    "name" : "Christianity", 
+    "eligibility" : {
+        "Christianity" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59df922b37d2d7b16d9de80a"), 
+    "name" : "Islam", 
+    "eligibility" : {
+        "Islam" : NumberInt(2)
+    }
+}
