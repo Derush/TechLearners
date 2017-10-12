@@ -307,15 +307,7 @@ window.onclick = function (event) {
 }
 
 
-function validateForm4() {
-    var x = document.forms["myForm"]["subject41"].value;
-    var y = document.forms["myForm"]["subject42"].value;
-    var z = document.forms["myForm"]["subject43"].value;
-    if (((x == y) || (y == z) || (x == z))) {
-        alert("There are same subjects in the form");
-        return false;
-    }
-}
+
 
 <!-- script for pop up -->
 
@@ -379,15 +371,7 @@ window.onclick = function (event) {
 }
 
 
-function validateForm5() {
-    var x = document.forms["myForm"]["subject51"].value;
-    var y = document.forms["myForm"]["subject52"].value;
-    var z = document.forms["myForm"]["subject53"].value;
-    if (((x == y) || (y == z) || (x == z))) {
-        alert("There are same subjects in the form");
-        return false;
-    }
-}
+
 
 <!-- script for pop up -->
 
@@ -451,12 +435,14 @@ window.onclick = function (event) {
 }
 
 
-function validateForm6() {
-    var x = document.forms["myForm"]["subject61"].value;
-    var y = document.forms["myForm"]["subject62"].value;
-    var z = document.forms["myForm"]["subject63"].value;
-    if (((x == y) || (y == z) || (x == z))) {
-        alert("There are same subjects in the form");
+function validateForm() {
+    var x = document.forms["myForm"]["subject1"].value;
+    var y = document.forms["myForm"]["subject2"].value;
+    var z = document.forms["myForm"]["subject3"].value;
+    if (x=="NONE"||y=="NONE"||z=="NONE") {
+        alert("error");
         return false;
     }
 }
+validateForm();
+
