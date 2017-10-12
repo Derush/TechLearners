@@ -82,12 +82,16 @@
             <div class="text-center center-block">
                 <p class="sansserif1"><font size="5"><strong>Click a stream to see possible subjects in following streams if you wish to follow</strong></font></p>
             </div>
+
             <ul class="button-group fix_button_group">
                 <button type="button" class="btn btn-primary btn-lg"
-                        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Arts
+                        onclick="document.getElementById('id11').style.display='block'" style="width:auto;">Commerce
                 </button>
                 <button type="button" class="btn btn-primary btn-lg"
-                        onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Other
+                        onclick="document.getElementById('id12').style.display='block'" style="width:auto;">Arts
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id13').style.display='block'" style="width:auto;">Other
                 </button>
 
 
@@ -96,11 +100,11 @@
     </div>
 
 </div>
-<div id="id01" class="modal">
+<div id="id12" class="modal">
     <form name="myForm" class="modal-content animate" action="/arts" onsubmit="return validateForm1()"
           method="POST">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('id12').style.display='none'" class="close" title="Close Modal">&times;</span>
 
         </div>
 
@@ -122,7 +126,7 @@
                                         <thead>
                                         <tr>
                                             <th>Subject</th>
-                                            <th>Grade</th>
+
 
                                         </tr>
                                         </thead>
@@ -205,10 +209,10 @@
                                                     History (Sri Lankan history and Indian history or European
                                                     history or World history)
                                                 </option>
-                                                <option value="Music">Accounting</option>
-                                                <option value="Dancing">Accounting</option>
+                                                <option value="Music">Music</option>
+                                                <option value="Dancing">Dancing</option>
                                                 <option value="Accounting">Accounting</option>
-                                                <option value="Home Economics">Business Statistics</option>
+                                                <option value="Home Economics">Home Economics</option>
                                                 <option value="Agricultural Science">Agricultural Science</option>
                                                 <option value="Buddhism or Buddhist Civilization">Buddhism or
                                                     Buddhist Civilization
@@ -250,11 +254,11 @@
 
 
 
-<div id="id02" class="modal">
+<div id="id13" class="modal">
     <form name="myForm" class="modal-content animate" action="/other" onsubmit="return validateForm1()"
           method="POST">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('id13').style.display='none'" class="close" title="Close Modal">&times;</span>
 
         </div>
 
@@ -276,7 +280,7 @@
                                         <thead>
                                         <tr>
                                             <th>Subject</th>
-                                            <th>Grade</th>
+
 
                                         </tr>
                                         </thead>
@@ -359,6 +363,115 @@
         </div>
     </form>
 </div>
+
+
+
+<div id="id11" class="modal">
+    <form name="myForm" class="modal-content animate" action="/commerce" onsubmit="return validateForm4()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id11').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <div id="page-wrapper4">
+                <div id="page-inner4">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-5 ">Your Results:</label>
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list41" onchange="getSubject41();">
+                                                    <option value="NONE">--select--</option>
+                                                    <option value="Accountancy">Accountancy</option>
+                                                    <option value="Business Studies">Business Studies</option>
+                                                    <option value="Economics">Economics</option>
+                                                </select></td>
+                                            <input type="hidden" id="subject41" name="subject41"/>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list42" onchange="getSubject42();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Accountancy">Accountancy</option>
+                                                <option value="Business Studies">Business Studies</option>
+                                                <option value="Economics">Economics</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject42" name="subject42"/>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list43" onchange="getSubject43();">
+                                                <option value="NONE">--select--</option>
+                                                <option value="Business Statistics">Business Statistics</option>
+                                                <option value="Geography">Geography</option>
+                                                <option value="Political Science">Political Science</option>
+                                                <option value="History">History</option>
+                                                <option value="Logic & Scientific Method">The logic and
+                                                    the scientific method
+                                                </option>
+                                                <option value="English">English</option>
+                                                <option value="German">German</option>
+                                                <option value="French">French</option>
+                                                <option value="Agricultural Sciences">Agricultural Sciences</option>
+                                                <option value="Combined Mathematics">Combined Mathematics</option>
+                                                <option value="Information and Communication Technology (ICT)">
+                                                    Information and Communication Technology (ICT)
+                                                </option>
+                                                <option value="Accountancy">Accountancy</option>
+                                                <option value="Business Studies">Business Studies</option>
+                                                <option value="Economics">Economics</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject43" name="subject43"/>
+
+
+
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
 </body>
 
 
@@ -384,6 +497,38 @@
 
 </body>
 <script>
+
+    var modal = document.getElementById('id11');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    var modal = document.getElementById('id12');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    var modal = document.getElementById('id13');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+
     function getSubject51() {
         var subject51sel = document.getElementById("list51").value;
         document.getElementById("subject51").value = subject51sel;
@@ -482,6 +627,48 @@
 
     getStream();
 
+
+    function getSubject41() {
+        var subject41sel = document.getElementById("list41").value;
+        document.getElementById("subject41").value = subject41sel;
+        var op42 = document.getElementById("list42");
+        for (var i = 0; i < op42.length; i++) {
+
+            (op42[i].value == subject41sel )
+                ? op42[i].disabled = true
+                : op42[i].disabled = false;
+        }
+        var op43 = document.getElementById("list43");
+        for (var i = 0; i < op43.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (op43[i].value == subject41sel )
+                ? op43[i].disabled = true
+                : op43[i].disabled = false;
+        }
+    }
+
+    getSubject41();
+
+
+
+
+    function getSubject42() {
+        var subject42sel = document.getElementById("list42").value;
+        document.getElementById("subject42").value = subject42sel;
+    }
+
+    getSubject42();
+
+
+
+
+
+    function getSubject43() {
+        var subject43sel = document.getElementById("list43").value;
+        document.getElementById("subject43").value = subject43sel;
+    }
+
+    getSubject43();
 
 </script>
 </html>

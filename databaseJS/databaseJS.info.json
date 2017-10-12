@@ -1,0 +1,46 @@
+{ 
+    "_id" : ObjectId("59dea47827547e7296cdc7af"), 
+    "name" : "Music", 
+    "eligibility" : {
+        "Music (Carnatic)" : NumberInt(2), 
+        "Music (Western)" : NumberInt(2), 
+        "Music (Oriental)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea4d027547e7296cdc7b0"), 
+    "name" : "Geography", 
+    "eligibility" : {
+        "Geography" : NumberInt(1)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea5cf27547e7296cdc7b1"), 
+    "name" : "Dancing", 
+    "eligibility" : {
+        "Dancing (Sinhala)" : NumberInt(2), 
+        "Dancing (Baratha)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea5d227547e7296cdc7b2"), 
+    "name" : "Dancing", 
+    "eligibility" : {
+        "Dancing (Sinhala)" : NumberInt(2), 
+        "Dancing (Baratha)" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59dea61727547e7296cdc7b3"), 
+    "name" : "Mathematics", 
+    "eligibility" : {
+        "Mathematics" : NumberInt(2)
+    }
+}
+{ 
+    "_id" : ObjectId("59deddd22427d0fcfd3a80b9"), 
+    "name" : "Information and Communication Technology", 
+    "eligibility" : {
+        "Information & Communication Technology" : NumberInt(1)
+    }
+}
