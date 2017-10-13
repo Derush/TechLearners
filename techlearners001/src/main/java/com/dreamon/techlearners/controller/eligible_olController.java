@@ -120,7 +120,7 @@ public class eligible_olController {
             check4 = true;
 
         } else {
-            System.out.print("you are not qualified");
+            return "notQual";
         }
         if (check4 == true ) {
             if ((subject1R >= 2)) {
@@ -139,6 +139,7 @@ public class eligible_olController {
                 System.out.print("Technology");
             }
         }
+
         if(phyeligibility == true)
         {
             SL.setId(String.valueOf(01));
