@@ -1,6 +1,18 @@
 function getSubject1() {
     var subject1sel = document.getElementById("list1").value;
     document.getElementById("subject1").value = subject1sel;
+    var op1 = document.getElementById("list2");
+    for (var i = 0; i < op1.length; i++) {
+        (op1[i].value == subject1sel )
+            ? op1[i].disabled = true
+            : op1[i].disabled = false;
+    }
+    var opr3 = document.getElementById("list3");
+    for (var i = 0; i < opr3.length; i++) {
+        (opr3[i].value == subject1sel )
+            ? opr3[i].disabled = true
+            : opr3[i].disabled = false;
+    }
 }
 
 getSubject1();

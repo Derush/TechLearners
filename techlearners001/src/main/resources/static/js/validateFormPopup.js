@@ -105,12 +105,12 @@ function getSubject21() {
             ? op22[i].disabled = true
             : op22[i].disabled = false;
     }
-    var opr23 = document.getElementById("list23");
-    for (var i = 0; i < opr23.length; i++) {
+    var op23 = document.getElementById("list23");
+    for (var i = 0; i < op23.length; i++) {
         // lowercase comparison for case-insensitivity
-        (opr23[i].value == subject21sel )
-            ? opr23[i].disabled = true
-            : opr23[i].disabled = false;
+        (op23[i].value == subject21sel )
+            ? op23[i].disabled = true
+            : opr3[i].disabled = false;
     }
 }
 
@@ -126,22 +126,22 @@ getSubject21Result();
 function getSubject22() {
 
     var subject22sel = document.getElementById("list22").value;
-    // var subject21sel = document.getElementById("list21").value;
+    var subject21sel = document.getElementById("list21").value;
     document.getElementById("subject22").value = subject22sel;
-    /* var op22 = document.getElementById("list23");
-     for (var i = 0; i < op22.length; i++) {
-         // lowercase comparison for case-insensitivity
-         ((op22[i].value == subject22sel ) || (op22[i].value == subject21sel ))
-             ? op22[i].disabled = true
-             : op22[i].disabled = false;
-     }
-     var opR1 = document.getElementById("list21");
-     for (var i = 0; i < opR1.length; i++) {
-         // lowercase comparison for case-insensitivity
-         (opR1[i].value == subject22sel )
-             ? opR1[i].disabled = true
-             : opR1[i].disabled = false;
-     }*/
+    var op23 = document.getElementById("list23");
+    for (var i = 0; i < op23.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op23[i].value == subject22sel ) || (op23[i].value == subject21sel ))
+            ? op23[i].disabled = true
+            : op23[i].disabled = false;
+    }
+    var op23 = document.getElementById("list21");
+    for (var i = 0; i < op23.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (op23[i].value == subject23sel )
+            ? op23[i].disabled = true
+            : op23[i].disabled = false;
+    }
 }
 
 getSubject22();
@@ -150,6 +150,7 @@ getSubject22();
 function getSubject22Result() {
     var subject22Result = document.getElementById("subject22Result").value;
     document.getElementById("subject22R").value = subject22Result;
+
 }
 
 getSubject22Result();
@@ -300,8 +301,24 @@ function getSubject41Result() {
 getSubject41Result();
 
 function getSubject42() {
+    var subject41sel = document.getElementById("list41").value;
     var subject42sel = document.getElementById("list42").value;
     document.getElementById("subject42").value = subject42sel;
+    var op42 = document.getElementById("list43");
+    for (var i = 0; i < op42.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op42[i].value == subject42sel ) || (op42[i].value == subject41sel ))
+            ? op42[i].disabled = true
+            : op42[i].disabled = false;
+    }
+    var opR = document.getElementById("list41");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject42sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
+    ;
 }
 
 getSubject42();
@@ -391,7 +408,22 @@ getSubject51Result();
 
 function getSubject52() {
     var subject52sel = document.getElementById("list52").value;
+    var subject51sel = document.getElementById("list51").value;
     document.getElementById("subject52").value = subject52sel;
+    var op53 = document.getElementById("list53");
+    for (var i = 0; i < op53.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op53[i].value == subject51sel ) || (op53[i].value == subject52sel ))
+            ? op53[i].disabled = true
+            : op53[i].disabled = false;
+    }
+    var opR = document.getElementById("list51");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject52sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
 }
 
 getSubject52();
@@ -468,6 +500,7 @@ function getSubject61() {
             ? op63[i].disabled = true
             : op63[i].disabled = false;
     }
+
 }
 
 getSubject61();
@@ -481,7 +514,22 @@ getSubject61Result();
 
 function getSubject62() {
     var subject62sel = document.getElementById("list62").value;
+    var subject61sel = document.getElementById("list61").value;
     document.getElementById("subject62").value = subject62sel;
+    var op63 = document.getElementById("list63");
+    for (var i = 0; i < op63.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op63[i].value == subject62sel ) || (op63[i].value == subject61sel ))
+            ? op63[i].disabled = true
+            : op63[i].disabled = false;
+    }
+    var opR = document.getElementById("list61");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject62sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
 }
 
 getSubject62();
