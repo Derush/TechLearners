@@ -80,6 +80,12 @@
                 </button>
 
 
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Technology
+                </button>
+
+
+
             </ul>
         </div>
     </div>
@@ -233,6 +239,108 @@
         </div>
     </form>
 </div>
+
+
+
+
+<div id="id03" class="modal">
+    <form name="myForm" class="modal-content animate" action="/tech" onsubmit="return validateForm3()"
+          method="POST">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <div id="page-wrapper3">
+                <div id="page-inner3">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+
+
+                                <div class="col-sm-5">
+
+                                    <table class="table table-striped">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="list31" onchange="getSubject31();" required>
+                                                    <option value="">--select--</option>
+                                                    <option value="Science for Technology">Science for Technology
+                                                    </option>
+                                                </select></td>
+                                            <input type="hidden" id="subject31" name="subject31"/>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list32" onchange="getSubject32();" required>
+                                                <option value="NONE">--select--</option>
+                                                <option value="Engineering Technology">Engineering Technology
+                                                </option>
+                                                <option value="Biosystems Technology">Bio-system technology</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject32" name="subject32"/>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td><select id="list33" onchange="getSubject33();" required>
+                                                <option value="">--select--</option>
+                                                <option value="Economics">Economics</option>
+                                                <option value="Geography">Geography</option>
+                                                <option value="Home Economics">Home Economics</option>
+                                                <option value="Accountancy">Accountancy</option>
+                                                <option value="Communication and Media Studies">Communication and
+                                                    Media Study
+                                                </option>
+                                                <option value="Art">Art</option>
+                                                <option value="Business Studies">Business Studies</option>
+                                                <option value="Agricultural Science">Agricultural Science</option>
+                                            </select></td>
+                                            <input type="hidden" id="subject33" name="subject33"/>
+
+
+
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-2">
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr/>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+    </form>
+</div>
+
 
 
 
