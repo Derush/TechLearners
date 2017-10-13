@@ -144,7 +144,7 @@ public class selectStreamController {
             }
             else
 
-                System.out.println("you are qualified for this combinations");
+                System.out.println("You are eligible to follow these combinations");
         }
         model.addAttribute("show", retrivelist2.findAll());
         return "OlSubjectSelect";
@@ -204,7 +204,7 @@ public class selectStreamController {
             }
             else
 
-                System.out.println("you are qualified for this combinations");
+                System.out.println("You are eligible to follow these combinations");
         }
         model.addAttribute("show", retrivelist2.findAll());
         return "OlSubjectSelect";
