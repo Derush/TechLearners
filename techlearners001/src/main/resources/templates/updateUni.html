@@ -405,7 +405,7 @@
         <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> <a href="adminLoginPanel.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
     </nav>
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
@@ -533,15 +533,15 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
             </div>
 
             <div id="id02" class="modal">
-                <form name="myForm" class="modal-content animate" action="/upadteUniDetails" method="POST">
+                <form name="myForm" class="modal-content animate" action="/upadteUniDetails">
                     <div class="imgcontainer">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 
                     </div>
 
                     <div>
-                        <div id="page-wrapper1">
-                            <div id="page-inner1">
+                        <div id="page-wrapper2">
+                            <div id="page-inner2">
                                 <div class="row">
                                     <div class="col-md-6">
 
@@ -561,10 +561,10 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
                                                     <tbody>
                                                     <tr>
                                                         <td>
-                                                            <input type="text" id="uniId" name="uniId" placeholder="Eg :- A" required/>
+
                                                         </td>
                                                         <td>
-                                                            <input type="text" id="uniName" name="uniName" placeholder="University of Jaffna" required/>
+
                                                         </td>
                                                     </tr>
 
@@ -573,14 +573,6 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
 
 
                                             </div>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-6 col-sm-2">
-                                                <input type="submit"/>
-                                            </div>
-
                                         </div>
 
 

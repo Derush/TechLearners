@@ -10,6 +10,7 @@
     <link rel="stylesheet" th:href="@{css/custom.css}">
     <link rel="stylesheet" th:href="@{css/Popup.css}">
     <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/tableCSS2.css}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -405,7 +406,7 @@
         <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> <a href="adminLoginPanel.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
     </nav>
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
@@ -436,7 +437,326 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
     <div id="page-wrapper" >
         <div id="page-inner">
 
+            <div>
+                <h1>Course and Z-Score Details</h1>
+                <table class="table scroll-thead scroll-tbody-y table-body">
+                    <thead>
+                    <tr>
+                        <th>Uni Code</th>
+                        <th>Course Name</th>
+                        <th>University Name</th>
+                        <th>Z-Score Year</th>
 
+                        <th  th:each="eli1 : ${eli}" th:text="${eli1.key}"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="show1 : ${show}" >
+
+                        <td th:text="${show1.id}"></td>
+                        <td th:text="${show1.name}"></td>
+                        <td th:text="${show1.university}"></td>
+                        <td th:text="${show1.year}"></td>
+                        <td th:each="eli1 : ${eli}" th:text="${eli1.value}"></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <ul class="button-group fix_button_group">
+                    <button type="button" class="btn btn-primary btn-lg"
+                            onclick="document.getElementById('id01').style.display='block'" style="width:auto;">UPDATE OR ADD
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg"
+                            onclick="document.getElementById('id02').style.display='block'" style="width:auto;">DELETE
+                    </button>
+                </ul>
+            </div>
+
+            <div id="id01" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteZscoreDetails" method="POST">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper1">
+                            <div id="page-inner1">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <table class="table scroll-tbody-y table-body ">
+
+                                                    <tr>
+                                                        <th>Uni Code</th>
+                                                        <td>
+                                                            <input type="text" id="uniId" name="uniId" placeholder="Eg :- 001A" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Course Name</th>
+                                                        <td>
+                                                            <input type="text" id="courseName" name="courseName" placeholder="Computer Science" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>University Name</th>
+                                                        <td>
+                                                            <input type="text" id="uniName" name="uniName" placeholder="University of Jaffna" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Z-Score Year</th><td>
+                                                        <input type="text" id="year" name="year" placeholder="2016"  required/>
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>COLOMBO</th>
+                                                        <td>
+                                                            <input type="text" id="c1" name="c1" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>KALUTARA</th>
+                                                        <td>
+                                                            <input type="text" id="c2" name="c2" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>MATALE</th>
+                                                        <td>
+                                                            <input type="text" id="c3" name="c3" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                    <th>KANDY</th>
+                                                        <td>
+                                                            <input type="text" id="c4" name="c4" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                    <th>NUWARAELIYA</th>
+                                                        <td>
+                                                            <input type="text" id="c5" name="c5" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                    <th>GALLE</th>
+                                                        <td>
+                                                            <input type="text" id="c6" name="c6" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                    <th>MATARA</th>
+                                                        <td>
+                                                            <input type="text" id="c7" name="c7" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>HAMBANTOTA</th>
+                                                        <td>
+                                                            <input type="text" id="c8" name="c8" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>JAFFNA</th>
+                                                        <td>
+                                                            <input type="text" id="c9" name="c9" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>KILINOCHCHI</th>
+                                                        <td>
+                                                            <input type="text" id="c10" name="c10" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>MANNAR</th>
+                                                        <td>
+                                                            <input type="text" id="c11" name="c11" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>MULLAITIVU</th>
+                                                    <td>
+                                                        <input type="text" id="c12" name="c12" placeholder="0.000" step="0.001" required/>
+                                                    </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                    <th>VAVUNIYA</th>
+                                                        <td>
+                                                            <input type="text" id="c13" name="c13" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>TRINNCOMALEE</th>
+                                                        <td>
+                                                            <input type="text" id="c14" name="c14" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>BATTICALOA</th>
+                                                        <td>
+                                                            <input type="text" id="c15" name="c15" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>AMPARA</th>
+                                                        <td>
+                                                            <input type="text" id="c16" name="c16" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>PUTTALAM</th>
+                                                        <td>
+                                                            <input type="text" id="c17" name="c17" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>KURUNEGALA</th>
+                                                        <td>
+                                                            <input type="text" id="c18" name="c18" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>ANURADHAPURA</th>
+                                                        <td>
+                                                            <input type="text" id="c19" name="c19" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>POLONNARUWA</th>
+                                                        <td>
+                                                            <input type="text" id="c20" name="c20" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>BADULLA</th>
+                                                    <td>
+                                                        <input type="text" id="c21" name="c21" placeholder="0.000" step="0.001" required/>
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>AMPARA</th>
+                                                        <td>
+                                                            <input type="text" id="c22" name="c22" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>MONARAGALA</th>
+                                                        <td>
+                                                            <input type="text" id="c23" name="c23" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>KEGALLE</th>
+                                                        <td>
+                                                            <input type="text" id="c24" name="c24" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>RATNAPURA</th>
+                                                        <td>
+                                                            <input type="text" id="c25" name="c25" placeholder="0.000" step="0.001" required/>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-6 col-sm-2">
+                                                <input type="submit"/>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
+
+            <div id="id02" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteUniDetails">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper2">
+                            <div id="page-inner2">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+
+                                                <table class="table">
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th>University Id</th>
+                                                        <th>University Name</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+
+                                                        </td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
 
         </div>
         <!-- /. PAGE INNER  -->

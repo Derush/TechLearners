@@ -1,0 +1,169 @@
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00948"), 
+    "UniCode" : "001A", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF COLOMBO"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00949"), 
+    "UniCode" : "001B", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094a"), 
+    "UniCode" : "001C", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF JEYEWARDHANAPURA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094b"), 
+    "UniCode" : "001D", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF KELANIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094c"), 
+    "UniCode" : "001E", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094d"), 
+    "UniCode" : "001F", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "UNIVERSITY OF RUHUNA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094e"), 
+    "UniCode" : "001H", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0094f"), 
+    "UniCode" : "001K", 
+    "CourseName" : "Medicine", 
+    "unviersityName" : "RAJARATA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00950"), 
+    "UniCode" : "002B", 
+    "CourseName" : "Dental Surgery", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00951"), 
+    "UniCode" : "003B", 
+    "CourseName" : "Veterinary Science", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00952"), 
+    "UniCode" : "004E", 
+    "CourseName" : "Agriculture", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00953"), 
+    "UniCode" : "004H", 
+    "CourseName" : "Agriculture", 
+    "unviersityName" : "EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00954"), 
+    "UniCode" : "004K", 
+    "CourseName" : "Agriculture", 
+    "unviersityName" : "RAJARATA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00955"), 
+    "UniCode" : "004L", 
+    "CourseName" : "Agriculture", 
+    "unviersityName" : "SABARAGAMUWA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00956"), 
+    "UniCode" : "004M", 
+    "CourseName" : "Agriculture", 
+    "unviersityName" : "WAYAMBA UNIVERSITY OF SRILANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00957"), 
+    "UniCode" : "005M", 
+    "CourseName" : "Food Science and Nutrition", 
+    "unviersityName" : "WAYAMBA UNIVERSITY OF SRILANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00958"), 
+    "UniCode" : "006A", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF COLOMBO"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00959"), 
+    "UniCode" : "006B", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095a"), 
+    "UniCode" : "006C", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF JEYEWARDHANAPURA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095b"), 
+    "UniCode" : "006D", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF KELANIYA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095c"), 
+    "UniCode" : "006E", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095d"), 
+    "UniCode" : "006F", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "UNIVERSITY OF RUHUNA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095e"), 
+    "UniCode" : "006H", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a0095f"), 
+    "UniCode" : "006J", 
+    "CourseName" : "Biological Science", 
+    "unviersityName" : "SOUTH-EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00960"), 
+    "UniCode" : "007K", 
+    "CourseName" : "Applied Science(Bio Science)", 
+    "unviersityName" : "RAJARATA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00961"), 
+    "UniCode" : "007L", 
+    "CourseName" : "Applied Science(Bio Science)", 
+    "unviersityName" : "SABARAGAMUWA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e05bb15e7cd206a8a00962"), 
+    "UniCode" : "007R", 
+    "CourseName" : "Applied Science(Bio Science)", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA (VAVUNIYA CAMPUS)"
+}
+{ 
+    "_id" : ObjectId("59e061a37056f40648df86ad"), 
+    "_class" : "com.dreamon.techlearners.model.UniCourse", 
+    "UniCode" : "008B", 
+    "CourseName" : "Engineering", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}

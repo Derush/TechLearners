@@ -9,6 +9,8 @@
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{css/custom.css}">
     <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/Popup.css}">
+    <link rel="stylesheet" th:href="@{css/tableCSS2.css}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -404,7 +406,7 @@
         <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> <a href="adminLoginPanel.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
     </nav>
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
@@ -434,6 +436,166 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" >
         <div id="page-inner">
+
+            <div>
+                <h1>Universtity Details</h1>
+                <table class="table scroll-thead scroll-tbody-y table-body">
+                    <thead>
+                    <tr>
+                        <th>Uni Code</th>
+                        <th>Course Name</th>
+                        <th>University Name</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="show1 : ${show}">
+
+                        <td th:text="${show1.UniCode}"></td>
+                        <td th:text="${show1.CourseName}"></td>
+                        <td th:text="${show1.unviersityName}"></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <ul class="button-group fix_button_group">
+                    <button type="button" class="btn btn-primary btn-lg"
+                            onclick="document.getElementById('id01').style.display='block'" style="width:auto;">UPDATE OR ADD
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg"
+                            onclick="document.getElementById('id02').style.display='block'" style="width:auto;">DELETE
+                    </button>
+                </ul>
+            </div>
+
+            <div id="id01" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteCourseDetails" method="POST">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper1">
+                            <div id="page-inner1">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+
+                                                <table class="table">
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Uni Code</th>
+                                                        <th>Course Name</th>
+                                                        <th>University Name</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" id="uniId" name="uniId" placeholder="Eg :- 001A" required/>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" id="courseName" name="courseName" placeholder="Computer Science" required/>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" id="uniName" name="uniName" placeholder="University of Jaffna" required/>
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-6 col-sm-2">
+                                                <input type="submit"/>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
+
+            <div id="id02" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteUniDetails">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper2">
+                            <div id="page-inner2">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+
+                                                <table class="table">
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th>University Id</th>
+                                                        <th>University Name</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+
+                                                        </td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
 
 
 

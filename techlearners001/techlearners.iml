@@ -84,5 +84,6 @@
     <orderEntry type="library" name="Maven: org.jboss.interceptor:jboss-interceptor-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: gov.nist.math:jama:1.0.3" level="project" />
   </component>
 </module>
