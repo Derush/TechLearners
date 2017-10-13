@@ -200,4 +200,65 @@ public class notQualController {
         model.addAttribute("show", retrivelist2.findAll());
         return "OlSubjectSelect";
     }
+
+
+
+    @RequestMapping(name = "/tech", value = "/tech", method = RequestMethod.POST)
+    public String check4(HttpServletRequest request, Model model) {
+
+        retrivelist2.deleteAll();
+
+        String subject31 = request.getParameter("subject31");
+        String subject32 = request.getParameter("subject32");
+        String subject33 = request.getParameter("subject33");
+        OlSubjectShow sl = new OlSubjectShow();
+        List<stream> newList =st.findAll();
+
+        int cou = 0;
+        for (int i = 0; i < newList.size(); i++) {
+            Map<String, Integer> checking = newList.get(i).getEligibility();
+            String name = newList.get(i).getName();
+            boolean check1 = false;
+            boolean check2 = false;
+            boolean check3 = false;
+            String key=null;
+            Integer value=null;
+            if (name.equals(subject31) || name.equals(subject32) || name.equals(subject33)) {
+                for (Map.Entry<String, Integer> entry : checking.entrySet()) {
+                    key = entry.getKey().toString();
+                    value = entry.getValue();
+                    check1=true;
+                }
+                if(check1==true)
+                {
+                    sl.setId(String.valueOf(cou));
+                    sl.setSubName(key);
+
+                    switch (value)
+                    {
+                        case 4:
+                            sl.setValue("A");
+                            break;
+                        case 3:
+                            sl.setValue("B");
+                            break;
+                        case 2:
+                            sl.setValue("C");
+                            break;
+                        default:
+                            sl.setValue("S");
+                    }
+                    retrivelist2.save(sl);
+                    cou++;
+                    System.out.println(" you have to take "+key+" in Ordinary level and should get"+ value +" passes"+" or ");
+                }
+
+            }
+            else
+
+                System.out.println("You are eligible to follow these combinations");
+        }
+        model.addAttribute("show", retrivelist2.findAll());
+        return "OlSubjectSelect";
+    }
 }
