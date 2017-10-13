@@ -75,12 +75,8 @@ function getSubject3Result() {
 getSubject3Result();
 
 
-function getStream() {
-    var streamval = document.getElementById("list").value;
-    document.getElementById("stream").value = streamval;
-}
 
-getStream();
+
 
 
 var modal = document.getElementById('id01');
@@ -435,14 +431,5 @@ window.onclick = function (event) {
 }
 
 
-function validateForm() {
-    var x = document.forms["myForm"]["subject1"].value;
-    var y = document.forms["myForm"]["subject2"].value;
-    var z = document.forms["myForm"]["subject3"].value;
-    if (x=="NONE"||y=="NONE"||z=="NONE") {
-        alert("error");
-        return false;
-    }
-}
-validateForm();
+
 
