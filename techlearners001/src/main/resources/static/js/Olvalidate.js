@@ -20,8 +20,6 @@ window.onclick = function (event) {
 
 
 var modal = document.getElementById('id13');
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -52,14 +50,29 @@ function getSubject51() {
 getSubject51();
 
 
-
-
 function getSubject52() {
     var subject52sel = document.getElementById("list52").value;
+    var subject51sel = document.getElementById("list51").value;
     document.getElementById("subject52").value = subject52sel;
+    var op53 = document.getElementById("list53");
+    for (var i = 0; i < op53.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op53[i].value == subject51sel ) || (op53[i].value == subject52sel ))
+            ? op53[i].disabled = true
+            : op53[i].disabled = false;
+    }
+    var opR = document.getElementById("list51");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject52sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
 }
 
 getSubject52();
+
+
 
 
 
@@ -103,10 +116,26 @@ getSubject61();
 
 function getSubject62() {
     var subject62sel = document.getElementById("list62").value;
+    var subject61sel = document.getElementById("list61").value;
     document.getElementById("subject62").value = subject62sel;
+    var op63 = document.getElementById("list63");
+    for (var i = 0; i < op63.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op63[i].value == subject62sel ) || (op63[i].value == subject61sel ))
+            ? op63[i].disabled = true
+            : op63[i].disabled = false;
+    }
+    var opR = document.getElementById("list61");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject62sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
 }
 
 getSubject62();
+
 
 
 
@@ -154,13 +183,27 @@ getSubject41();
 
 
 function getSubject42() {
+    var subject41sel = document.getElementById("list41").value;
     var subject42sel = document.getElementById("list42").value;
     document.getElementById("subject42").value = subject42sel;
+    var op42 = document.getElementById("list43");
+    for (var i = 0; i < op42.length; i++) {
+        // lowercase comparison for case-insensitivity
+        ((op42[i].value == subject42sel ) || (op42[i].value == subject41sel ))
+            ? op42[i].disabled = true
+            : op42[i].disabled = false;
+    }
+    var opR = document.getElementById("list41");
+    for (var i = 0; i < opR.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (opR[i].value == subject42sel )
+            ? opR[i].disabled = true
+            : opR[i].disabled = false;
+    }
+
 }
 
 getSubject42();
-
-
 
 
 
