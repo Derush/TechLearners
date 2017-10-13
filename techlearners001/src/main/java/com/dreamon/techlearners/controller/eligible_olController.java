@@ -133,11 +133,7 @@ public class eligible_olController {
                 bioeligibility=true;
                 System.out.print("BioScience");
             }
-            if(subject9.equals("Information & Communication Technology")&&(subject9R>=1))
-            {
-            techeligibility=true;
-                System.out.print("Technology");
-            }
+
         }
 
         if(phyeligibility == true)
@@ -152,13 +148,6 @@ public class eligible_olController {
             SL.setId(String.valueOf(02));
             SL.setStream("Bio Science");
             s2=true;
-            retrivelist.save(SL);
-        }
-        if(techeligibility == true)
-        {
-            SL.setId(String.valueOf(03));
-            SL.setStream("Technology");
-            s3=true;
             retrivelist.save(SL);
         }
 

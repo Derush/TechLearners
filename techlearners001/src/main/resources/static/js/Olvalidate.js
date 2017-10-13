@@ -17,6 +17,14 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 var modal = document.getElementById('id13');
@@ -156,6 +164,54 @@ function getStream() {
 }
 
 getStream();
+
+
+
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+<!-- script for pop up -->
+
+function getSubject31() {
+    var subject31sel = document.getElementById("list31").value;
+    document.getElementById("subject31").value = subject31sel;
+
+}
+
+getSubject31();
+
+
+
+function getSubject32() {
+    var subject32sel = document.getElementById("list32").value;
+    document.getElementById("subject32").value = subject32sel;
+}
+
+getSubject32();
+
+
+
+
+function getSubject33() {
+    var subject33sel = document.getElementById("list33").value;
+    document.getElementById("subject33").value = subject33sel;
+}
+
+getSubject33();
+
+
+
+
+
+
+
 
 
 function getSubject41() {
