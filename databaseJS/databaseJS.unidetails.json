@@ -1,0 +1,116 @@
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a008fe"), 
+    "universityId" : "A", 
+    "unviersityName" : "UNIVERSITY OF COLOMBO"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a008ff"), 
+    "universityId" : "B", 
+    "unviersityName" : "UNIVERSITY OF PERADENIYA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00900"), 
+    "universityId" : "C", 
+    "unviersityName" : "UNIVERSITY OF JEYEWARDHANAPURA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00901"), 
+    "universityId" : "D", 
+    "unviersityName" : "UNIVERSITY OF KELANIYA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00902"), 
+    "universityId" : "E", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00903"), 
+    "universityId" : "F", 
+    "unviersityName" : "UNIVERSITY OF RUHUNA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00904"), 
+    "universityId" : "G", 
+    "unviersityName" : "UNIVERSITY OF MORATUWA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00905"), 
+    "universityId" : "H", 
+    "unviersityName" : "EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00906"), 
+    "universityId" : "J", 
+    "unviersityName" : "SOUTH-EASTERN UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00907"), 
+    "universityId" : "K", 
+    "unviersityName" : "RAJARATA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00908"), 
+    "universityId" : "L", 
+    "unviersityName" : "SABARAGAMUWA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00909"), 
+    "universityId" : "M", 
+    "unviersityName" : "WAYAMBA UNIVERSITY OF SRILANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090a"), 
+    "universityId" : "N", 
+    "unviersityName" : "INSTITUTE OF INDIGENEOUS MEDICINE"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090b"), 
+    "universityId" : "P", 
+    "unviersityName" : "GAMPAHA WICRAMARACHCHI AYURVEDHAINSTITUTE"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090c"), 
+    "universityId" : "R", 
+    "unviersityName" : "UNIVERSITY OF JAFFNA (VAVUNIYA CAMPUS)"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090d"), 
+    "universityId" : "S", 
+    "unviersityName" : "UNIVERSITY OF COLOMBO (SRIPALEE CAMPUS)"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090e"), 
+    "universityId" : "T", 
+    "unviersityName" : "UNIVERSITY OF COLOMBO SCHOOL OF COMPUTING"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a0090f"), 
+    "universityId" : "U", 
+    "unviersityName" : "UVA WELLASSA UNIVERSITY OF SRI LANKA"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00910"), 
+    "universityId" : "W", 
+    "unviersityName" : "EASTERN UNIVERSITY (TRINCOMALEE CAMPUS)"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00911"), 
+    "universityId" : "X", 
+    "unviersityName" : "RAMANATHAN ACADEMY OF FINE ARTS"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00912"), 
+    "universityId" : "Y", 
+    "unviersityName" : "SWAMI VIPULANANDA INSTITUTE OF AESTHETIC"
+}
+{ 
+    "_id" : ObjectId("59e047ea5e7cd206a8a00913"), 
+    "universityId" : "Z", 
+    "unviersityName" : "UNIVERSITY OF THE VISUAL AND PERFORMING ARTS"
+}
+{ 
+    "_id" : ObjectId("59e054a45e7cd209b4618a6f"), 
+    "_class" : "com.dreamon.techlearners.model.uniDetails", 
+    "universityId" : "AA", 
+    "unviersityName" : "UNIVERSITY OF KELANIYA"
+}

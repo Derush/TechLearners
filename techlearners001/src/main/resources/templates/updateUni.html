@@ -435,6 +435,169 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" >
         <div id="page-inner">
+            <div>
+                <h1>Universtity Details</h1>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>University ID</th>
+                        <th>University Details</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="show1 : ${show}">
+
+                        <td th:text="${show1.universityId}"></td>
+                        <td th:text="${show1.unviersityName}"></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <ul class="button-group fix_button_group">
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id01').style.display='block'" style="width:auto;">UPDATE OR ADD
+                </button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('id02').style.display='block'" style="width:auto;">DELETE
+                </button>
+                </ul>
+            </div>
+
+            <div id="id01" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteUniDetails" method="POST">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper1">
+                            <div id="page-inner1">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+
+                                                <table class="table">
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th>University Id</th>
+                                                        <th>University Name</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                        <input type="text" id="uniId" name="uniId" placeholder="Eg :- A" required/>
+                                                        </td>
+                                                        <td>
+                                                        <input type="text" id="uniName" name="uniName" placeholder="University of Jaffna" required/>
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-6 col-sm-2">
+                                                <input type="submit"/>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
+
+            <div id="id02" class="modal">
+                <form name="myForm" class="modal-content animate" action="/upadteUniDetails" method="POST">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                    </div>
+
+                    <div>
+                        <div id="page-wrapper1">
+                            <div id="page-inner1">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-5">
+
+                                                <table class="table">
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th>University Id</th>
+                                                        <th>University Name</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" id="uniId" name="uniId" placeholder="Eg :- A" required/>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" id="uniName" name="uniName" placeholder="University of Jaffna" required/>
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-6 col-sm-2">
+                                                <input type="submit"/>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- /. ROW  -->
+                                <hr/>
+
+                            </div>
+                            <!-- /. PAGE INNER  -->
+                        </div>
+                        <!-- /. PAGE WRAPPER  -->
+                    </div>
+                </form>
+            </div>
+
+
 
 
 
