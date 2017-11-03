@@ -173,6 +173,11 @@
 <button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Arts</button>
 <button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Other</button>
 
+<form name="myForm" class="modal-content animate" action="/getoption" onsubmit="return validateForm1()"
+      method="POST">
+
+    <input type="submit"/>
+</form>
 <div id="id01" class="modal">
     <form name="myForm" class="modal-content animate" action="/addstream1" onsubmit="return validateForm1()"
           method="POST">
@@ -1050,6 +1055,19 @@
     function getSubject22() {
         var subject22sel = document.getElementById("list22").value;
         document.getElementById("subject22").value = subject22sel;
+        var op22 = document.getElementById("list23");
+        for (var i = 0; i < op22.length; i++) {
+            // lowercase comparison for case-insensitivity
+            ((op22[i].value ==subject2sel )||(op22[i].value ==subject1sel ))
+                ? op22[i].disabled = true
+                : op22[i].disabled = false ;
+        }
+        var opR = document.getElementById("list21");
+        for (var i = 0; i < opR.length; i++) {
+            // lowercase comparison for case-insensitivity
+            (opR[i].value ==subject2sel )
+                ? opR[i].disabled = true
+                : opR[i].disabled = false ;
     }
 
     getSubject22();
