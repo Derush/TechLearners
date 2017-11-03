@@ -7,19 +7,8 @@
     "option2" : [
         "Engineering Technology", 
         "Bio-system technology"
-    ], 
-    "option3" : [
-        "Economics", 
-        "Geography", 
-        "Home Economics", 
-        "English Language", 
-        "Accountancy", 
-        "Communication and Media Study", 
-        "Information and communication Technology", 
-        "Arts", 
-        "Business Studies", 
-        "Agriculture"
-    ]
+    ],
+    "option3" : "Economics,Geography,Home Economics,English Language,Accountancy,Communication and Media Study,Information and communication Technology,Arts,Business Studies,Agriculture"
 }
 { 
     "_id" : ObjectId("5999cf562e2fce15da9b8120"), 
