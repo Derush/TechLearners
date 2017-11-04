@@ -2,18 +2,18 @@
     "_id" : ObjectId("598eab4b865e42068b85a562"), 
     "name" : "ENGINEERING", 
     "eligibility" : {
-        "Combined Mathematics" : NumberInt(1), 
-        "physics" : NumberInt(1), 
-        "Chemistry" : NumberInt(1)
+        "Combined Mathematics" : NumberInt(4), 
+        "physics" : NumberInt(4), 
+        "Chemistry" : NumberInt(4)
     }
 }
 { 
     "_id" : ObjectId("598eac87865e42068b85a563"), 
     "name" : "PHISICAL SCIENCE", 
     "eligibility" : {
-        "Combined Mathematics" : NumberInt(1), 
-        "physics" : NumberInt(1), 
-        "Chemistry" : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(4), 
+        "physics" : NumberInt(4), 
+        "Chemistry" : NumberInt(4), 
         "Biology" : NumberInt(1), 
         "Agriculture" : NumberInt(1), 
         "Higher Mathematics" : NumberInt(1)
@@ -23,9 +23,9 @@
     "_id" : ObjectId("598ead7de41174341905a754"), 
     "name" : "COMPUTER SCIENCE", 
     "eligibility" : {
-        "Combined Mathematics" : NumberInt(2), 
-        "physics" : NumberInt(2), 
-        "Chemistry" : NumberInt(1), 
+        "Combined Mathematics" : NumberInt(4), 
+        "physics" : NumberInt(4), 
+        "Chemistry" : NumberInt(4), 
         "Higher Mathematics" : NumberInt(1), 
         "Information and Communication Technology" : NumberInt(1), 
         "Mathematics" : NumberInt(1)
